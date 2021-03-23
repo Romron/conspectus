@@ -310,19 +310,94 @@ Flex
 						тогда этот элемент отобразится раньше 
 						элемента с order: 0;
 
-Способы выравнивание блока по центру экрана
-	Подробнее:	https://www.youtube.com/watch?v=FdcwNozRkqE
-	1.	элементу:
-		position: absolute;
-		# погоризонтали
-			left: 0;
-			right: 0;
-			margin: 0 auto;
-		# по вертикали:
-			top: calc(50% - половина высоты элемента)
-		# если высота неизвестна
-			top: 50%;
-			transform: translate(0, -50%)
+Выравнивание блока по центру экрана
+	Подробнее:	
+		https://www.youtube.com/watch?v=FdcwNozRkqE
+		онлайн тренажор
+			http://howtocenterincss.com/
+	Всегда(?):
+		html, body{
+			width: 100%;
+			height: 100%;
+		}
+	1.	position
+			элементу:
+				высота элемента известна и фиксирована
+					position: absolute;
+					/*погоризонтали*/
+						left: 0px;
+						right: 0px;
+						margin: 0px auto;
+					/*по вертикали:*/
+						top: calc(50% - половина высоты элемента)
+				если высота элемента неизвестна
+					# по вертикали:
+						top: 50%;
+						transform: translate(0, -50%)
+	2. FlexBox
+			высота элемента известна и фиксирована
+				flex-conteiner{
+					display: flex;
+					justify-content: center;
+					align-items:center;
+					height: 400px;
+					max-width: 400px;
+					position: absolute;
+					top: calc(50% - 200px);	/*половина высоты элемента*/
+					left: 0px;
+					right: 0px;
+					margin: 0px auto;
+				}				
+			высота элемента неизвестна
+				flex-conteiner{
+					display: flex;
+					justify-content: center;
+					align-items:center;
+					height: 100%;
+				}
+	3. GRID
+			grid-conteiner{
+				display: grid;
+				justify-items: center;
+				align-items: center;
+				height: 100%;
+			}
+	4. при помощи псевдо элемента
+		используеться редко, 
+		но поддерживается всеми браузерами, в т.ч. старыми
+			.container{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				text-align: center;
+				width: 100%;
+				height: 100%;
+				font-size: 0px;  /* высота content: ''; */
+			}
+			.container::before{
+				content: '';
+				display: inlin-block;
+				vertical--align: middle;
+				height: 100%;
+			}
+			.elenemt{
+				display: inlin-block;
+				vertical-align: middle;			
+			}	
+	5. при помощи таблиц
+		устаревший метод
+			.container{
+				display: table;
+				width: 100%;
+				height: 100%;
+			}
+			.elenemt{
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+			}
+
+
 
 
 
