@@ -419,8 +419,76 @@ Grid CSS
 		Объявление формы
 
 
+Позиционирование
+	устанавливает позицию элемента в документе
+	при помощи свойств
+		top
+			растояние от верхнего края элемента
+		bottom
+			растояние от нижнего края элемента
+		left
+			растояние от левого края элемента
+		right
+			растояние от правого края элемента
+	!! позиционируеться ТОЛЬКО тот элемент 
+		у которого 
+			вычисленное(!!) значение position 
+				relative, absolute, fixed либо sticky
+		относительное позиционирование
+			relative
+				устанавливает новое положение 
+				относительно нормального
+					т.е. свойства top,bottom,left,right
+					задают смещение от нормального положения
+				элемент остаёться в общем потоке
+					отображается поверх других элементов
+		абсолютное позиционирование 
+				задают смещения от 
+				краёв блока содержащего элемент
+			absolute
 
-
+			fixed
+		fixed
+		sticky
+	!! содержащий блок
+		однозначно устанавливается значением 
+		свойства position	
+			static, relative, или sticky тогда
+				краем content бокса 
+				ближайшего предка 
+					который:
+						является блочным контейнером (block container), 
+							его свойство display установлено 
+								inline-block
+								block
+								list-item
+						устанавливает контекст форматирования (formatting context), 
+							блочный контейнер (block container)
+							flex-контейнер (flex container) 
+							grid-контейнер (grid container) 
+							контейнер таблицы (table container)
+			absolute
+				краем padding бокса 
+				ближайшего предка
+					position которого 
+						fixed, absolute, relative или sticky
+						(всё кроме fixed)
+			fixed
+				в случае непрерывного медиа (continuous media) областью просмотра (вьюпорт - viewport);
+				в случае страничного медиа (paged media) областью страницы.
+			absolute или fixed
+				краем padding бокса 
+				ближайшего предка
+					у которого:
+						transform или perspective
+							отличное от none
+						will-change 
+							transform или perspective.
+						filter  
+							отличное от none 
+							will-change value of filter (работает только в Firefox).
+						contain 
+							paint
 
 
 

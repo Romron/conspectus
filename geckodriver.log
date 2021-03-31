@@ -1243,3 +1243,37 @@ JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 2231: 
 A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
 [Parent 7908, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
 1616057235376	Marionette	INFO	Stopped listening on port 51849
+1617000910903	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-width=960.0" "-height=830.7692307692307" "-foreground" "-no-remote" "-profile" "C:\\Users\\BEREHU~1\\AppData\\Local\\Temp\\rust_mozprofilev853H7"
+1617000927971	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1617000930581	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1617000930581	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1617000930582	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1617000930582	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+[Parent 7524, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1617000968514	Marionette	INFO	Listening on port 50666
+1617000968809	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210322/r20110914/client/qs_click_protection_fy2019.js, line 14: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210322/r20110914/client/qs_click_protection_fy2019.js, line 14: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/13298309791513575843/index.html#t=8086980050428297060&p=https%3A%2F%2Fgoogleads.g.doubleclick.net, line 214: TypeError: studio.Enabler is undefined
+JavaScript error: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/16155771691807081390/index.js, line 897: TypeError: this.cta is undefined
+JavaScript error: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/16155771691807081390/index.js, line 913: TypeError: this.pack is undefined
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210322/r20110914/client/qs_click_protection_fy2019.js, line 14: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210322/r20110914/client/qs_click_protection_fy2019.js, line 14: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/13298309791513575843/index.html#t=17699403555162532651&p=https%3A%2F%2Fgoogleads.g.doubleclick.net, line 214: TypeError: studio.Enabler is undefined
+JavaScript error: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/16155771691807081390/index.js, line 897: TypeError: this.cta is undefined
+JavaScript error: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/16155771691807081390/index.js, line 913: TypeError: this.pack is undefined
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210322/r20110914/client/qs_click_protection_fy2019.js, line 14: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210322/r20110914/client/qs_click_protection_fy2019.js, line 14: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/13298309791513575843/index.html#t=1804295502184295933&p=https%3A%2F%2Fgoogleads.g.doubleclick.net, line 214: TypeError: studio.Enabler is undefined
+JavaScript error: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/13298309791513575843/index.html#t=10265609903386955935&p=https%3A%2F%2Fgoogleads.g.doubleclick.net, line 214: TypeError: studio.Enabler is undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/13298309791513575843/index.html#t=16718433117622268013&p=https%3A%2F%2Fgoogleads.g.doubleclick.net, line 214: TypeError: studio.Enabler is undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/13298309791513575843/index.html#t=5631450724503647898&p=https%3A%2F%2Fgoogleads.g.doubleclick.net, line 214: TypeError: studio.Enabler is undefined
+1617001061233	Marionette	INFO	Stopped listening on port 50666
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
