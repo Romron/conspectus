@@ -335,7 +335,7 @@ Flex-Box
 				если высота элемента неизвестна
 					# по вертикали:
 						top: 50%;
-						transform: translate(0, -50%)
+						transform: translate(0, -50%);
 	2. FlexBox
 			высота элемента известна и фиксирована
 				flex-conteiner{
@@ -501,7 +501,7 @@ Flex-Box
 							will-change value of filter (работает только в Firefox).
 						contain 
 							paint
-		
+
 
 
 ==============  TODO  ====================
@@ -510,3 +510,6 @@ Flex-Box
 Bootstrap
 
 Grid CSS
+
+
+Свойство width — это не абсолютный размер элемента, а размер содержимого элемента и это огромная разница
