@@ -264,7 +264,7 @@ Flex-Box
 						а также перед первым и после последнего
 						было одинаковым
 			вдоль поперечной оси
-				align-items 
+				align-items !!! если это свойство скопировать именно отсюда и вставить в css фай работать не будет МИСТИКА!!!
 					устанавливается для контейнера
 					устанавливает расположение элементов НЕ СТОРОК 
 						вдоль поперечной оси
@@ -332,105 +332,6 @@ Flex-Box
 Bootstrap
 
 Grid CSS
-
-Выравнивание блока по центру экрана
-	Подробнее:	
-		https://www.youtube.com/watch?v=FdcwNozRkqE
-		онлайн тренажор
-			http://howtocenterincss.com/
-	Всегда(?):
-		html, body{
-			width: 100%;
-			height: 100%;
-		}
-	1.	position
-			элементу:
-				высота элемента известна и фиксирована
-					position: absolute;
-					/*погоризонтали*/
-						left: 0px;
-						right: 0px;
-						margin: 0px auto;
-					/*по вертикали:*/
-						top: calc(50% - половина высоты элемента)
-				если высота элемента неизвестна
-					# по вертикали:
-						top: 50%;
-						transform: translate(0, -50%);
-	2. FlexBox
-			высота элемента известна и фиксирована
-				flex-conteiner{
-					display: flex;
-					justify-content: center;
-					align-items:center;
-					height: 400px;
-					max-width: 400px;
-					position: absolute;
-					top: calc(50% - 200px);	/*половина высоты элемента*/
-					left: 0px;
-					right: 0px;
-					margin: 0px auto;
-				}				
-			высота элемента неизвестна
-				flex-conteiner{
-					display: flex;
-					justify-content: center;
-					align-items:center;
-					height: 100%;
-				}
-	3. GRID
-			grid-conteiner{
-				display: grid;
-				justify-items: center;
-				align-items: center;
-				height: 100%;
-			}
-	4. при помощи псевдо элемента
-		используеться редко, 
-		но поддерживается всеми браузерами, в т.ч. старыми
-			.container{
-				position: absolute;
-				left: 0px;
-				top: 0px;
-				text-align: center;
-				width: 100%;
-				height: 100%;
-				font-size: 0px;  /* высота content: ''; */
-			}
-			.container::before{
-				content: '';
-				display: inlin-block;
-				vertical--align: middle;
-				height: 100%;
-			}
-			.elenemt{
-				display: inlin-block;
-				vertical-align: middle;			
-			}	
-	5. при помощи таблиц
-		устаревший метод
-			.container{
-				display: table;
-				width: 100%;
-				height: 100%;
-			}
-			.elenemt{
-				display: table-cell;
-				vertical-align: middle;
-				text-align: center;
-			}
-
-Непрямоугольные блоки при помощи CSS-форм
-	псевдо элементы
-		используется для
-			скошенные углы, как правило
-		https://www.youtube.com/watch?v=4-5JoIEISE8
-
-	<shapes>
-		Все HTML-элементы имеют 
-			прямоугольную блочную модель, 
-			которая управляет потоком содержимого внутри и снаружи нее
-		Объявление формы
 
 Позиционирование
 	устанавливает позицию элемента в документе
@@ -580,6 +481,132 @@ Grid CSS
 				то она будет равняться ширине области рамки.
 
 	min-content, max-content, fit-content, stretch в CSS
+
+-----  Приёмы вёрстки	------
+	Выравнивание блока по центру экрана
+		Подробнее:	
+			https://www.youtube.com/watch?v=FdcwNozRkqE
+			онлайн тренажор
+				http://howtocenterincss.com/
+		Всегда(?):
+			html, body{
+				width: 100%;
+				height: 100%;
+			}
+		1.	position
+				элементу:
+					высота элемента известна и фиксирована
+						position: absolute;
+						/*погоризонтали*/
+							left: 0px;
+							right: 0px;
+							margin: 0px auto;
+						/*по вертикали:*/
+							top: calc(50% - половина высоты элемента)
+					если высота элемента неизвестна
+						# по вертикали:
+							top: 50%;
+							transform: translate(0, -50%);
+		2. FlexBox
+				высота элемента известна и фиксирована
+					flex-conteiner{
+						display: flex;
+						justify-content: center;
+						align-items:center;
+						height: 400px;
+						max-width: 400px;
+						position: absolute;
+						top: calc(50% - 200px);	/*половина высоты элемента*/
+						left: 0px;
+						right: 0px;
+						margin: 0px auto;
+					}				
+				высота элемента неизвестна
+					flex-conteiner{
+						display: flex;
+						justify-content: center;
+						align-items:center;
+						height: 100%;
+					}
+		3. GRID
+				grid-conteiner{
+					display: grid;
+					justify-items: center;
+					align-items: center;
+					height: 100%;
+				}
+		4. при помощи псевдо элемента
+			используеться редко, 
+			но поддерживается всеми браузерами, в т.ч. старыми
+				.container{
+					position: absolute;
+					left: 0px;
+					top: 0px;
+					text-align: center;
+					width: 100%;
+					height: 100%;
+					font-size: 0px;  /* высота content: ''; */
+				}
+				.container::before{
+					content: '';
+					display: inlin-block;
+					vertical--align: middle;
+					height: 100%;
+				}
+				.elenemt{
+					display: inlin-block;
+					vertical-align: middle;			
+				}	
+		5. при помощи таблиц
+			устаревший метод
+				.container{
+					display: table;
+					width: 100%;
+					height: 100%;
+				}
+				.elenemt{
+					display: table-cell;
+					vertical-align: middle;
+					text-align: center;
+				}
+
+	Фоновое изображение блока 
+		подробнее
+			https://www.youtube.com/watch?v=nTtuiBXKp88&ab_channel=%D0%A4%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81%D0%B5%D1%80%D0%BF%D0%BE%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8-IT%D0%B8%D1%84%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81
+
+	Повышение надёжности вёрстки
+		-- использоваие селекторов типа
+			- все объекты контейнера первого уровня
+			- last-child
+			и т.п.
+		-- высоту строчки текста задавать в процентах
+			подробнее
+				https://www.youtube.com/watch?v=f-irDQwt1l4&ab_channel=%D0%A4%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81%D0%B5%D1%80%D0%BF%D0%BE%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8-IT%D0%B8%D1%84%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81
+
+	menu
+		структура типа 
+			<nav id="menu-">
+				<ul> 
+					<li><a href="/">content</a></li>
+					<li><a href="/">content</a></li>
+				</ul>
+			</nav>
+		!!!!! много крутых менюшек с кодами:
+			https://www.creativosonline.org/ru/menu-html-css.html?_gl=1%2A1h6tqji%2A_ga%2AYW1wLUZmdV9rM040VDlqOXJ2dXRwbU5ZSVVZWHM2emFFNmlsRGxUWlUzMUJHQUwtM1Ywc3preXI4Z1QyeFd4NlVOMnA.#Menu_circular_CSS_HTML
+
+	Непрямоугольные блоки при помощи CSS-форм
+		псевдо элементы
+			используется для
+				скошенные углы, как правило
+			https://www.youtube.com/watch?v=4-5JoIEISE8
+
+		<shapes>
+			Все HTML-элементы имеют 
+				прямоугольную блочную модель, 
+				которая управляет потоком содержимого внутри и снаружи нее
+			Объявление формы
+-----  Приёмы вёрстки	end		------
+
 
 Всё обо всём 
 	margin-right: 5%;    /* относительно ширины РОДИТЕЛЬСКОГО блока */
