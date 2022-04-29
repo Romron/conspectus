@@ -813,17 +813,17 @@ Grid CSS
 				будет пропорционально изменяться вместе с шириной
 				для родителя
 					min-height: 100px;
-					flex: 0 0 33.333%;
+					flex: 0 0 33.333%;	/*отзывчивая ширина*/
 					overflow: hidden;
 					position: relative;
-					padding: 0px 0px 50% 0px; /*вместо(!!!) фиксированной высоты*/
+					padding: 0px 0px 50% 0px; /*вместо(!!!) фиксированной высоты при нижнем отступе в 100% будет показана вся картинка*/
 				для картинки
 					width: 100%;
-					hight: 100%;
+					height: 100%;
 					position: absolute;
 					top: 0;
 					left: 0;
-					object-feit:cover;
+					object-fit:cover;
 					object-position: center; /* или более подходящее значение*/
 
 
