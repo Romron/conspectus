@@ -562,6 +562,9 @@ Grid CSS
 		Иконочный шрифт
 			https://www.youtube.com/watch?v=QYwI3LRCnRE&ab_channel=%D0%A4%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81%D0%B5%D1%80%D0%BF%D0%BE%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8-IT%D0%B8%D1%84%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81
 			на иконки действуют все css правила шрифтов
+			создание иконочных шрифтов
+				из набора SVG картинок:
+					https://icomoon.io
 			подключение
 				https://fontawesome.com
 					регистрация на сайте
@@ -847,7 +850,24 @@ Grid CSS
 					object-fit:cover;
 					object-position: center; /* или более подходящее значение*/
 
-
+	разделитель между блоками
+		1. смещение бордеров
+			.block{
+				border-left: 3px solid red;
+				padding: 0 20px;
+				margin: 0 1px 0 -8px;
+			}
+			.block-wrap>div:nth-child(1) .bloc { /*т.е. первому из разделяемых блоков*/
+				border-left: 3px solid #d4d0d1;
+				padding: 0 20px;
+				margin: 0 0 0 -2px;
+			}
+			.block-wrap>div:nth-last-child(1) .block { /*т.е. последнему из разделяемых блоков*/
+				border-right: 3px solid #d4d0d1;
+				width: auto; /*из-за отрецательного margin блок смещается в лево тогда правый бордер смещён внутрь блока*/
+			}
+		2. фоновым изображением
+		3. svg иконка в ::after ::before
 
 	Непрямоугольные блоки при помощи CSS-форм
 		псевдо элементы
