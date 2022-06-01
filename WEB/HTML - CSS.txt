@@ -1238,13 +1238,237 @@
 								.tabs>#content-3:target~.tabs__links>a[href="#content-3"] {
 								background-color: #bbdefb;
 								cursor: default;
-								}				
+								}	
+						код
+							<style>
+								.tabs {
+								display: flex;
+								flex-direction: column;
+								}
+
+								.tabs__links {
+								display: flex;
+								width: 100%;
+								overflow-x: auto;
+								overflow-y: hidden;
+								margin-left: auto;
+								margin-right: auto;
+								margin-bottom: 10px;
+								order: 0;
+								white-space: nowrap;
+								background-color: #fff;
+								border: 1px solid #e3f2fd;
+								box-shadow: 0 2px 4px 0 #e3f2fd;
+								}
+
+								.tabs__links>a {
+								display: inline-block;
+								text-decoration: none;
+								padding: 6px 10px;
+								text-align: center;
+								color: #1976d2;
+								}
+
+								.tabs__links>a:hover {
+								background-color: rgba(227, 242, 253, 0.3);
+								}
+
+								.tabs>#content-1:target~.tabs__links>a[href="#content-1"],
+								.tabs>#content-2:target~.tabs__links>a[href="#content-2"],
+								.tabs>#content-3:target~.tabs__links>a[href="#content-3"] {
+								background-color: #bbdefb;
+								cursor: default;
+								}
+
+								.tabs>div:not(.tabs__links) {
+								display: none;
+								order: 1;
+								}
+
+								.tabs>div:target {
+								display: block;
+								}
+							</style>
+
+							<div class="tabs">
+							<div id="content-1">
+								Содержимое 1...
+							</div>
+							<div id="content-2">
+								Содержимое 2...
+							</div>
+							<div id="content-3">
+								Содержимое 3...
+							</div>
+							<div class="tabs__links">
+								<a href="#content-1">Вкладка 1</a>
+								<a href="#content-2">Вкладка 2</a>
+								<a href="#content-3">Вкладка 3</a>
+							</div>
+							</div>										
 		js
 			Этот способ может потребоваться для решения задач, которые просто невозможно решить на CSS. 
 				Например, когда нужно загружать контент динамически (через AJAX) в момент открытия вкладки.
+			код
+				<style>
+				.tabs {
+					border: 1px solid #e0e0e0;
+				}
 
+				.tabs__nav {
+					display: flex;
+					flex-wrap: wrap;
+					list-style-type: none;
+					background: #fafafa;
+					margin: 0;
+					border-bottom: 1px solid #e0e0e0;
+				}
 
+				.tabs__btn {
+					padding: 0.5rem 0.75rem;
+					text-decoration: none;
+					color: black;
+					text-align: center;
+					flex-shrink: 0;
+					flex-grow: 1;
+					border: 1px solid transparent;
+					cursor: pointer;
+				}
 
+				.tabs__btn_active {
+					background: #e0e0e0;
+					cursor: default;
+				}
+
+				.tabs__btn:not(.tabs__btn_active):hover,
+				.tabs__btn:not(.tabs__btn_active):focus {
+					background-color: #eee;
+				}
+
+				.tabs__content {
+					padding: 1rem;
+				}
+
+				.tabs__pane {
+					display: none;
+				}
+
+				.tabs__pane_show {
+					display: block;
+				}
+				</style>
+
+				<div class="tabs">
+				<div class="tabs__nav">
+					<button class="tabs__btn tabs__btn_active">Вкладка 1</button>
+					<button class="tabs__btn">Вкладка 2</button>
+					<button class="tabs__btn">Вкладка 3</button>
+				</div>
+				<div class="tabs__content">
+					<div class="tabs__pane tabs__pane_show">
+						Содержимое 1...
+					</div>
+					<div class="tabs__pane">
+						Содержимое 2...
+					</div>
+					<div class="tabs__pane" id="content-3">
+						Содержимое 3...
+					</div>
+				</div>
+				</div>
+
+				JavaScript (с использованием классов):
+
+				class ItcTabs {
+				constructor(target, config) {
+					const defaultConfig = {};
+					this._config = Object.assign(defaultConfig, config);
+					this._elTabs = typeof target === 'string' ? document.querySelector(target) : target;
+					this._elButtons = this._elTabs.querySelectorAll('.tabs__btn');
+					this._elPanes = this._elTabs.querySelectorAll('.tabs__pane');
+					this._eventShow = new Event('tab.itc.change');
+					this._init();
+					this._events();
+				}
+				_init() {
+					this._elTabs.setAttribute('role', 'tablist');
+					this._elButtons.forEach((el, index) => {
+						el.dataset.index = index;
+						el.setAttribute('role', 'tab');
+						this._elPanes[index].setAttribute('role', 'tabpanel');
+					});
+				}
+				show(elLinkTarget) {
+					const elPaneTarget = this._elPanes[elLinkTarget.dataset.index];
+					const elLinkActive = this._elTabs.querySelector('.tabs__btn_active');
+					const elPaneShow = this._elTabs.querySelector('.tabs__pane_show');
+					if (elLinkTarget === elLinkActive) {
+						return;
+					}
+					elLinkActive ? elLinkActive.classList.remove('tabs__btn_active') : null;
+					elPaneShow ? elPaneShow.classList.remove('tabs__pane_show') : null;
+					elLinkTarget.classList.add('tabs__btn_active');
+					elPaneTarget.classList.add('tabs__pane_show');
+					this._elTabs.dispatchEvent(this._eventShow);
+					elLinkTarget.focus();
+				}
+				showByIndex(index) {
+					const elLinkTarget = this._elButtons[index];
+					elLinkTarget ? this.show(elLinkTarget) : null;
+				};
+				_events() {
+					this._elTabs.addEventListener('click', (e) => {
+						const target = e.target.closest('.tabs__btn');
+						if (target) {
+						e.preventDefault();
+						this.show(target);
+						}
+					});
+				}
+				}
+
+				Инициализация табов:
+
+				new ItcTabs('.tabs');
+
+				Адаптивные вкладки на CSS и JavaScript
+
+				Инициализация табов на странице осуществляется посредством создания нового объекта типа ItcTabs и передаче ему в качестве аргумента CSS-селектор или DOM-элемент которой необходимо инициализировать как табы.
+
+				Если в качестве аргумента указать селектор класса, то в качестве табов будет инициализирован только первый элемент.
+
+				Для того чтобы на странице инициализировать несколько вкладок, можно использовать следующий код:
+
+				const tabs = document.querySelectorAll('.tabs');
+				for (let i = 0, length = tabs.length; i < length; i++) {
+				new ItcTabs(tabs[i]);
+				}
+
+				Кроме этого, результат вызова new ItcTabs() можно сохранить в переменную, а затем использовать её для программного переключения вкладок.
+
+				Например:
+
+				const tab = new ItcTabs('.tabs');
+				// программно переключиться на 2 вкладку (1 – индекс вкладки, на которую нужно перейти)
+				tab.showByIndex(1);
+
+				Краткое описание исходного кода JavaScript
+
+				Исходный JavaScript построен на основе класса ItcTabs.
+
+				В конструкторе:
+
+					this._elTabs - это DOM-элемент, содержимое которого нужно инициализировать в качестве табов;
+					this._elButtons - элементы, которые представляют собой вкладки;
+					this._elPanes - элементы, содержащие контент, который необходимо переключать с помощью вкладок.
+
+				Установка обработчика для события click осуществляется в методе _events(). Данный метод вызывается в конструкторе.
+
+				Для отображения определённого контента в зависимости от нажатой вкладки выполняется с помощью метода show(). Элемент, на который нажали передаём в качестве аргумента:
+
+				this.show(target);
+
+				Метод showByIndex(index) предназначен для перехода на вкладку по её индексу.			
 
 
 
