@@ -1120,7 +1120,135 @@
 
 			}
 
+Табы (вкладки)		https://itchief.ru/javascript/tabs
+	В вебе табы – это просто набор ссылок или других HTML элементов, 
+		которые визуально обычно оформляют в виде вкладок или группы кнопок. 
+		При нажатии ни них они включают видимость одного какого-то блока с контентом 
+		и скрывают другие.
+	Реализация
+		CSS 
+			радиокнопки
+				описание 
+					В этом варианте радиокнопки связаны с определённым label. 
+					Связь элемента label с input выполнена через атрибут for. 
+					Это действие необходимо для того, чтобы можно было скрыть элементы input, 
+					а управление ими (установку checked) выполнять через клики по элементам label.
 
+					Стилизация выбранного элемента label в этом примере выполнена 
+					с использованием селектора input[type="radio"]:checked+label. 
+					Этот селектор выбирает элемент label, 
+					который расположен сразу же после элемента input[type="radio"], 
+					находящимся в состоянии checked.
+
+					Отображение и скрытие контента, связанного с вкладками, выполняется очень просто. 
+					По умолчанию элементы, содержащие контент, не отображаются. 
+					Показ того или иного элемента с контентом осуществляется только в том случае, 
+					если селектор в следующем правиле позволяет выбрать его:
+						#tab-btn-1:checked~#content-1,
+						#tab-btn-2:checked~#content-2,
+						#tab-btn-3:checked~#content-3 {
+						display: block;
+						}				
+				код
+					<style>
+					.tabs {
+						font-size: 0;
+					}
+
+					.tabs>input[type="radio"] {
+						display: none;
+					}
+
+					.tabs>div {
+						/* скрыть контент по умолчанию */
+						display: none;
+						border: 1px solid #e0e0e0;
+						padding: 10px 15px;
+						font-size: 16px;
+					}
+
+					/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+					#tab-btn-1:checked~#content-1,
+					#tab-btn-2:checked~#content-2,
+					#tab-btn-3:checked~#content-3 {
+						display: block;
+					}
+
+					.tabs>label {
+						display: inline-block;
+						text-align: center;
+						vertical-align: middle;
+						user-select: none;
+						background-color: #f5f5f5;
+						border: 1px solid #e0e0e0;
+						padding: 2px 8px;
+						font-size: 16px;
+						line-height: 1.5;
+						transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+						cursor: pointer;
+						position: relative;
+						top: 1px;
+					}
+
+					.tabs>label:not(:first-of-type) {
+						border-left: none;
+					}
+
+					.tabs>input[type="radio"]:checked+label {
+						background-color: #fff;
+						border-bottom: 1px solid #fff;
+					}
+					</style>
+
+					<div class="tabs">
+					<input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+					<label for="tab-btn-1">Вкладка 1</label>
+					<input type="radio" name="tab-btn" id="tab-btn-2" value="">
+					<label for="tab-btn-2">Вкладка 2</label>
+					<input type="radio" name="tab-btn" id="tab-btn-3" value="">
+					<label for="tab-btn-3">Вкладка 3</label>
+					<div id="content-1">
+						Содержимое 1...
+					</div>
+					<div id="content-2">
+						Содержимое 2...
+					</div>
+					<div id="content-3">
+						Содержимое 3...
+					</div>
+					</div>				
+			псевдокласс :target
+				Псевдокласс :target предназначен для выбора элемента, 
+					идентификатор которого соответствует хэшу в URL-адресе.
+				Описание	
+					Логика этого способа основана на следующих моментах. 
+						Первый момент заключается в добавлении хэша к URL-адресу страницы 
+							при нажатии на ссылку (вкладку). 
+						Второй – это стилизация элементов, выбор которых осуществляется в зависимости от 
+							хэша в URL-адресе. 
+						Выбрать элемент, идентификатор которого соответствует хэшу в URL-адресе в CSS 
+							можно выполнить посредством псевдокласса :target. 
+						С помощью него мы можем написать селектор 
+							не только для получения элемента, на который он указывает, 
+							но и для выбора других элементов, которые каким-то определённым образом связаны с ним.
+						Например, выбрать вкладку, 
+							которая должна быть активной для элемента на который указывает :target можно так:
+								.tabs>#content-1:target~.tabs__links>a[href="#content-1"],
+								.tabs>#content-2:target~.tabs__links>a[href="#content-2"],
+								.tabs>#content-3:target~.tabs__links>a[href="#content-3"] {
+								background-color: #bbdefb;
+								cursor: default;
+								}				
+		js
+			Этот способ может потребоваться для решения задач, которые просто невозможно решить на CSS. 
+				Например, когда нужно загружать контент динамически (через AJAX) в момент открытия вкладки.
+
+
+
+
+
+
+				
 -----  Приёмы вёрстки	end		------
 
 
