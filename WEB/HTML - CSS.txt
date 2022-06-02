@@ -1239,7 +1239,14 @@
 								background-color: #bbdefb;
 								cursor: default;
 								}	
-						код
+
+							или так:
+								.menu1>div:nth-of-type(1),
+								.menu1 #tab2:target~div:nth-of-type(2),
+								.menu1 #tab3:target~div:nth-of-type(3) {
+									display: block;
+								}
+						код 1: страница перепрыгивает на :target !!!!
 							<style>
 								.tabs {
 								display: flex;
@@ -1305,7 +1312,84 @@
 								<a href="#content-2">Вкладка 2</a>
 								<a href="#content-3">Вкладка 3</a>
 							</div>
-							</div>										
+							</div>	
+						код 2: страница НЕ перепрыгивает на :target 
+							#tab2,
+							#tab3,
+							#tab4,
+							#tab5 {
+								position: fixed;
+							}
+
+							.menu1>a,
+							.menu1 #tab2:target~a:nth-of-type(1),
+							.menu1 #tab3:target~a:nth-of-type(1),
+							.menu1>div {
+								padding: 5px;
+								border: 1px solid #aaa;
+							}
+
+							.menu1>a {
+								line-height: 28px;
+								background: #fff;
+								text-decoration: none;
+							}
+
+							/* #tab2,
+							#tab3,
+							.menu1>div,
+							.menu1 #tab2:target~div:nth-of-type(1),
+							.menu1 #tab3:target~div:nth-of-type(1) {
+								display: none;
+							} */
+
+
+
+							.menu1>div,
+							.menu1 #tab2:target~div:nth-of-type(1),
+							.menu1 #tab3:target~div:nth-of-type(1) {
+								display: none;
+							}
+
+
+
+
+
+							.menu1>div:nth-of-type(1),
+							.menu1 #tab2:target~div:nth-of-type(2),
+							.menu1 #tab3:target~div:nth-of-type(3) {
+								display: block;
+							}
+
+
+
+
+							.menu1>a:nth-of-type(1),
+							.menu1 #tab2:target~a:nth-of-type(2),
+							.menu1 #tab3:target~a:nth-of-type(3) {
+								border-bottom: 2px solid #fff;
+							}		
+
+						<div class="menu1">
+							<br id="tab2">
+							<br id="tab3">
+							<!-- <br id="tab4">
+							<br id="tab5"> -->
+							<a href="#tab1">1</a>
+							<a href="#tab2">2</a>
+							<a href="#tab3">3</a>
+							<!-- <a href="#tab4">4</a>
+							<a href="#tab5">5</a> -->
+							<div>вкладка 1</div>
+							<div>вкладка 2</div>
+							<div>вкладка 3</div>
+							<!-- <div>вкладка 4</div>
+							<div>вкладка 5</div> -->
+						</div>
+
+
+
+
 		js
 			Этот способ может потребоваться для решения задач, которые просто невозможно решить на CSS. 
 				Например, когда нужно загружать контент динамически (через AJAX) в момент открытия вкладки.
