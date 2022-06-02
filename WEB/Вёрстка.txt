@@ -276,7 +276,7 @@
 	SMACSS
 	FUN
 	DoCSSa
-Критерии вёрстки
+Критерии вёрстки			https://www.100up.ru/testirovanie-html-verstki/#section-1	!!!!!!!!!!!!!!!!!!
 	1. соответствие макету
 		максимальное соответствие web страницы макету и тех заданию 
 			нормальным счмтается точность +- 5px
@@ -333,6 +333,25 @@
 				людей с ограничеными возможностями				
 	9. маштабируемость вёрстки ??
 	10. структура каталогов вёрстки  ??
+Ресурсы для проверки качества вёрстки:
+	Внешние соответствие шаблону
+		плагин для PerfectPixel by WellDoneCode (pixel perfect) Хрома !!!
+	Комплексная проверка технических параметров сайта		
+		lighthouse в браузере Хром
+			находится в панели разработчика браузера
+	Валидаторы 
+		HTML
+			https://validator.w3.org/	
+		CSS
+			https://jigsaw.w3.org/css-validator/   
+	Адаптивность 		для проверки сайт должен быть доступен в нете
+		https://search.google.com/test/mobile-friendly
+		https://bluetree.ai/screenfly/
+		http://iloveadaptive.com/ru/
+	Кроссбраузерность
+		https://www.lambdatest.com/
+		https://www.browserstack.com/
+
 
 Необходимые технологии:
 	Автоматизация вёрстки
