@@ -1005,12 +1005,46 @@
 			используется для
 				скошенные углы, как правило
 			https://www.youtube.com/watch?v=4-5JoIEISE8
-
 		<shapes>
 			Все HTML-элементы имеют 
 				прямоугольную блочную модель, 
 				которая управляет потоком содержимого внутри и снаружи нее
 			Объявление формы
+		CSS свойство clip-path:
+			Создаёт ограниченную область, которая определяет какая часть элемента должна быть видимой. 
+			Обрезанная область - это траектория, определяемая как
+				внутренняя ссылка
+				внешний SVG
+				фигура, такая как круг (circle()).
+			проблем:
+				не поддерживает border !!!
+			решение:
+				совмещать идентичные фигуры разного размера
+				цвет границы при этом определяет фон нижней фигуры
+					пример:
+						.shape {
+						width: 400px;
+						height: 40px;
+						background-color: black;
+						position: relative;
+						}
+						.shape:before {
+						content: '';
+						width: 398px;
+						height: 38px;
+						background: #00c000;
+						display: block;
+						position: absolute;
+						top: 1px;
+						left: 1px;
+						}
+						.shape, .shape:before {
+						-webkit-clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+						clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+						}
+						
+						<div class="shape"></div>
+
 
 	Слайдер
 		Принцып работы
@@ -1045,6 +1079,31 @@
 			SLICK SLIDER	https://youtu.be/rXNfDfqtM3M
 		Самописные
 			JS
+				function slider_1() {
+					/*
+						проматывает все элементы с лево на право и обратно
+					*/
+
+					let offset = 0;
+					const sliderLine = document.querySelector('.wrap-slider-cards');
+					let quantity_img = document.querySelectorAll('.wrap-slider-cards .slider-card').length
+					// console.log("quantity_img = " + quantity_img);
+
+					document.querySelector('#left').addEventListener('click', function () {
+						if (offset > (quantity_img - 5) * 235) {
+							return;
+						}
+						offset = offset + 235;
+						sliderLine.style.left = -offset + 'px';
+					});
+					document.querySelector('#right').addEventListener('click', function () {
+						if (offset < 1) {
+							return;
+						}
+						offset = offset - 235;
+						sliderLine.style.left = -offset + 'px';
+					});
+				}
 			CSS
 				принцып действия:
 					смещение элементов в бок
@@ -1424,6 +1483,19 @@
 						<div>вкладка 5</div> -->
 					</div>
 			js
+				Самописные:
+					function tabs_1() {
+						const tabs = document.querySelectorAll('.wrap-tabs>div');
+						const title_tabs = document.querySelectorAll('.wrap-title-tabs>div');
+						document.querySelector('.wrap-title-tabs').addEventListener('click', (e) => {
+							for (let i = 0; i < tabs.length; i++) {
+								tabs[i].className = "tab-hide";
+								title_tabs[i].className = "title-tab";
+							}
+							document.querySelector('#tab-' + e.target.id).className = "tab-active";
+							e.target.classList.add("title-tab-active");
+						});
+					}					
 				Этот способ может потребоваться для решения задач, которые просто невозможно решить на CSS. 
 					Например, когда нужно загружать контент динамически (через AJAX) в момент открытия вкладки.
 				код
