@@ -70,7 +70,7 @@ Programing
 		Back End
 			++ PHP
 				Laravel
-				Symfony 5
+				Symfony
 			+- MySQL
 		MySQL
 		Front End
