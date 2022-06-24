@@ -3,7 +3,7 @@
    https://laravel.su/docs/5.0/installation
    https://habr.com/ru/post/439200/
 
-смежные области:
+Смежные области:
    ООП в PHP -- в отдельном файле
    MySQL
    Терминал 
