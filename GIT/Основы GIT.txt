@@ -15,6 +15,11 @@
       git add --all
          добавить все файлы в индекс
    
+      git ls-tree -r repo_name --name-only
+         покажет все отслеживаемые файлы 
+      git ls-files --others --exclude-standard
+         покажет все НЕ отслеживаемые файлы 
+
    Создать репозиторий
       Локальный комп --> https://github.com
          открыть терминал
