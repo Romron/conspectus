@@ -1,8 +1,19 @@
 Источники:
-   ++ https://www.internet-technologies.ru/articles/ruk-po-laravel-8-kak-sozdat-pervoe-prilozhenie.html
-   + https://laravel.ru/docs/v5/eloquent
-   https://laravel.su/docs/5.0/installation
-   https://habr.com/ru/post/439200/
+   Eloquent ORM
+      + https://laravel.ru/docs/v5/eloquent
+   Установка Laravel
+      https://laravel.su/docs/5.0/installation
+   Композер
+      https://habr.com/ru/post/439200/
+      https://getcomposer.org/doc/03-cli.md
+   все функции laravel
+      https://laravel.com/docs/9.x/helpers#main-content
+   о паролях MySQL
+      https://webformyself.com/kak-uznat-parol-mysql-ili-ne-ishhem-priklyuchenij-na-svoyu-golovu/
+   Руководства по Laravel 8
+      ++ https://www.internet-technologies.ru/articles/ruk-po-laravel-8-kak-sozdat-pervoe-prilozhenie.html
+
+
 
 Смежные области:
    ООП в PHP -- в отдельном файле
@@ -212,12 +223,12 @@
          Конструктор запросов
             +https://laravel.ru/docs/v5/queries
       Создать модель
-         php artisan make:model Task
-         Эта команда создаст модель (файл??) задачи в папке приложения, как показано ниже.
-      Отношение «один-ко-многим»
-         Отношения используются для соединения таблиц. 
-         Eloquent даёт возможность связать свои модели через отношения Eloquent. 
-         Eloquent свяжет модели между собой, поэтому вам придется использовать только функции.
+         Эта команда создаст файл модели в папке приложения
+            php artisan make:model name_model
+         Эта команда создаст файл модели в папке приложения а также миграцию БД 
+            php artisan make:model name_model --migration
+               или
+            php artisan make:model name_model -m
          Пример 
             Модель задачи (файл task.php находится в app/task.php):
                ...
@@ -500,6 +511,11 @@
       создать файл модели  
          php artisan make:model имя модели -m
             ключ -m  создаст вместе с файлом модели файл миграции 
+         запустить файлы моделей на исполнение
+   Миграции
+         запустить файлы миграций на исполнение
+            php artisan migrate  // все(!) миграции в папке database\migrations 
+
 
 
 
@@ -508,3 +524,27 @@
 
 
 ----------------------- Практика end -----------------------  
+
+
+----------------------- Проблемы -- решения start -----------------------
+   Проблема
+      внезапно в рабочем проэкте:
+         при запуске artisan serve
+            Failed to open stream: No such file or directory ......
+         и при запусеке npm run watch
+            "mix" не является внутренней или внешней командой, исполняемой программой или пакетным файлом.
+   Решение
+      по artisan serve
+         переустановка laravel
+            composer update --no-scripts  --запускается но сервер не работает
+         т.к. laravel переустанавливался после создания проэкта то файл .env небыл создан
+            copy .env.example .env       // копировать .env.example как .env
+            php artisan key:generate   // устанавливает значение APP_KEY в вашем файле .env. 
+                                       // По умолчанию эта команда запускается после команды composer create-project laravel/laravel
+      по npm run watch
+         переустановил laravel-mix
+            npm install laravel-mix --save-dev
+         laravel-mix -- запускается но сервер не работает
+
+
+----------------------- Проблемы -- решения end -----------------------
