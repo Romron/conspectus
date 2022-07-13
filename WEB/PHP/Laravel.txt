@@ -8,6 +8,7 @@
       https://getcomposer.org/doc/03-cli.md
    все функции laravel
       https://laravel.com/docs/9.x/helpers#main-content
+      https://laravel.ru/docs/v5/helpers
    о паролях MySQL
       https://webformyself.com/kak-uznat-parol-mysql-ili-ne-ishhem-priklyuchenij-na-svoyu-golovu/
    Руководства по Laravel 8
@@ -21,6 +22,9 @@
       https://laravel.su/docs/8.x/seeding
    Построитель запросов к база данных  
       https://laravel.su/docs/8.x/queries
+   Хранение - файловая Система 
+      https://laravel.su/docs/6.x/filesystem#introduction
+
 
 Смежные области:
    ООП в PHP -- в отдельном файле
@@ -152,6 +156,8 @@
                </x-app-layout>
             В файле dashboard.blade.php также замените весь код на тот, 
             который приведен выше. 
+   Доступ браузера к папкам
+      по умалчанию у браузера доступ есть только к папке 'public'
    Миграции
       описание 
          миграция это функция, по сути обычные классы, 
@@ -312,7 +318,6 @@
          Удалить существующие задачи.
       Laravel Jetstream добавляет вход и регистрацию, 
          поэтому теперь нам нужно позаботиться только о трех маршрутах.
-
    Привязка модели к маршруту (Route-Model Binding)
       Это механизм для внедрения экземпляра модели в маршруты. 
       Это значит что 
@@ -538,6 +543,8 @@
    Миграции
          запустить файлы миграций на исполнение
             php artisan migrate  // все(!) миграции в папке database\migrations 
+         откат всех миграций  
+            php artisan migrate:reset
    Базы данных
       вариант_1
          создать базу данных MySQL
@@ -596,7 +603,7 @@
    Наполнение БД
       сгенерировать новый наполнитель:
          php artisan make:seeder name_Seeder
-      db:seed по умолчанию запускает класс Database\Seeders\DatabaseSeeder, 
+      php db:seed по умолчанию запускает класс Database\Seeders\DatabaseSeeder, 
          который, в свою очередь, может вызывать другие классы
       php artisan db:seed --class=UserSeeder
          запуск конкретного класса наполнителя
@@ -629,3 +636,6 @@
 
 
 ----------------------- Проблемы -- решения end -----------------------
+php artisan db:seed --class=DatabaseSeeder_all_lists
+php artisan migrate:reset
+php artisan migrate
