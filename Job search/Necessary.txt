@@ -56,9 +56,6 @@ Programing
 
 
 
-
-
-
 Портфолио
 	портал для размещения работ
 	перечень технологий которые необходимо использовать
@@ -80,6 +77,27 @@ Programing
 			JQuery
 Practics !!!!
 
+
+
+Ратотодатель спрашивает
+	 Ux/Ui дизайн
+	 	это дизайн пользовательского интерфейса
+	 Figma
+	 HTML5
+	 CSS3
+	 JavaScript
+	 jQuery
+	 PHP7 + ОПП
+	 Mysql
+	 Git
+	 API Integration (JSON, XML)
+	 WordPress
+	 	в части backEnd
+	 	в части frontEnd
+	 	для блога
+	 	для магазинов
+	 базової SEO 
+	 оптимізація швидкості сайту
 
 
 
