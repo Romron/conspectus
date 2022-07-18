@@ -1,7 +1,51 @@
+Хранить на Github		https://qna.habr.com/q/461903
+	???  https://github.com/roots/bedrock
+	???  https://d2c.io/ru/article/how-to/ispolzovanie-git-pri-rabote-s-wordpress-i-perenos-proekta-v-d2c
+	репозиторий гита в корне вордпресса
+		.gitignore
+			# VS Cod
+			.vscode
+
+			# WordPress
+			*.log
+			/wp-*.php
+			/index.php
+			/xmlrpc.php
+			/license.txt
+			/readme.html
+			/sitemap.xml
+			/sitemap.xml.gz
+
+			/backup*
+
+			wp-admin/
+			wp-includes/
+
+			wp-content/*
+			!wp-content/themes/
+			wp-content/themes/*
+
+			!wp-content/plugins/
+			wp-content/plugins/*
+
+			!wp-content/themes/ei/
+			!wp-content/themes/ei-child/
+
+			!wp-content/plugins/realty-export
+
+			# Frontend tools
+			wp-content/themes/ei-child/node_modules/
+	сomposer в WordPress 		https://oddstyle.ru/wordpress-2/stati-wordpress/ispolzovanie-composer-v-wordpress-nebolshoe-rukovodstvo-dlya-novichkov.html
+	управление WordPress-сайтом с помощью Git 		https://wordpressify.ru/2019/09/upravlenie-wordpress-sajtom-s-pomoshhyu-git-i-composer-chast-1-sohranyaem-wordpress-v-git/
+
+
+
 
 
 
 САМЫЙ ПЕРВЫЙ PHP ФАЙЛ, ОБЫЧНО ЭТО INDEX.PHP - ЭТО ГЛОБАЛЬНАЯ ОБЛАСТЬ КОДА
+
+
 
 
 
