@@ -884,6 +884,7 @@
 			ширина		
 
 	menu
+		выпадающее меню 		https://html5css.ru/howto/howto_css_dropdown.php
 		разметка (структура) типа 
 			<nav id="menu-">
 				<ul> 
