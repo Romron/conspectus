@@ -1,6 +1,7 @@
 
 Источники:
 	+++https://www.youtube.com/c/%D0%91%D1%8B%D1%82%D1%8C%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82%D0%BE%D0%BC/playlists
+	Генератор файловой структуры	https://underscores.me/
 
 Термины:
 	спецификация
@@ -11,16 +12,13 @@
 		часть имени функции от начала до тире	нужен для того чтобы избежать задваивания названий в разных темах плагинах и т.п.
 
 
-
-Генератор файловой структуры	https://underscores.me/
-
-
-
 Смежные области:
 
 
 
 ----------------------- ТЕОРИЯ start -----------------------
+подключение файлов в functions.php
+	require get_template_directory() . '/inc/metabox.php';
 страницы и посты а также любые другие типы записей 
 	это всего лиш записи в таблице posts базы данных
 	тело поста формировать в отдельном файле с префиксом single-.....php
@@ -49,7 +47,74 @@
 		главный цыкл WP будет вывыдить только один пост
 		для того что бы получить все посты нужно использовать класс WP_Query{}
 		который выводит любую инфу в любом месте сайта
+произвольные поля в админке WordPress				https://youtu.be/CBDpmQQ7Znc
+	создать блок полей в админ панеле
+		functions.php	
+			function ITDS_add_metabox(){
+					add_meta_box('goods_metabox', esc_html__('Goods settings', 'ITDS'),'goods_metabox_html', 'goods','normal');
+				}
+				add_action('add_meta_boxes', 'ITDS_add_metabox');
+				где 
+					goods_metabox_html -- вёрстка самих полей
+	создать сами поля -- вёрстка
+		functions.php
+			function goods_metabox_html($post){
+				// если значение поля уже есть в БД 
+				$rating = get_post_meta($post->ID,'rating',true);				
+				$old_price = get_post_meta($post->ID,'old_price',true);
+				$new_price = get_post_meta($post->ID,'new_price',true);
+				$status = get_post_meta($post->ID,'status',true);
+				?>
+					<p>
+						<label for="rating"> <?php esc_html_e('Рейтинг','ITDS_Agency_test')?> </label>
+							<input type="text" id="rating" name="rating" value="<?php echo esc_attr($rating);?>"/>
+						<label for="status"> <?php esc_html_e('Статус','ITDS_Agency_test')?> </label>	
+							<input type="text" id="status" name="status" value="<?php echo esc_attr($status);?>"/>
+						<label for="old-price"> <?php esc_html_e('Старая цена','ITDS_Agency_test');?> </label>	
+							<input type="text" id="old-price" name="old-price" value="<?php echo esc_attr($old_price);?>"/>
+						<label for="new-pric"> <?php esc_html_e('Новая цена','ITDS_Agency_test')?> </label>
+							<input type="text" id="new-price" name="new-price" value="<?php echo esc_attr($new_price);?>"/>
+					</p>
+				<?php
+			}
 
+	проверки данных из полей и защиты 
+		// чтобы убедиться, что данные были отправлены с текущего сайта, а не от куда-то еще
+		if (!isset($_POST['_goods_metabox']) || !wp_verify_nonce($_POST['_goods_metabox'], 'ITDS_goods_metabox_html54545461213878')) {
+			return $post_id;
+		}
+
+		// проверка на автосохранение самим WP
+		if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+			return $post_id;
+		}
+		// проверка на post_type
+		if ($post->post_type != 'goods') {
+			return $post_id;
+		}
+
+		// проверка прав пользователя
+		$post_type = get_post_type_object($post->post_type);
+		if (!current_user_can($post_type->cap->edit_post,$post_id)) {
+			return $post_id;
+		}
+
+	сохранить значения полей в БД
+		functions.php
+			function ITDS_goods_save_meta_box($post_id, $post){
+				
+				// проверки !!!
+
+				if (isset($_POST['rating'])) {
+					update_post_meta($post_id,'rating', sanitize_text_field($_POST['rating']));
+					}else{
+						delete_post_meta($post_id, 'rating',);
+					}	
+					return $post_id;		
+				}
+				add_action('save_post', 'ITDS_goods_save_meta_box', 10, 2);	// где 2 это количество передаваемых аргументов
+	получение инфы на страницы сайта	
+		get_post_meta() можно использовать за пределами Цикла WordPress, т.е. где угодно в шаблоне
 
 
 ----------------------- ТЕОРИЯ end ------------------------- 
