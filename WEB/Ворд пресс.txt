@@ -146,7 +146,45 @@
 			if (has_post_thumbnail(get_the_ID())){
 				the_post_thumbnail('название_размера_кртинки');
 			}
+форма поиска
+	в любом месте темы
+		get_search	_form();
+			вернёт стандартную форму поиска WP
+	для стилизации формы поиска 
+		в корне темы нужен файл  	searchform.php
+		или фильтер в function
+			function my_theme_custom_searchform($form){
+				$form = "
+					<form >
+						html для формы поиска;
+						при этом важно!!!
+							указать тегу form метод 
+							и если он GET то полю ввода поискового запроса задать имя 'S'
 
+
+					</form>
+				";
+				return $searc_form;
+			};
+			add_filter('get_search	_form',my_theme_custom_searchform);
+	сраницы вывода результатов поиска
+		search.php
+	для формы поиска как и для других блоков нужно зарегистрировать поддержку html5
+		в function
+			......
+			function my_theme_init(){
+				регистрация меню
+
+				add_them_suport(
+					'html5',
+					array(
+						search-form,
+						и прочие стандартные блоки
+					)
+				);
+			}
+			add_action('after_setup_theme',my_theme_init,0);
+			......
 ----------------------- ТЕОРИЯ end ------------------------- 
 
 
