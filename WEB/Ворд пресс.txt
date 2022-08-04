@@ -205,6 +205,28 @@
 				'theme_location'=>'heder_nav_menu-1',		// именно по названию локации WP распознаёт меню
 			));
 	свой хук для назначения класса тегам например li			https://youtu.be/5W9hL3N7Q6g	33:46
+создать плагин
+	в папке plugins теммы 
+		my-plugin-name --	папка плагина в каторой:
+			обязательные файлы	
+			 	index.php
+				my-plugin-name.php
+					<?php
+						/*
+						Plugin Name: my-plugin-name
+						Plugin URI: #
+						Description: Функционал необходимый для работы теммы
+						Version: 1.0
+						Author: Roman
+						Author URI: #
+						License: GPLv2 or later
+						Text Domain: my_plugin_name
+						*/
+	подключение файлов 
+		т.к. get_template_directory_uri() в плагине не работает
+		путь к плогину формировать так:
+			require plugin_dir_path(__FILE__) . /* путь к нужному файлу */
+
 подключение необходимых плагинов			https://youtu.be/bcpkS1b31AQ
 	всё что касается функционала должно находится в плагине
 		имя которого /plugins/my_plugin-core.zip
