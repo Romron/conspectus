@@ -205,6 +205,84 @@
 				'theme_location'=>'heder_nav_menu-1',		// именно по названию локации WP распознаёт меню
 			));
 	свой хук для назначения класса тегам например li			https://youtu.be/5W9hL3N7Q6g	33:46
+пагинация				https://youtu.be/gLdt8Pqf4T4
+	формируется по данным из запроса WP_Query
+		WP_Query -- стандартный тогда 
+			пагинация разделяется по типам записей 
+			т.е. на каждом типе страниц будет разный
+		WP_Query -- кастомный тогда
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;	// если paged есть верни её иначе 1. 
+				// Нужно для того что бы WP_Query() выводил данные в соответствии с той страницей на которой сейчас находишся
+			$args = array(
+							'post_type' => 'goods',
+							'posts_per_page' => 4,
+							'paged' => $paged,
+						);
+			$goods = new WP_Query($args);			
+						
+	ф-ции для отображения пагинации
+		paginate_links();		//	возвращает значение. Позволяет создать ссылки пагинации для любых страниц. Используется чаще всего.
+			пример того как выглядит планация: « предыдущая 1 … 3 4 5 6 7 … 9 следующая »
+			для того что бы paginate_links() работала с кастомным WP_Query():
+				$args = array(
+								'post_type' => 'goods',
+								'posts_per_page' => 4,
+								'paged' => $paged,
+							);
+				$goods = new WP_Query($args);					
+				$big = 999999999; // уникальное число для замены
+				echo paginate_links(
+					array(
+						'base'    => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+						'format'  => '',
+						'current' => max( 1, get_query_var('paged') ),		// Нужно для того что бы WP_Query() выводил данные в соответствии с той страницей на которой сейчас находишся
+						'total'   => $goods->max_num_pages,
+					);					
+				);
+			для удобства использования 
+				в function:
+					function my_theme_pagination($query){
+						$big = 999999999; // уникальное число для замены
+						$paged = '';	// для WP обязательно инициализировать переменную 
+						if (is_singular()){			// для статических страниц 'paged' заменить на 'page'
+							$paged = get_query_var('page');
+						} else {
+							$paged = get_query_var('paged');
+						}
+						
+						echo paginate_links(
+							array(
+								'base'    => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+								'format'  => '',
+								'current' => max( 1, $paged ),		// Нужно для того что бы WP_Query() выводил данные в соответствии с той страницей на которой сейчас находишся
+								'total'   => $query->max_num_pages,
+							);					
+						)
+					}	
+				в любом месте сайта:
+					для статических страниц 'paged' заменить на 'page'
+					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;	// если paged есть верни её иначе 1. 
+						// Нужно для того что бы WP_Query() выводил данные в соответствии с той страницей на которой сейчас находишся				
+					$args = array(
+									'post_type' => 'goods',
+									'posts_per_page' => 4,
+									'paged' => $paged,
+								);
+					$goods = new WP_Query($args);	
+					my_theme_pagination($goods);
+				
+
+		the_posts_navigation(); // Выводит блок пагинации Используется на страницах архивов
+		the_post_navigation(); // Выводит блок пагинации Используется на single
+		get_posts_nav_link();	// Получает ссылки на предыдущую и следующую страницы записей на странице архива
+		get_the_posts_navigation();	// Получает ссылки на следующую и предыдущую страницы постов. Используется на страницах архивов
+		posts_nav_link();	// самая простая навигация без указания кол-ва стр. Выводит ссылки на предыдущую и следующую страницы (посты/категории)
+		previous_posts_link();	// Выводит ссылку на предидущую страницу пагинации
+		get_previous_posts_link();	// возвращает ссылку на предидущую страницу пагинации
+		next_posts_link();	// Выводит ссылку на следующую страницу пагинации
+		get_next_posts_link();	// возвращает ссылку на следующую страницу пагинации
+		и д.р.
+
 создать плагин
 	в папке plugins теммы 
 		my-plugin-name --	папка плагина в каторой:
@@ -226,7 +304,6 @@
 		т.к. get_template_directory_uri() в плагине не работает
 		путь к плогину формировать так:
 			require plugin_dir_path(__FILE__) . /* путь к нужному файлу */
-
 подключение необходимых плагинов			https://youtu.be/bcpkS1b31AQ
 	всё что касается функционала должно находится в плагине
 		имя которого /plugins/my_plugin-core.zip
