@@ -227,14 +227,11 @@
 				$args = array(
 								'post_type' => 'goods',
 								'posts_per_page' => 4,
-								'paged' => $paged,
+								'paged' => $paged,	// обязательно
 							);
 				$goods = new WP_Query($args);					
-				$big = 999999999; // уникальное число для замены
-				echo paginate_links(
+				echo paginate_links(			// обязательны только эти два параметра!!
 					array(
-						'base'    => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
-						'format'  => '',
 						'current' => max( 1, get_query_var('paged') ),		// Нужно для того что бы WP_Query() выводил данные в соответствии с той страницей на которой сейчас находишся
 						'total'   => $goods->max_num_pages,
 					);					
