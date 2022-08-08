@@ -280,7 +280,6 @@
 		next_posts_link();	// Выводит ссылку на следующую страницу пагинации
 		get_next_posts_link();	// возвращает ссылку на следующую страницу пагинации
 		и д.р.
-
 создать плагин
 	в папке plugins теммы 
 		my-plugin-name --	папка плагина в каторой:
@@ -302,7 +301,7 @@
 		т.к. get_template_directory_uri() в плагине не работает
 		путь к плогину формировать так:
 			require plugin_dir_path(__FILE__) . /* путь к нужному файлу */
-подключение необходимых плагинов			https://youtu.be/bcpkS1b31AQ
+подключение плагинов к теме			https://youtu.be/bcpkS1b31AQ
 	всё что касается функционала должно находится в плагине
 		имя которого /plugins/my_plugin-core.zip
 	сгенерировать и скачать библиотеку		http://tgmpluginactivation.com/download/
@@ -336,6 +335,30 @@
 							'slug'        => 'wordpress-seo',		// последняя часть ссылки на страницу плагина в https://wordpress.org/
 							'required'    => true,	// If false, the plugin is only 'recommended' instead of required.
 						),
+глобольные настройки теммы			https://youtu.be/44tFg9-UW9k
+	создать theme options panel 
+		самому
+		плагин redux 
+			установить плагин redux
+			создать файл с настройками /inc/redux-options.php
+			для этого
+				найти файл примера
+					wp-content/plugins/redux-Framework/sample/sample-config.php
+				скопировать из него весь код в свой файл redux-options.php
+				в functions.php подключить redux-options.php 
+					require_once get_template_directory() . '/inc/redux-options.php';
+	настройка options panel
+		созданой самастоятельно
+		созданой плагином redux
+			в /inc/redux-options.php
+				$opt_name = 'my_theme_name_options';	// по этому имени будем получать данные в front часть сайта
+																	// т.е. вся options panel хранится в одном массиве а это его имя
+				прописать нужные поля в $args				https://youtu.be/44tFg9-UW9k		8:35
+	создание полея в options panel	
+		деление полей на категории т.е. создание секций полей			https://youtu.be/44tFg9-UW9k		19:32
+
+		
+
 
 	
 
@@ -362,12 +385,8 @@
 		API настроек (опций)			https://wp-kama.ru/id_3773/api-optsiy-nastroek.html
 		настроек много 
 			Redux Framework	https://youtu.be/44tFg9-UW9k
-		
-
-
-
-
-
+Плагины обязательные для каждого сойта				https://youtu.be/aETsjfn2InU
+	iThemes Security 		
 
 Хранить на Github		https://qna.habr.com/q/461903
 	???  https://github.com/roots/bedrock
