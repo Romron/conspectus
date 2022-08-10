@@ -78,8 +78,6 @@
 	не используемые файлы страниц каркаса удалить 
 	тест теммы плагином theme check			
 
-
-
 подключение файлов в functions.php
 	require get_template_directory() . '/inc/metabox.php';
 страницы и посты а также любые другие типы записей 
@@ -563,7 +561,7 @@ WordPress -- Git -- Composer
 			__e('','');		// с выводом на экран 
 		если добавить esc_html строки будут очищатся
 			esc_html__('','')
-			esc_html__e('','');
+			esc_html_e('','');
 	указать WP место хранения папки с языковыми файлами
 		в function.php 
 			в хуке init() добовить load_theme_textdomain()
