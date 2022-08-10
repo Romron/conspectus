@@ -432,9 +432,12 @@
 
 ----------------------- Практика start ---------------------
 Обязательно при посадке шаблона
+	добавлять функции которые запускают хуки их используют плагины
+		wp_head()
+		wp_body_open()
+		wp_footer()
 	стили и разметка в теме
 	функционал в плагине
-
 	закоментированого када не должно быть
 	картинки должны загружаться через админку
 	пагинация
@@ -452,7 +455,6 @@
 			Redux Framework	https://youtu.be/44tFg9-UW9k
 Плагины обязательные для каждого сойта				https://youtu.be/aETsjfn2InU
 	iThemes Security 		
-
 Хранить на Github		https://qna.habr.com/q/461903
 	???  https://github.com/roots/bedrock
 	???  https://d2c.io/ru/article/how-to/ispolzovanie-git-pri-rabote-s-wordpress-i-perenos-proekta-v-d2c
