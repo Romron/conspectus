@@ -8,7 +8,6 @@
 
 
 ----------------------- ТЕОРИЯ start -----------------------
-
 Адресация
    Интервал адресов для локальных сетей
       10.х.х.х
@@ -17,10 +16,37 @@
    Интервал адресов для внутреннего использования
       127.0.0.х
 Маска сети
-   
 мак адрес нужен только для соединения машин внутри локальных сетей
 
-
+Виртуальные хосты       https://youtu.be/sMUGgozqrYo
+   C:\Windows\System32\drivers\etc\hosts 
+      127.0.0.1 имя сайта 
+   apache\conf\extra\httpd-vhosts.conf
+      <VirtualHost 127.0.0.1:80>
+         ServerName имя сайта
+         # ServerAlias альтернативные имена сайта через пробел
+         DocumentRoot "D:/web"   абсолютный путь к папке сайта
+         # ErrorLog "logs/dummy-host2.example.com-error.log"
+         # CustomLog "logs/dummy-host2.example.com-access.log" common
+      </VirtualHost>
+      ## Настройки папки виртуального хоста
+      # <Directory "имя сайта">
+      #         # AllowOverride none
+      #         AllowOverride All
+      #         # Require all denied
+      #         Require all granted 
+      # </Directory>
+   apache\conf\httpd.conf
+      <Directory />
+         ##запрещает доступ к виртуальным хостам
+         # Require all denied        
+         ##разрешает доступ к виртуальным хостам
+         Require all granted         
+      </Directory>
+   перезагрузить сервер
+   доменное имя в брацузере   -->   
+      обращение к DNS серверу(на локальной мошине это файл hosts) который возвращает IP  -->  
+      на сервер приходит запрос по IP а на сервере записано что это IP связан с конкретной папкой на локальной машине
 
 ----------------------- ТЕОРИЯ end ------------------------- 
 
