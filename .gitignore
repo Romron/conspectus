@@ -2,5 +2,8 @@
 *.psd
 # VS Cod
 .vscode
+# игнорирую файлы баз данных которые не относятся к сайтам в этом репозитории
+data_base_files/*
+!data_base_files/itds_agency_test/
 
 
