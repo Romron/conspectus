@@ -8,11 +8,11 @@
 
 
 	вёрстка макетов для тренировки
-		из PSD
+		++ из PSD
 			гово:
 				BeautifulTravelandHotel
 				Web-Development-Project
-		из FIGMA
+		++ из FIGMA
 			начал:
 				Sanchos-Family  https://www.figma.com/file/XWg1JWYyk211W9JX7TIXhb/Sanchos-Family?node-id=0%3A1
 
