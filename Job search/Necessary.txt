@@ -16,6 +16,12 @@ Programing
 				слоган
 				лого
 				разделы демонстрации использованных техенологий добавлять по мере выполнения заданий с бирж
+					демо контент для тестирования сайтов
+						https://wordpress.org/plugins/one-click-demo-import/
+						https://youtu.be/-8JnguLrSXc		просто для woocommerce
+						товары
+						фильмы
+						прочее
 					wordpress
 						макеты
 					laravel
