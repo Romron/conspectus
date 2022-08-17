@@ -424,9 +424,14 @@
 				echo $my_theme_name_options['fild_name'];  // в указонном поле может быть строка (echo ...) или масив (print_r();)
 			?>
 		
-
-
-	
+категории это вертикальное разделение 
+	есть неограниченное количество подкатегорий
+метки это горизонтальное разделение
+	не имеет ерархической структуры 
+	всего лиш обьединение по какомуто отдельному признаку
+постоянные ссылки
+	индексируются поисковиками
+служебные ф-ции WP	
 
 ----------------------- ТЕОРИЯ end ------------------------- 
 
@@ -455,8 +460,18 @@
 		API настроек (опций)			https://wp-kama.ru/id_3773/api-optsiy-nastroek.html
 		настроек много 
 			Redux Framework	https://youtu.be/44tFg9-UW9k
-Плагины обязательные для каждого сойта				https://youtu.be/aETsjfn2InU
-	iThemes Security 		
+Плагины обязательные для каждого сайта				https://youtu.be/aETsjfn2InU
+	Безопасность сайта
+	Антиспам
+	SEO
+		Yoast SEO
+	Транслетерация 
+	Оптимизация картинок
+	При разработке
+		Query Monitor 
+	iThemes Security(?)
+
+
 Хранить на Github		https://qna.habr.com/q/461903
 	???  https://github.com/roots/bedrock
 	???  https://d2c.io/ru/article/how-to/ispolzovanie-git-pri-rabote-s-wordpress-i-perenos-proekta-v-d2c
@@ -508,6 +523,7 @@ WordPress -- Git -- Composer
 Отслеживание ошибок
 	файл wp-config
 		define(WP_DEBUG,true);
+	или плагин Query Monitor
 всегда добавлять в шаблон технические ф-ции:
 	в файл header.php(!!!)
 		wp_header() 
@@ -583,8 +599,6 @@ WordPress -- Git -- Composer
 		типов записей и зарезервированных WordPress публичных и частных переменных.
 Виджеты для Elementor		https://youtu.be/D-JMm37C7jU
 
-
-11
 
 
 

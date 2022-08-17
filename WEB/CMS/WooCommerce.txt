@@ -1,5 +1,8 @@
 Источники:
    https://youtu.be/YkTvLVif3yI
+   https://youtu.be/pPbLkZ7As2c
+   https://www.businessbloomer.com/
+   https://www.businessbloomer.com/category/woocommerce-tips/visual-hook-series/
 
 Термины:
 
@@ -8,7 +11,53 @@
 
 
 ----------------------- ТЕОРИЯ start -----------------------  
+   Страницы WC 
+      https://youtu.be/IRxOu5XZh2s  плейлист очень подробно о страницах WC 
+      https://youtu.be/YkTvLVif3yI     2:36:45
+   Вносить изменения в файлы страниц WC      
+      хуки и фильтры более предпочтительный
+         манипуляции с хуками и фильтрами проводятся в отдельном файле каторый нужно подключить в function.php
+         хуки можно вешать и на хуки WP
+            пример setup_theme 
+         remove_action() удалить что либо вовремя указаного события
+         add_action()    добавить что либо вовремя указаного события
+         add_filter() изменить что либо вовремя указаного события
+            тот же хук но обязательно 
+               принемает параметры 
+               возвращает параметры
+      изменять файлы если нужного хука нет
+         найти нужный в папке плагина
+         перенести в папку своей темы в папку "woocommerce" не меняя название файла!!!
+         внести изменения
+         недостаток:
+            при обновлении WC будет требовать обновить файлы в темме
+   Логические ф-ции WC 
+      is_shop();
 
+
+   товары это записи произвольного типа
+   Постоянные ссылки на страницы woocommerce       https://youtu.be/mtLj3SZquRo
+      настраиваются в меню WP "постоянные ссылки"
+   Таксономии:
+      Категории
+      Метки
+      Атрибуты
+      Сгрупированный товар
+   Шорткоды
+      Системные
+         [woodcommerce_cart]
+         [woodcommerce_checkout]
+         [woodcommerce_my_account]
+         [woodcommerce_order_tracing]
+         [poroducts] -- poroducts shortcides
+      Визуальные
+      плагин woocommerce shortcode
+   Виджеты
+      фильтрация товаров
+      просмотренные
+      популярные
+      и д.р.
+   Визуализация хуков   https://www.businessbloomer.com/category/woocommerce-tips/visual-hook-series/
 ----------------------- ТЕОРИЯ end ------------------------- 
 
 
@@ -16,10 +65,10 @@
 Установка      https://youtu.be/YkTvLVif3yI     1:50:00(подробно) 3:16:27(быстро)
    стандартно из WP репозитория
 Настройки   https://youtu.be/YkTvLVif3yI     0:0:0 -> 1:50:00
+Работа с WC       https://youtu.be/562WDeXEd5s     плейлист очень подробно
 
 
-о стандартных страницах WooCommerce    https://youtu.be/YkTvLVif3yI     2:36:45
-Посадка шаблона       https://youtu.be/YkTvLVif3yI     2:47:00
+Посадка шаблона       https://youtu.be/YkTvLVif3yI     2:47:00;   https://youtu.be/H0WktqMIk1Y  плейлист очень подробно
 
 
 
