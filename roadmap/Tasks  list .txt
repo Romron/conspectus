@@ -2,20 +2,42 @@
 intern или trainee -- без опыта
 jnior  -- с опытом!! от 6 месяцев
 
+ROAD MAPS	
+	front end	http://bit.ly/junior-fe-roadmap
+	back end
+
 ----------  необходимо изучить -- освоить  intern --> jnior ----------
 
 	FronT end
-		html/css		
+		html/css		https://youtu.be/4YRG6cMAASI
+			конспект по теме рендер 3
+				этапы рендеринга	https://developer.mozilla.org/ru/docs/Web/Performance/Critical_rendering_path
+				Рендеринг WEB-страницы	https://habr.com/ru/post/224187/
 			адаптивная вёрстка
 			вёрстка по сеткам 
+			Препроцессоры
+				nesting (вложеннлость)
+				includes 
+				variables
 		JS
+			ES6+
+			block scope (области видимости)
+			var, let, const   в чём разница
+			this 
+			arrow functions
+			async code асинхронность 
+			promises
+			fetch API	отправка и получение данных с сервера
 			работа с DOM
-			асинхронность 
-			отправка и получение данных с сервера
+			events events loop 
 			фреймворки
-				react 
+				! react 
 				vue
 				state менеджер
+		Node.js
+		NPM 
+		webpack
+		Galp
 
 	BacK end 
 		PHP
@@ -33,11 +55,13 @@ jnior  -- с опытом!! от 6 месяцев
 			REST API
 			Soap
 			WebSocets
-		NPM 
 		Composer
-		Galp
 
 Общие знания на базовом уровне		https://youtu.be/VR9EPKz8aXk 		https://youtu.be/o-jURY9hUWY
+	!!! ОПП
+		prototype
+	GIT 
+	English
 	Алгоритмы		https://youtu.be/NErrGZ64OdE
 		поиск
 		соритировка
@@ -51,8 +75,6 @@ jnior  -- с опытом!! от 6 месяцев
 		хеш таблицы
 		списки деревья 
 		графы
-	ОПП
-	GIT 
 	Linux
 
 
