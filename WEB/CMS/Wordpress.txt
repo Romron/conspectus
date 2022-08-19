@@ -719,7 +719,7 @@ WordPress -- Git -- Composer
 					генератор болванок
 						underscores.me
 
-	+ ЦЫКЛ ВОРДПРЕСС - The Loop		https://wp-kama.ru/id_119/the-loop.html
+	+ ЦЫКЛ ВОРДПРЕСС - The Loop		https://wp-kama.ru/id_119/the-loop.html  ;  https://sebweo.com/ru/teoriya-wordpress-raznitsa-mezhdu-tsiklami-query_posts-get_posts-i-wp_query/
 		задача этого цыкла ---- перебор записей 
 		цель перебора -- вывод информации из записи на текущую страницу сайта
 			при этом:
