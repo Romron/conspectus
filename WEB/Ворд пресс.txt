@@ -581,7 +581,12 @@ WordPress -- Git -- Composer
 		отличное от уже имеющихся таксономий, 
 		типов записей и зарезервированных WordPress публичных и частных переменных.
 Виджеты для Elementor		https://youtu.be/D-JMm37C7jU
-
+Назначить странице щаблон		https://wp-kama.ru/id_5177/3-sposoba-sozdat-shablon-stranitsyi.html
+	<?php
+		/*
+		Template Name: category 
+		*/
+	?>
 
 
 
