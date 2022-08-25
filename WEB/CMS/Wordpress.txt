@@ -123,12 +123,13 @@
 			woocommerce/includes -- ф-ционал связанный с WC 
 			woocommerce/includes/wc-functions.php
 
+Опции WordPress (полный список)		https://wp-kama.ru/id_11084/options-list.html
 подключение файлов в functions.php
 	require get_template_directory() . '/inc/metabox.php';
 страницы и посты а также любые другие типы записей 
 	это всего лиш записи в таблице posts базы данных
 	тело поста формировать в отдельном файле с префиксом single-.....php
-цикл WP --> глобальный запрос
+цикл WP --> глобальный запрос		https://wp-kama.ru/id_767/3-sposoba-postroeniya-tsiklov-v-wordpress.html	https://wp-kama.ru/function/wp_query#categories		
 	по умолчанию формирует глобальный запрос в базу данных 
 		инфармацию выдаёт каждому типу страниц разную на основании зароса от get_header();
 			для главной страницы это все посты
@@ -513,7 +514,6 @@
 	При разработке
 		Query Monitor 
 	iThemes Security(?)
-
 Для безопасности 
 	в начале файла functions.php				https://digitrain.ru/questions/54727760/
 		if (!defined(name:'ABSPATH')){
