@@ -16,7 +16,6 @@
          выводит описание команды
       git add --all
          добавить все файлы в индекс
-   
       git ls-tree -r repo_name --name-only
          покажет все отслеживаемые файлы 
       git ls-files --others --exclude-standard
