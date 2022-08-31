@@ -447,7 +447,7 @@
 	из файла example.php
 		скопировать в function
 			хук подключения регистрации настроек
-				add_action('tgmpa_register', 'ITDS_Agency_test_register_required_plugins');
+				add_action('ITDS_Agency_test_2_register', 'ITDS_Agency_test_register_required_plugins');
 			тело функции
 				function my_theme_register_required_plugins()
 				{
@@ -461,7 +461,7 @@
 						// have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
 						// 'wordpress-seo-premium'.
 						// By setting 'is_callable' to either a function from that plugin or a class method
-						// `array( 'class', 'method' )` similar to how you hook in to actions and filters, TGMPA can still
+						// `array( 'class', 'method' )` similar to how you hook in to actions and filters, ITDS_Agency_test_2 can still
 						// recognize the plugin as being installed.
 						array(
 							'name'        => 'WordPress SEO by Yoast',	// название плагина
