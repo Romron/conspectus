@@ -1,0 +1,173 @@
+Источники:
+   https://youtu.be/MRlBKfGktwI
+
+Термины:
+
+Смежные области:
+
+
+
+----------------------- ТЕОРИЯ start -----------------------  
+   В webpack нет задач есть описание описание сборки проэкта 
+      т.е. то как одни файлы проэкта из папки src в папку dist
+      это значит что по умолчанию точка входа: /src/index.js
+   package.json   содержит описание и настройки проэкта
+      нужен для того что бы быстро и без проблем подымать среду разработки
+         при этом пакеты указанные в разделах "devDependencies", "optionalDependencies", "dependencies" будут установленны автоматически
+      разделы 
+         "sсripts"
+            скрипты которые могут быть запущены из консоли командой:
+               run script_name
+                  "test":"echo \" test \" && exit 1"
+                  "dev":"webpack-dev-server --mode development --open"
+                  "build":"webpack --mode production"
+         "dependencies"
+            раздел в который записываются имя и версия пакетов которые необходимы для конечного пользователя 
+         "devDependencies"
+            раздел в который записываются имя и версия пакетов которые необходимы в процессе разработки 
+         "optionalDependencies"
+            эти пакеты могут быть использованы в работе, но если они будут недоступны или произойдет ошибка при их установке, 
+            то npm просто пропустит их и продолжит работу.
+         "bundleDependencies"
+
+
+----------------------- ТЕОРИЯ end ------------------------- 
+
+
+----------------------- Практика start ---------------------
+   Установка
+      Предвонительно установить 
+         node.js
+      В командной строке
+         перейти в папку проэкта
+         npm init
+            согласится совсем
+            будет создан package.json
+               в котором будут описание и настройки проэкта
+            npm install webpack --save-dev
+            флаги install
+               в зависимости от флага при установке пакета, его имя и версия пропишутся в файле package.json
+               --save
+                  в раздел "dependencies"
+               --save-prod:
+                  тоже в раздел  "dependencies"
+               --save-dev
+                  в раздел "devDependencies"
+               --save-optional
+                  в раздел "optionalDependencies"
+               --save-bundle
+                  сохранит пакет в "bundleDependencies"
+               --save-exact
+                  сохранит версию пакета точно, как указано
+               --no-save
+                  запрещает сохранять пакет в package.json
+   webpack.config.js
+      let path = require('path')
+      let conf = {
+         entry: './src/index.js',
+         output: {
+            path: path.resolve(__dirname, './dist'),
+            filename: 'maine.js',
+            publicPath: 'dist/',
+         }
+         devServer: {
+            overlay: true     // отображение ошибок
+         }
+         module:{
+            rules:[        // описание правил с каким расширением файлов что делать использует регулярные выражения
+               {
+                  test: /\.js$/,
+                  loader: 'babel-loader',
+               },
+               {
+                  test: /\.css$/,
+                  use: [
+                     'style-loader'
+                     'css-loader'
+                     ],
+               },
+            ]
+         }
+         plugins:[
+            ExtractTextPlugin -- для нормального подключения css файлов 
+         ]
+         devtool:'eval-sourcemap'      // строит  карту кода в браузере необходимо при поиске строки с ошибкой
+      };
+      module.exports = (env,options) => {
+         let production = options.mode === 'production';
+         conf.devtool = production
+            ? 'source-map'    // оптимальная карта кода для продакшина или 
+            // ? false        // отмена карты кода в продакшине
+            : 'eval-sourcemap';     // быстрая карта кода для разработки 
+         return conf; 
+      }
+
+   Необходимые модули
+      webpack-cli
+         для запуска webpack из консоли
+         npm install webpack-cli --save-dev
+      webpack-dev-server
+         npm install webpack-dev-server --save-dev
+         прослушивает файлы и обновляет страницу
+         аналог live Server
+      path 
+         npm install path --save-dev 
+      babel 
+         npm install babel-core babel-loader babel-present-env babel-preset-stage-3 --save-dev
+         обеспечивает преобразование js кода в старые стандарты для совместимости со всеми браузерами
+         файл настроек
+            .babelrc 
+               {
+                  presets:[
+                     "env"
+                     "stage-3"
+                  ]
+               }
+      style-loader css-loader
+         npm install style-loader css-loader --save-dev
+         при этом css подключается через import в исполняемый файл js(!) как свой модуль
+   Подключение модулей в исполняемый файл
+      стандартный модуль
+         import name_module_for_my_program from 'name_module'
+      свой модуль
+         import name_module_for_my_program from './name_module' // т.е. локальный путь
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------- Практика end -----------------------
+
+
+
+----------------------- Проблемы -- решения start ---------
+
+----------------------- Проблемы -- решения end -----------
+
+
+
+
+
+
+
+
+----------------------- ЧЕРНОВИК -----------------------
+
+
+
+
+
+
+
+
