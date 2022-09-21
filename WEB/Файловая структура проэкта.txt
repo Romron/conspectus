@@ -1,0 +1,87 @@
+
+Минимальная
+   node_modules   // возникает при установке webpack
+   src
+      fonts
+      img
+      index.css
+      index.html
+      index.php
+      index.js
+   package-lock.json      // возникает при установке webpack
+   package.json      // возникает при npm init
+   webpack.config.js
+
+
+
+
+
+dist/ - папка с готовой работой
+
+assets/
+  /css
+  /fonts
+  /img
+    /icons
+    /svg
+    /del
+  /js
+    /libs
+    /components
+    script.js
+  /scss
+    /base
+      fonts.scss
+      base.scss
+      header.scss
+      footer.scss
+    /common
+      animation.scss
+      buttons.scss
+      elements.scss
+      grids.scss
+      typography.scss
+    /components
+    /libs
+    /mixins
+    /pages
+    /vars
+      breakpoints.scss
+      colors.scss
+      fonts.scss
+      transitions.scss
+    style.scss
+  index.html
+
+
+------------------------------------------------
+
+dist/ - папка с готовой работой
+
+src/
+  components/
+    global.sass
+    service/ - служебные стили
+       fonts/ - папка со шрифтами
+       fonts.sass
+       variables.sass
+       mixins.sass
+       functions.sass
+    sections/  - папка которая содержит в себе большие секции типа footer/header
+       footer/
+         footer.sass
+         footer.pug
+         footer.js
+    block/ - небольшие блоки - панели навигации, формы
+    items/ - кнопочки, прочая мелкая ересь, 
+  pages/
+    base/
+      base.pug - шаблон для страниц
+      includes.pug - подключаю сюда все sections
+    index.pug
+    page2.pug
+index.js - Точка входа в webpack подключаю сюда все js и sass из папки components вот такой вот функцией
+
+function requireAll(requireContext) {
+    return requireContext.keys().map(requireContext);
+}
