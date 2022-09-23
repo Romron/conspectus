@@ -3,14 +3,23 @@
    node_modules   // возникает при установке webpack
    src
       fonts
+        fonts.css   // только для подключения шрифтов сам файл подключается в index.css
       img
-      index.css
+      style
+        index.css   // или index.scss  внести соответствующие изменения в файле index.js
+      libs
+        normalize.css
       index.html
-      index.php
-      index.js
+      index.php   // для того что бы файлы php обрабатывались добавить php в регулярку правила         
+                  //   {
+                  //        test: /\.(php|html)$/i,
+                  //        loader: "html-loader",
+                  //    },
+      index.js    // в нём подключаются все другие файлы
    package-lock.json      // возникает при установке webpack
    package.json      // возникает при npm init
    webpack.config.js
+   composer.json      // для создания:   composer init 
 
 
 
