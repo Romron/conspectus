@@ -637,7 +637,8 @@
       перейти в нужную папку
       выполнить команду 
          laravel new projectname
-         composer create-project --prefer-dist laravel/laravel laravelblog   // эта команда не проверялась
+         composer create-project --prefer-dist laravel/laravel laravelblog   // ++
+         composer create-project laravel/laravel projectname      // эта команда не проверялась
       настроить базу донных подробнее см. ниже
          SQLite предустановлена в Laravel
          любые другие:
