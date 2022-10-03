@@ -1,5 +1,7 @@
 Источники:
    https://habr.com/ru/company/timeweb/blog/541452/
+   gulp
+      https://lucasbatiiista.medium.com/configuring-gulp-browsersync-php-inside-server-3ee882c6a798
 
 Термины:
 
@@ -35,7 +37,18 @@
             npm install -g npm@номер_версии 
 
 ----------------------- Практика end -----------------------
-
+   для PHP
+      использовать proxy т.е. переадресовать запрос через другой сервер
+      gulp 
+         browserSync
+            browserSync.init({
+               proxy: "http://web/twily/gulp/"     
+            });
+         gulp-livereload       https://gist.github.com/vectorcode/62c299fe78d87451bf83
+         https://lucasbatiiista.medium.com/configuring-gulp-browsersync-php-inside-server-3ee882c6a798
+   Полезные команды
+      npm ls -g --depth=0
+         пакажет все модули установленные глобально
 
 
 ----------------------- Проблемы -- решения start ---------
