@@ -52,6 +52,21 @@
 
 
 ----------------------- Практика start ---------------------
+Рабочий код из файла httpd-vhosts.conf приэтом в httpd.conf нет ничего об этом хосте
+   <VirtualHost 127.0.0.1:80>
+      DocumentRoot "F:/web"
+      ServerName web
+
+      <Directory "F:/web">
+         Options Indexes FollowSymLinks Includes ExecCGI
+         AllowOverride All
+         Require all granted
+      </Directory>
+   </VirtualHost>
+
+
+
+
 
 ----------------------- Практика end -----------------------
 
