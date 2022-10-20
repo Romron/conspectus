@@ -146,9 +146,70 @@
             const newAddress = {...address, street: 'Gogoly', code: 123}
             console.log(newAddress)
             // console.log(address.concat())
-
-
-
+      модули   файлы -> отдельные модули !!!
+         для того что бы переменные (функции и т.д) были видимы в других файлах
+            export let b = 1;
+            import { b, funck } from 'путь к модулю'; 
+            import * as my_import from 'путь к модулю';
+         экспорт по дефолту
+            export default {
+               function func(){}
+            }
+            import my_def_import, { b, funck } from 'путь к модулю';    // не привязано к имени области  export default (!!??)
+               my_def_import.func();
+      классы      устроены на основании прототипов  __proto__ 
+         создать класс
+            class MyClass {
+                  construktor(param_1){
+                  this.param_1 = param_1;
+               }
+               field_1 = 'значение поля 1';
+               metod_1(){
+               }
+            }
+            const instance = new MyClass(param_1);
+            instance.metod_1();
+            console.log(instance.field_1);
+         наследоваие
+            class MySecondClass extends {
+                  construktor(param_1, param_2){
+                     super(param_1)    // передать параметр в клас родитель
+                     this.param_2 = param_2;    
+                  }
+               field_1 = 'значение поля 1';  // переопределить поле класса родителя
+               metod_1(){        // переопределить метод класса родителя
+                  super.metod_1();     // обращение к методу родителя
+                  .... code .....
+               }
+            }  
+         статические методы и поля        ???????????????
+            statick metod_3(){}
+         динамические ключи
+            class MyClass {
+                  construktor(param_1){
+                  this.param_1 = param_1;
+               }
+               [dinam_key] : 'что то';
+               field_1 = 'значение поля 1';
+               metod_1(){
+               }
+            }            
+         гетеры и сетеры 
+      символы
+         тип данных который появился в ES6 
+         задаёт уникальные ключи (значения)
+      генерация ошибок
+         throw new Error('текст ошибки');
+         try{
+            .... что то ....
+         }catch(e){
+            console.log(e);
+         }
+      генераторы и итераторы
+      цыкл for (  of)  - перебирает элементы сущности
+      промисы и массивы промисов
+      async await
+      set и map
 ----------------------- ТЕОРИЯ end ------------------------- 
 
 
