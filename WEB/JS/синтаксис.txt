@@ -225,6 +225,39 @@
       set и map
       reflect 
       proxy
+      import -- export
+         вариант 1 в index.html
+            перечислить в строгом порядке все файлы из которых прописывается импорт
+               <script src="../build/js/script_1.js"></script>
+               <script src="../build/js/script_2.js"></script>
+               <script src="../build/js/main.js"></script>
+            import - export не нужен
+         вариант 2 import - export
+            принято, не обязательно(!!) import в начале файла
+            для нативного js расширение необходимо(!) при зборке webpack расширение можно опустить
+            index.html подключать только файл в котором прописан импорт обязательно указать type="module"
+               <script type="module" src="../build/js/main.js"></script>      
+            export default -- экспорт по умолчанию
+               эксрортировать по умолчанию можно только один блок из обного файла
+                  import псевдоним(!!)_того_что_импортируется from 'путь_откуда_импорт.js' 
+            import - export
+               каждая ф-ция или класс в файле экспортируется отдельно
+                  import {имя(!)_того_что_импортируется_1, имя(!)_того_что_импортируется_2} from 'путь_откуда_импорт.js'
+               методы и поля класса могут эксрортироваться отдельно от класса
+                  let myClass = {
+                     fild_1 : "",
+                     fild_2 : 23,
+                     method_1 : function(){
+                        ....  .... ....
+                     },
+                     method_2 : function(){
+                           ....  .... ....
+                        },
+                  }
+                  export const alias_fild_1 = myClass.fild_1;
+                  export const alias_method_2 = myClass.method_2;
+
+
 ----------------------- ТЕОРИЯ end ------------------------- 
 
 
