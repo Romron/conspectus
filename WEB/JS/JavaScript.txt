@@ -112,7 +112,7 @@
 				arr.forEach(function callback(currentValue, index, array) {
 					//your iterator
 				}[, thisArg]);
-			Array.prototype.map()	передаёт в colback функцию каждый элемент массива создаёт 
+			Array.prototype.map()	передаёт в colback функцию каждый элемент массива 
 				возвращает новый массив с результатом вызова указанной функции для каждого элемента массива
 			Array.prototype.filter()	создаёт новый массив со всеми элементами, прошедшими проверку, задаваемую в передаваемой функции
 				т.е. colback функция должна(!!) вернуть folse или true 
