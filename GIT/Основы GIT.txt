@@ -112,7 +112,6 @@
 
 ----------- Практика end  ----------
 
-git push https://roman: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@github.com/Romron/full-sta-k.git
 
 ----------- Проблемы  ----------
 
