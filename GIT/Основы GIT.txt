@@ -131,3 +131,7 @@
 решение:
    Worked for me, into terminal enter: (branch accordingly to your desires lul)
       echo ref: refs/heads/master >.git/HEAD
+
+
+
+      
