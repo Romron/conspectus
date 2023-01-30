@@ -25,8 +25,10 @@
          wp_body_open();   // сразу после открывающего тега body 
       в тег <article>
          <article <?php post_class();  ?>></article>
-
       предоставить возможность пользователю темы оставлять коментарии везде(?)
+      в конце страниц выводящих контент или комментарии нужны ф-ции 
+         previous_post_link() и next_post_link() the_comments_navigation() для того что бы WP мог делить контент на страницы
+
 
    Часть имени файла после дефиса называется спецификацией 
       нужна для уточнения предназначения файла
@@ -111,12 +113,12 @@
                подключается 
                   get_template_part('partials/contetnt',get_post_type());  // get_post_type() - возвращает тип поста для указания спецификации
       Страница таксономий  
-         
          иерархия
             taxomony-taxonomy_name-term_name.php   // term_name это название конкретного элемента в таксономии
                taxomony-taxonomy_name.php
                   taxomony.php
                      archive.php (есле нет предидущих)
+      
    Шаблоны для страниц (Custom Page Templates - шаблон для конкретной страницы)
       Главная страница
          архивная страница постов 
@@ -143,8 +145,51 @@
             page builders
    Циклы WP 
       записи любых типов достаются из базы данных по средствам цыклов
-      в зависимости от открытой итраницы WP, в ф-ции get_header(), отправляет запрос в БД
+      Cтандартный цыкл WP 
+         на каждом типе страниц свой запрос который генерируется в ф-ции wp_head();
+            полученный массив данных нужно перебрать в цикле
+      Кастомный цыкл WP 
+         запрос генерируется в класе 
+            $args = [
+               'post_type'=>'my_type',
+               'posts_per_page'=>2,    // кол-во записей на странице
+            ]
+            $my_query = WP_Query($args);
          полученный массив данных нужно перебрать в цикле
+            но have_posts() и the_post() теперь методы от экземпляра класса
+                $my_query -> have_posts() $my_query -> the_post() 
+   Пагинация
+         На архивных страницах
+            передать в запрос номер текущей страницы
+               $paged = (get_query_var('paged')) ? (get_query_var('paged')) : 1;
+               $args = [
+                  'post_type'=>'my_type',
+                  'posts_per_page'=>2,    // кол-во записей на странице
+                  'paged'=> $paged;
+               ]
+               $my_query = WP_Query($args);
+               .... вёрстка ....
+               <?php    // этот кусок кода лучше вынести в отдельную ф-цию в function.php
+                  $big = 999999999; // need an unlikely integer
+                  echo paginate_links( array(
+                     'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                     'format' => '?paged=%#%',
+                     'current' => max( 1, get_query_var('paged') ),
+                     'total' => $my_query->max_num_pages
+                  ) );
+               ?> 
+         На статических страницах всё так же но 'paged'=> $paged; нужно заменить на  'page'=> $paged;
+            тогда в функции пагинации нужно добавить проверку типа страниц
+                $paged = '';  // инициализация пустой переменной -- требование WP (!!!)
+               if(is_singular()){
+                  $paged = get_query_var('page');
+               }else{
+                  $paged = get_query_var('paged');
+               }
+
+      ссылки на страницы пагинации
+         внутри цикла перебора постов(!), до else
+            posts_nav_link();
    Регестрация типов постов
       хук init функцией register_post_type();
       для простых тем регестрировать типы постов можно в function.php 
@@ -163,12 +208,34 @@
       категории
          когда нужно по этому критерию в последствии делать сортировки поиски и т.п.
       метки       
+      ф-ции для таксономий
+         is_tax('tax_name','term_name');
+         taxomony_exists();   // перед созданием таксономий проверить не занято ли имя
+   Sidebar
+      это контейнер для виджитов
+      регестрация в function.php
+         register_sidebar(arrey());
+      вывод в вёрстку на любой странице
+         get_sidebar('ny_name');    // без имени подтянет  sidebar.php
+      файл шаблона 
+         sidebar-any_name.php
+            sidebar.php (есле нет предидущих)
+      вёрстка самого Sidebar
+         в файле шаблона
+               if(!is_active_sidebar('id_указанный_при_регестрации')){  // проверка на наличие виджита в сайдбаре
+                  return;
+               }
+               echo '<aside id="" class="">';
+               dynamic_sidebar('id_указанный_при_регестрации');
+               echo '</aside>';
+   Виджиты
+      создать класс который будет расширять WP_Widget   
 
-
-
-   Функции которые работают с заголовками работают и вне цыкла в том числе
-      the_archive_title();
-      the_archive_description();
+   Функции
+      работают и вне цыкла в том числе
+         the_archive_title();
+         the_archive_description();
+      is_singular('name_post_type');
 
 ----------------------- Практика end -----------------------
 
