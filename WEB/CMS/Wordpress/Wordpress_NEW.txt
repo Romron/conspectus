@@ -229,9 +229,42 @@
          get_post_thumbneil_id();   // выводит картинку в вёрстку
          get_the_post_thumbneil();  // возвращает изображение поста в виде HTML-тега <img> и его атрибутами причём в любом нужном размере 
          set_post_thumbneil_size(); // создаст тумбу указанного размера 
+   Произвольные поля. Мета-боксы 
+      Хуком приоритет для фриланса  
+         хук   'add_meta_boxes'
+         функция  add_meta_box();
+         этапы
+            зарегестрировать в админ панели WP 
+            создать вёрстку в админ панели WP 
+            связать вёрстку с БД    хук 'save_post'
+               чтение  
+               запись - обновление
+                  update_post_meta();  // обязательные проверки !!!!
+               Удаление
+                  delete_post_meta();
+               пример
+                  if($_POST['my_post_meta']){
+                      update_post_meta($post_id, 'my_post_meta',sanitize_text_field($_POST['my_post_meta']));
+                  }else{
+                     delete_post_meta($post_id, 'my_post_meta');
+                  }
+         !! основные необходимые проверки и защиты
+            wp_nonce_field();
+
+            if( !isset( $_POST[ 'true_nonce' ] ) && wp_verify_nonce( $_POST[ 'true_nonce' ], 'save-post-' . $_POST[ 'post_id' ] ) {          ????????????
+               // проверка прошла успешно, делаем дела
+            }
+
+            if(defined('DOING_AUTOSAVE') && DOING_AUTOSAVE){
+               return post_id;
+            }
+            if($post->post_type != 'my_post_type'){
+               return post_id;
+            }
 
 
-
+      Классом приоритет для фриланса
+      Плагином приоритет для коммерческих тем
 
    Таксономии
       !!!   если при регестрации типов постов включен редактор гутенберг его нужно включить и для таксономий иноче таксономии небудут подтягиватся к посту
