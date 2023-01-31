@@ -362,8 +362,8 @@
             my_theme_name-file_ajax_name,
             my_theme_name-file_ajax_name-script,   // имя объекта в js который будет содержать переменные указанные в массиве
             arrey(
-               'ajaxurl' => admin_url('admin-ajax.php'),
-               'nonce' => wp_create_nonce('ajax-nonce'),    
+               'ajaxurl' => admin_url('admin-ajax.php'), // именно в таком виде!!   
+               'nonce' => wp_create_nonce('ajax-nonce'),    // обязательно
                ...... и другие переменные .....
             )
             );
@@ -375,7 +375,7 @@
                $.ajax({
                   url: my_theme_name-file_ajax_name-script.ajaxurl,
                   data:{
-                     'action':'название функции обработчика на back end',  // в function.php
+                     'action':'my_theme_name-my_func_on_back_end',  // в function.php
                      'nonce': my_theme_name-file_ajax_name-script.nonce,
                       ...... и другие переменные .....
                   }
@@ -388,7 +388,26 @@
                })
             })
          })
+      function.php
+         function my_theme_name-my_func_on_back_end(){
 
+            if(!wp_verify_nonce($_REQUEST['nonce'], 'ajax-nonce')){
+               die;
+            }
+
+            какие либо действия в том числе и цикл WP (!)
+
+            $arr_params=[
+
+            ]
+            $my_query = new WP_Query($arr_params)
+
+
+
+            die;     // на ajax всегда только die (?)
+         }
+         add_action('wp_ajax_my_theme_name-my_func_on_back_end',my_theme_name-my_func_on_back_end);   // ajax для авторизированных пользователей
+         add_action('wp_ajax_nopriv_my_theme_name-my_func_on_back_end',my_theme_name-my_func_on_back_end);   // ajax для не авторизированных пользователей
 
    Функции
       работают и вне цыкла в том числе
