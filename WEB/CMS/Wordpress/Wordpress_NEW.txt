@@ -118,7 +118,6 @@
                taxomony-taxonomy_name.php
                   taxomony.php
                      archive.php (есле нет предидущих)
-      
    Шаблоны для страниц (Custom Page Templates - шаблон для конкретной страницы)
       Главная страница
          архивная страница постов 
@@ -229,45 +228,50 @@
          get_post_thumbneil_id();   // выводит картинку в вёрстку
          get_the_post_thumbneil();  // возвращает изображение поста в виде HTML-тега <img> и его атрибутами причём в любом нужном размере 
          set_post_thumbneil_size(); // создаст тумбу указанного размера 
-   Произвольные поля. Мета-боксы 
-      Хуком (приоритет для фриланса)  
-         хук   'add_meta_boxes'
-         функция  add_meta_box();
-         этапы
-            зарегестрировать в админ панели WP 
-            создать вёрстку в админ панели WP 
-            связать вёрстку с БД    хук 'save_post'
-               чтение  
-               запись - обновление
-                  update_post_meta();  // обязательные проверки !!!!
-               Удаление
-                  delete_post_meta();
-               пример
-                  if($_POST['my_post_meta']){
-                      update_post_meta($post_id, 'my_post_meta',sanitize_text_field($_POST['my_post_meta']));
-                  }else{
-                     delete_post_meta($post_id, 'my_post_meta');
-                  }
-         !! основные необходимые проверки и защиты
-            wp_nonce_field();
+   Произвольные поля. Мета-боксы
+      локальные данные привязанные к отдельному посту
+      метобоксы которые завязаны на контенте должны быть в плагине
+      Создание в админке WP 
+         Хуком (приоритет для фриланса)  
+            хук   'add_meta_boxes'
+            функция  add_meta_box();
+            этапы
+               зарегестрировать в админ панели WP 
+               создать вёрстку в админ панели WP 
+               связать вёрстку с БД    хук 'save_post'
+                  чтение  
+                  запись - обновление
+                     update_post_meta();  // обязательные проверки !!!!
+                  Удаление
+                     delete_post_meta();
+                  пример
+                     if($_POST['my_post_meta']){
+                        update_post_meta($post_id, 'my_post_meta',sanitize_text_field($_POST['my_post_meta']));
+                     }else{
+                        delete_post_meta($post_id, 'my_post_meta');
+                     }
+            !! основные необходимые проверки и защиты
+               wp_nonce_field();
 
-            if( !isset( $_POST[ 'true_nonce' ] ) && !wp_verify_nonce( $_POST[ 'true_nonce' ], 'save-post-' . $_POST[ 'post_id' ] ) {   // в работоспособности не уверен
-               return post_id;
-            }
-            if(defined('DOING_AUTOSAVE') && DOING_AUTOSAVE){
-               return post_id;
-            }
-            if($post->post_type != 'my_post_type'){
-               return post_id;
-            }
-            $post_type = get_post_type_object($post->post_type);
-            if(!current_user_can($post_type->cap->edit_post, $post_id)){
-               return post_id;
-            }
-
-      Классом (приоритет для фриланса)
-      Плагином (приоритет для коммерческих тем)
-
+               if( !isset( $_POST[ 'true_nonce' ] ) && !wp_verify_nonce( $_POST[ 'true_nonce' ], 'save-post-' . $_POST[ 'post_id' ] ) {   // в работоспособности не уверен
+                  return post_id;
+               }
+               if(defined('DOING_AUTOSAVE') && DOING_AUTOSAVE){
+                  return post_id;
+               }
+               if($post->post_type != 'my_post_type'){
+                  return post_id;
+               }
+               $post_type = get_post_type_object($post->post_type);
+               if(!current_user_can($post_type->cap->edit_post, $post_id)){
+                  return post_id;
+               }
+         Классом (приоритет для фриланса)
+         Плагином (приоритет для коммерческих тем)
+            advanced custom fields    
+               документация:     https://www.advancedcustomfields.com/resources/register-fields-via-php/ 
+      Вывод в вёрстку
+         echo get_post_meta(get_the_ID(), 'key_fild', true);      // третий параметр - возвращать строку или массив
    Таксономии
       !!!   если при регестрации типов постов включен редактор гутенберг его нужно включить и для таксономий иноче таксономии небудут подтягиватся к посту
       категории
@@ -310,6 +314,81 @@
                   Version: 1.0
                */
          function.php
+   Подключение необходимых плагинов к теме
+      TGM Plugin Activation
+         нужно переносить в том числе и папку языков
+   Options Настройки
+      глобальные настройки привязаные ко всему сайту
+      метобоксы которые завязаны на стилях должны быть в теме
+      Создание в админке WP 
+         Хуком 
+         Плагином
+            Redux
+               файл настроек redux-options.php  содержимое взять из файла redux-framework/sample/sample-config.php
+            Получение данных из полей в вёрстку
+               все значения полей в глобальном масиве имя которого задаётся в начале файла настроек redux-options.php   $my_arr_options 
+                  global $my_arr_options;
+                  echo $my_arr_options['my_field_mane'];
+   Core плагин для темы
+      размещение 
+         в корне темы папка plugins в которой 
+            папка плагина с названием my_theme_name-core
+      структура 
+         index.php
+         my_theme_name-core.php
+            /*
+               Plagin name: my_theme_name core
+               version: 1.0
+               Text Domain: my_theme_name-core
+            */
+      защиты и проверки
+         обращение к плагину от WP 
+            if(!function_exist('add_action')){
+               exit;
+            }
+      нюансы 
+         get_template_directory() в плагинах не работает
+            в место неё     plugin_dir_path(__FILE__);
+      использование
+         добавить в ZIP архив
+         установить и актевировать через админку WP
+   Передать переменные в js скрипты
+      wp_localize_script();
+   Ajax  лучше делать на jQuery
+      подключить файл скрипта с ajax 
+         wp_enqueue_script();
+      передача переменных в файл ajax 
+         wp_localize_script(
+            my_theme_name-file_ajax_name,
+            my_theme_name-file_ajax_name-script,   // имя объекта в js который будет содержать переменные указанные в массиве
+            arrey(
+               'ajaxurl' => admin_url('admin-ajax.php'),
+               'nonce' => wp_create_nonce('ajax-nonce'),    
+               ...... и другие переменные .....
+            )
+            );
+      ajax.js
+         jQuery(document).ready(function($){
+            $('#my_button').on('click',function(e){
+               e.prevendDefault;
+
+               $.ajax({
+                  url: my_theme_name-file_ajax_name-script.ajaxurl,
+                  data:{
+                     'action':'название функции обработчика на back end',  // в function.php
+                     'nonce': my_theme_name-file_ajax_name-script.nonce,
+                      ...... и другие переменные .....
+                  }
+                  success: function(data){
+                     ..... действия с полученными данными
+                  },
+                  error: function(errorThrown){
+                     ..... действия при ошибке
+                  }
+               })
+            })
+         })
+
 
    Функции
       работают и вне цыкла в том числе
