@@ -29,7 +29,6 @@
       в конце страниц выводящих контент или комментарии нужны ф-ции 
          previous_post_link() и next_post_link() the_comments_navigation() для того что бы WP мог делить контент на страницы
 
-
    Часть имени файла после дефиса называется спецификацией 
       нужна для уточнения предназначения файла
          content.php
@@ -93,6 +92,28 @@
          printf(esc_html_e('что то %1$s ещё что то %2$s','слаг_текст_домен'),$var_1,$var_2)
       множественное число 
          _n();
+   Хуки    
+      хуки действия  action 
+      хуки фильтры   filter 
+      стандартные       https://developer.wordpress.org/reference/hooks/
+      кастомные
+         хуки
+            создать в любом месте сайта
+               do_action('my_name_hook',$var_1,$var_2)
+            обратится в любом месте сайта
+               add_action('my_name_hook', function($var_1,$var_2 ), приоритет, кол-во_переменных_в_ф-ции)
+         фильтры
+            создать возможность применять фильтер
+               $my_var = apply_filters('my_filter_name', $my_var );
+            применить фильтр
+               function my_func_for_filter($my_var){
+                  .... какие либо действия ....
+                  return $my_var;
+               }
+               add_filter('my_filter_name', my_func_for_filter);
+      удалить фильтр или хук
+         remove_filter('my_filter_name', my_func_for_filter);
+         remove_action('my_name_hook', my_func_for_hook);
    Стандартные виды страниц WP 
       Архивная
          это страница на которой выводятся все записи данного типа в хронологическом порядке
