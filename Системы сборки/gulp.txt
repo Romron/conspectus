@@ -27,11 +27,25 @@
       npm init 
          ускоренная установка дабавить -y ответить на все вопросы да
       npm i gulp -D
+Модули 
+   необходимые 
+      nod del  i -D 
+   нужные для разроботки
+      nod gulp-concat  i -D     // соединяет указанные css файлы в алфовитном порядке(!) в один по этому нужно передавать масив соединяемых файлов в определённом порядке
+      nod gulp-autoprefixer i -D
+         настойка    см docs
+            задать процент использования браузера    "browsersList":">0,5";
+               либо в обдельном файле
+               либо в package.json в ключе browsersList 
+      nod gulp-cleanCSS i -D     // минимизирует и оптимизирует CSS код
+         настройка 
+            задаётся уравень оптимизации  рекомендуется думул 1
+      npm gulp-sourcemaps i -D      // генерирует карту по которой соотносятся исходные и минимизированные файлы
+   необходимые для продакшина
 
 Запуск обработки проэкта
    gulp           // запустит task с именем default  
    gulp task_nema 
-     
 
 Стандартная структура проэкта
    build
@@ -42,22 +56,38 @@
       scripts
       index.html
    gulpfile.js
-Конфигурация gulp    в файле gulpfile.js
+Базовыя конфигурация gulp для вёрстки   в файле gulpfile.js
    const gulp = require('gulp');
+   const del = require('del');
+   const concat = require('gulp-concat');
+   const autoprefixer = require('gulp-autoprefixer');
+   const cleanCSS = require('gulp-clean-CSS');
+   const sourcemaps = require('gulp-sourcemaps');
+
+   function clean(){
+      return del('./build/*');
+   }
 
    function name_func(){
       return gulp.src('path_to_file(s)')     // т.к. методы галпа возвращают промисы return обязательно
+         .pipe(sourcemaps.init())      // // обязательно до всех преобразований
+         .pipe(concat('arr_concat_files, main.css'))
+         .pipe(autoprefixer())
+         .pipe(cleanCSS({
+            leve:1
+         }))
          
-         .pipe(любые_другие_действия_над_потоком_данных)
-         
+         .pipe(sourcemaps.write(map_file))     // обязательно после всех преобразований  map_file - фаил с картой указывать необязательно
          .pipe(gulp.best('./build'))
    }
 
-   let build = gulp.parallel(task_nema_1, task_nema_2, task_nema_3, task_nema_4);
+   let assemble = gulp.parallel(task_nema_1, task_nema_2, task_nema_3, task_nema_4);      // собрать проэкт задействуя все манипуляции с файлами
+   let build = gulp.series(clean,assemble);     // удалить файлы прошлой сборки выполнить новую сборку
 
 
-   
+
    gulp.task('build', build);
+   gulp.task('assemble', assemble);
 
 Команды, методы, gulp 
    gulp.src('path_to_file(s)')      // формирует поток данных. Попрасту перемещает файлы из указанного места   возвращает промис
