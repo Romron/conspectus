@@ -42,11 +42,8 @@
             задаётся уравень оптимизации  рекомендуется думул 1
       npm gulp-sourcemaps i -D      // генерирует карту по которой соотносятся исходные и минимизированные файлы
       npm browser-sync i -D
+      npm gulp-if i -D     // для условного управления потоком данных т.е. pipe будет выполнятся только когда первый параметр true 
    необходимые для продакшина
-
-Запуск обработки проэкта
-   gulp           // запустит task с именем default  
-   gulp task_nema 
 
 Стандартная структура проэкта
    build
@@ -57,7 +54,15 @@
       scripts
       index.html
    gulpfile.js
+
 Минимальная базовыя конфигурация gulp для вёрстки   в файле gulpfile.js
+   /*
+      Для начала сборки проэкта
+         режим разработки  gulp start
+         режим готового продукта  gulp start --prod
+   
+   */
+   
    const gulp = require('gulp');
    const del = require('del');
    const concat = require('gulp-concat');
@@ -65,6 +70,10 @@
    const cleanCSS = require('gulp-clean-CSS');
    const sourcemaps = require('gulp-sourcemaps');
    const browserSync = require('browser-sync').create();
+   const gulpif = require('gulp-if');
+
+   const isDev = !isProd;     // всегда противоположно isProd   
+   const isProd = process.argv.includes('--prod');    // теперь если в консоли вводить любую команду с флагом --prod isProd будет true иначе false   
 
    function clean(){
       return del('./build/*');
@@ -82,16 +91,15 @@
 
    function styles(){
       return gulp.src('./src/css/**/*.css')     // т.к. методы галпа возвращают промисы return обязательно
-         .pipe(sourcemaps.init())      // // обязательно до всех преобразований
+         .pipe(gulpif(isDev, sourcemaps.init()))      // // обязательно до всех преобразований
          .pipe(concat('arr_concat_files, main.css'))
          .pipe(autoprefixer())
-         .pipe(cleanCSS({
-            leve:1
-         }))
-         
-         .pipe(sourcemaps.write(map_file))     // обязательно после всех преобразований  map_file - фаил с картой указывать необязательно
+         .pipe(gulpif(isProd, cleanCSS({ leve:1 })))
+
+
+         .pipe(gulpif(isDev, sourcemaps.write(map_file)))     // обязательно после всех преобразований  map_file - фаил с картой указывать необязательно
          .pipe(gulp.best('./build')
-         .pipe(browserSync.stream())      // отслеживает изменение файлов
+         .pipe(gulpif(isDev, browserSync.stream()))      // отслеживает изменение файлов
          )
    }
 
@@ -104,10 +112,9 @@
       gulp.watch(''./src/**/*.*'', function styles())
    }
 
-
    let assemble = gulp.parallel(task_scc, task_html, task_nema_3, task_nema_4);      // собрать проэкт задействуя все манипуляции с файлами
    let build = gulp.series(clean,assemble);     // удалить файлы прошлой сборки выполнить новую сборку
-   let dev = gulp.series(build,watch); 
+   let start = gulp.series(build,watch); 
 
    gulp.task('dev', watch);
    gulp.task('build', build);
@@ -119,14 +126,34 @@
    gulp.best('./build')    // устанавльвает место назначение перемещаемых данных для того что бы сбереч структуру вложенных папок указать только корневой каталог
    gulp.task('task_nema', name_func);      // регестрирует задачи которые будут вызыватся из командной строки
    gulp.parallel(task_nema_1, task_nema_2, task_nema_3, task_nema_4);      // запускает все задачи паралельно
-      
+
+Флаги команд консоли
+   вся информация о текущем node процесе в пепеменной process 
+      process.argv возвращает массив, содержащий аргументы командной строки, переданные при запуске процесса Node.js
+         console.log(process.argv);
+   предустановленные 
+   кастомные
+      устновить свой флаг любой команде в консоли     process.argv.includes('--my_flag');
+
+Запуск обработки проэкта
+   непосредственно галпом
+      gulp           // запустит task с именем default  
+      gulp task_nema 
+   скриптом npm   используется в тех случиях когда команда запуска gulp слишком длинная например много ключей
+      в файле package.json
+         "scripts" : {
+            "script_name" : "любой код для выполнения в консоли",
+            "dev" : "gulp start", 
+            "prod" : "gulp start --prod",
+         }
+         npm run script_name
 
 Маски именования файлов
    *.html
    **/*.html   во всех вложенных папках
 
 Заметки
-   обрабатываются толька те файлы каторые перемещаются
+   обрабатываются только те файлы каторые перемещаются
 Нельзя:
    называть папку для установки GULP называть GULP или так как называются модули галпа
 ----------------------- Практика end -----------------------
