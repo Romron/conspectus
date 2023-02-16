@@ -32,6 +32,7 @@
       nod del  i -D 
    нужные для разроботки
       nod gulp-concat  i -D     // соединяет указанные css файлы в алфовитном порядке(!) в один по этому нужно передавать масив соединяемых файлов в определённом порядке
+      npm gulp-group-css-media-queries i -D     // нужен тогда кагда отключен gulp-concat например для less файлов 
       nod gulp-autoprefixer i -D
          настойка    см docs
             задать процент использования браузера    "browsersList":">0,5";
@@ -43,7 +44,10 @@
       npm gulp-sourcemaps i -D      // генерирует карту по которой соотносятся исходные и минимизированные файлы
       npm browser-sync i -D
       npm gulp-if i -D     // для условного управления потоком данных т.е. pipe будет выполнятся только когда первый параметр true 
+      npm npm gulp-less i -D
+
    необходимые для продакшина
+   
 Стандартная структура проэкта
    build
    src
@@ -64,14 +68,20 @@
    const gulp = require('gulp');
    const del = require('del');
    const concat = require('gulp-concat');
+   const gcmq = require('gulp-group-css-media-queries');
    const autoprefixer = require('gulp-autoprefixer');
    const cleanCSS = require('gulp-clean-CSS');
    const sourcemaps = require('gulp-sourcemaps');
    const browserSync = require('browser-sync').create();
-   const gulpif = require('gulp-if');
+   const gulpif = require('gulp-if');     // возможны разные условия см: https://www.npmjs.com/package/gulp-if    и  https://www.npmjs.com/package/gulp-if-else
 
    const isDev = !isProd;     // всегда противоположно isProd   
    const isProd = process.argv.includes('--prod');    // теперь если в консоли вводить любую команду с флагом --prod isProd будет true иначе false   
+   const isLESS = process.argv.includes('--less');     
+
+   const arrSccFiles = [
+      // порядок файлов имеет значение!
+   ]
 
    function clean(){
       return del('./build/*');
@@ -88,9 +98,10 @@
    }
 
    function styles(){
-      return gulp.src('./src/css/**/*.css')     // т.к. методы галпа возвращают промисы return обязательно
+      return gulp.src(gulpif(isLESS,'./src/css/main.less','./src/css/**/*.css'))     // т.к. методы галпа возвращают промисы return обязательно;  т.к. LESS мобирает файлы сам (протестить!)
          .pipe(gulpif(isDev, sourcemaps.init()))      // // обязательно до всех преобразований
-         .pipe(concat('arr_concat_files, main.css'))
+         .pipe(gulpif(isLESS, less(), concat('arrSccFiles, main.css'))         // isLESS == true использовать less() иначе concat()
+         .pipe(gulpif(isLESS, gcmq())         // isLESS == true использовать gcmq т.к. отключён concat()
          .pipe(autoprefixer())
          .pipe(gulpif(isProd, cleanCSS({ leve:1 })))
 
@@ -117,12 +128,14 @@
    gulp.task('dev', watch);
    gulp.task('build', build);
    gulp.task('assemble', assemble);
+
 Команды, методы, gulp 
    gulp.src('path_to_file(s)')      // формирует поток данных. Попрасту перемещает файлы из указанного места   возвращает промис
    .pipe(gulp_comand)     // регестрирует действие над данными в потоке    возвращает промис
    gulp.best('./build')    // устанавльвает место назначение перемещаемых данных для того что бы сбереч структуру вложенных папок указать только корневой каталог
    gulp.task('task_nema', name_func);      // регестрирует задачи которые будут вызыватся из командной строки
    gulp.parallel(task_nema_1, task_nema_2, task_nema_3, task_nema_4);      // запускает все задачи паралельно
+    gulp.watch()    // наблюдать за изменением в указанных файлах, при добавлении новых файлов перезапустить gulp 
 Флаги команд консоли
    вся информация о текущем node процесе в пепеменной process        https://nodejs.org/docs/latest/api/process.html#processargv
       process.argv возвращает массив, содержащий аргументы командной строки, переданные при запуске процесса Node.js
@@ -140,6 +153,7 @@
          "scripts" : {
             "script_name" : "любой код для выполнения в консоли",
             "dev" : "gulp start", 
+            "devL" : "gulp start --less", 
             "prod" : "gulp start --prod",
          }
          npm run script_name
