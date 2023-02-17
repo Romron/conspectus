@@ -45,6 +45,8 @@
       npm browser-sync i -D
       npm gulp-if i -D     // для условного управления потоком данных т.е. pipe будет выполнятся только когда первый параметр true 
       npm npm gulp-less i -D
+      npm i smart-grid -D       // 213 загрузок за неделю!  автор модуля Д. Лаврик
+      
 
    необходимые для продакшина
       npm install normalize.css     // подключение непосредственно в main.less первой строкой   @import (less) 'normolize.css'; /*будет искать файл normalize.css в папке css если ненайдёт то искать будет в папке node_modules*/
@@ -76,10 +78,12 @@
    const sourcemaps = require('gulp-sourcemaps');
    const browserSync = require('browser-sync').create();
    const gulpif = require('gulp-if');     // возможны разные условия см: https://www.npmjs.com/package/gulp-if    и  https://www.npmjs.com/package/gulp-if-else
+   const smartGrid = require('smart-grid');   
+   const path = require('path');    // для очистки кеша файла настроек smartgrid.js    в node установлен по умолчанию
 
    const isDev = !isProd;     // всегда противоположно isProd   
    const isProd = process.argv.includes('--prod');    // теперь если в консоли вводить любую команду с флагом --prod isProd будет true иначе false   
-   const isLESS = process.argv.includes('--less');     
+   const isLESS = process.argv.includes('--less');  
 
    const arrSccFiles = [
       // порядок файлов имеет значение!
@@ -114,13 +118,21 @@
          )
    }
 
+   function grid(done){    // настройка в отдельном файле smartgrid.js  см в конспекте Вёрстка NEW.txt    https://www.npmjs.com/package/smart-grid?activeTab=explore
+      delete require.cache[path.resolve('./smartgrid.js')];    
+      let options = require('./smartgrid.js');     // кеширует результат первого запуска
+      smartGrid('./src/css');    
+      done();        // работает в синхронном режиме по этому нужна заглушка в виде калбек ф-ции done()
+   }
+
    function watch(){
       browserSync.init({
         server: {
                   baseDir: "./build/"     // корневая папка сервера
             }
          });
-      gulp.watch(''./src/**/*.*'', function styles())
+      gulp.watch('./src/**/*.*', styles)
+      gulp.watch('./smartgrid.js', grid)
    }
 
    let assemble = gulp.parallel(task_scc, task_html, task_nema_3, task_nema_4);      // собрать проэкт задействуя все манипуляции с файлами
@@ -130,6 +142,7 @@
    gulp.task('dev', watch);
    gulp.task('build', build);
    gulp.task('assemble', assemble);
+   gulp.task('grid', grid);      // для создания сетки проэкта используется один раз
 
 Команды, методы, gulp 
    gulp.src('path_to_file(s)')      // формирует поток данных. Попрасту перемещает файлы из указанного места   возвращает промис
