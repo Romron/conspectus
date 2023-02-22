@@ -120,36 +120,47 @@
          прекращение просмотра истории и возврат на последний кооммит в указанной ветке
          эта команда обязательна после просмотра истории для продолжении работы
 
-   Доступ по SSH     https://youtu.be/B8m-4yd7MZc     не работает!!!!!!
-      Создание нового ключа SSH
-         в GitBash
-            ssh-keygen -t ed25519 -C "rombtnet@gmail.com"
-         включить SSH агент в фоне
-            $ eval "$(ssh-agent -s)"
-         добавить закрытый ключ SSH в ssh-agent
-            $ ssh-add ~/.ssh/id_ed25519_rombt
-            $ ssh-add ~/.ssh/id_ed25519_romron
-         проверка работоспособности
-            $ ssh -T git@github.com
+   Несколько аккаунтов на одном компьютере  
+      источники:
+         https://docs.github.com/ru/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-your-personal-account/managing-multiple-accounts#contributing-to-multiple-accounts-using-ssh-and-git_ssh_command
+         !! https://webhamster.ru/mytetrashare/index/mtb339/1573482054de7rhrq1mx
+         https://stackoverflow.com/questions/3860112/multiple-github-accounts-on-the-same-computer       
+            строчки Host .... должна быть как в моём примере!!!
+      по протоколу https для обеих учетных записей
+         можно использовать разные personal access tokens для каждой учетной записи, 
+         настроив Git для хранения разных учетных данных для каждого репозитория.
+         использовать диспетчера учетных данных  get .helper
+      по протоколу SSH
+         настроить доступ по SSH для каждого аккаунта    
+            только в GitBash!
+               создать ключ SSH
+                  ssh-keygen -t ed25519 -C "rombtnet@gmail.com"
+               включить SSH агент в фоне
+                  $ eval "$(ssh-agent -s)"
+               добавить закрытый ключ SSH в ssh-agent
+                  $ ssh-add ~/.ssh/id_ed25519_rombt
+                  $ ssh-add ~/.ssh/id_ed25519_romron
+               добавить ключ в github     https://docs.github.com/ru/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+               ? проверка работоспособности    работает не корректно!! кода две учётные записи нормально работают выдоёт ошибку!! 
+                  $ ssh -T git@github.com
+               ? получить более полную информацию    https://docs.github.com/ru/authentication/troubleshooting-ssh/error-permission-denied-publickey
+                  $ ssh -vT git@github.com
+         ./ssh/config         рабочие примеры!!         
+            Host Rombt.github.com      
+            HostName github.com
+            IdentityFile ~/.ssh/id_ed25519_rombt 
+            # IdentitiesOnly yes      # без этих строк тоже работает
 
-            $ ssh -T GITHUB-Rombt@github.com
-            $ ssh -T rombt@github.com
-            $ ssh -T GITHUB-romron@github.com
-  
-   
-            git@github.com:Romron/conspectus.git
-         https://git@github.com/Romron/conspectus.git 
-         https://github.com/Romron/conspectus.git
-
-         было 
-            origin  https://romron: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@github.com/Romron/conspectus.git (fetch)
-            origin  https://romron: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@github.com/Romron/conspectus.git (push)
-   
-
-         git remote set-url origin git@github.com:Romron/conspectus.git
-         
-
-         G:/Projects/conspectus
+            Host Romron.github.com
+            HostName github.com 
+            IdentityFile ~/.ssh/id_ed25519_romron
+            # IdentitiesOnly yes      # без этих строк тоже работает
+         my_repo/.git/config        рабочие примеры!!        
+            [remote "origin"]
+               url = git@Romron.github.com:Romron/conspectus.git
+            [user]
+               name = Romron
+               email = romron@ukr.net
 
 
 
