@@ -130,12 +130,14 @@
          проверка работоспособности
             $ ssh -T git@github.com
             $ ssh -T GITHUB-Rombt@github.com
-            $ ssh -T GITHUB-omron@github.com
+            $ ssh -T GITHUB-romron@github.com
 
 
     git@github.com:Romron/conspectus.git
-https://github.com/Romron/conspectus.git
 https://git@github.com/Romron/conspectus.git 
+https://github.com/Romron/conspectus.git
+
+G:/Projects/conspectus
 
 
 
