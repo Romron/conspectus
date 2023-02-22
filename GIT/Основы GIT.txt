@@ -126,9 +126,11 @@
             $ eval "$(ssh-agent -s)"
          добавить закрытый ключ SSH в ssh-agent
             $ ssh-add ~/.ssh/id_ed25519_rombt
+            $ ssh-add ~/.ssh/id_ed25519_romron
          проверка работоспособности
             $ ssh -T git@github.com
             $ ssh -T GITHUB-Rombt@github.com
+            $ ssh -T GITHUB-omron@github.com
 
 
 
