@@ -135,7 +135,7 @@
 
     git@github.com:Romron/conspectus.git
 https://github.com/Romron/conspectus.git
-https://git@github.com/Romron/conspectus.git
+https://git@github.com/Romron/conspectus.git xx
 
 
 
