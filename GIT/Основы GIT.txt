@@ -122,6 +122,20 @@
       Создание нового ключа SSH
          в GitBash
             ssh-keygen -t ed25519 -C "rombtnet@gmail.com"
+         включить SSH агент в фоне
+            $ eval "$(ssh-agent -s)"
+         добавить закрытый ключ SSH в ssh-agent
+            $ ssh-add ~/.ssh/id_ed25519_rombt
+         проверка работоспособности
+            $ ssh -T git@github.com
+            $ ssh -T GITHUB-Rombt@github.com
+
+
+
+
+
+
+
 
    Несколько акаунтов на одном компьютере    https://stackoverflow.com/questions/3860112/multiple-github-accounts-on-the-same-computer
 
