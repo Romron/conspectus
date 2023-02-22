@@ -120,7 +120,7 @@
          прекращение просмотра истории и возврат на последний кооммит в указанной ветке
          эта команда обязательна после просмотра истории для продолжении работы
 
-   Доступ по SSH     https://youtu.be/B8m-4yd7MZc     не заработало!!!!!!!!
+   Доступ по SSH     https://youtu.be/B8m-4yd7MZc     не работает!!!!!!!!
       Создание нового ключа SSH
          в GitBash
             ssh-keygen -t ed25519 -C "rombtnet@gmail.com"
@@ -131,7 +131,9 @@
             $ ssh-add ~/.ssh/id_ed25519_romron
          проверка работоспособности
             $ ssh -T git@github.com
+
             $ ssh -T GITHUB-Rombt@github.com
+            $ ssh -T rombt@github.com
             $ ssh -T GITHUB-romron@github.com
 
 
@@ -139,7 +141,15 @@
          https://git@github.com/Romron/conspectus.git 
          https://github.com/Romron/conspectus.git
 
-G:/Projects/conspectus
+         было 
+            origin  https://romron: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@github.com/Romron/conspectus.git (fetch)
+            origin  https://romron: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@github.com/Romron/conspectus.git (push)
+   
+
+         git remote set-url origin git@github.com:Romron/conspectus.git
+         
+
+         G:/Projects/conspectus
 
 
 
