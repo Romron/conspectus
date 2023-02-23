@@ -27,18 +27,19 @@
       npm init 
          ускоренная установка дабавить -y ответить на все вопросы да
       npm i gulp -D
-Модули 
+Модули      https://www.npmjs.com/
    необходимые 
-      nod del  i -D 
+      npm install del -D      // для использования import нужно установливать npm i del@6.1.1
+      npm i @babel/preset-env @babel/register -D         // для решения проблемы с import 
    нужные для разроботки
-      nod gulp-concat  i -D     // соединяет указанные css файлы в алфовитном порядке(!) в один по этому нужно передавать масив соединяемых файлов в определённом порядке
+      npm gulp-concat  i -D     // соединяет указанные css файлы в алфовитном порядке(!) в один по этому нужно передавать масив соединяемых файлов в определённом порядке
       npm gulp-group-css-media-queries i -D     // нужен тогда кагда отключен gulp-concat например для less файлов 
-      nod gulp-autoprefixer i -D
+      npm gulp-autoprefixer i -D
          настойка    см docs
             задать процент использования браузера    "browsersList":">0,5";
                либо в обдельном файле
                либо в package.json в ключе browsersList 
-      nod gulp-cleanCSS i -D     // минимизирует и оптимизирует CSS код
+      npm gulp-cleanCSS i -D     // минимизирует и оптимизирует CSS код
          настройка 
             задаётся уравень оптимизации  рекомендуется думул 1
       npm gulp-sourcemaps i -D      // генерирует карту по которой соотносятся исходные и минимизированные файлы
@@ -46,11 +47,15 @@
       npm gulp-if i -D     // для условного управления потоком данных т.е. pipe будет выполнятся только когда первый параметр true 
       npm npm gulp-less i -D
       npm i smart-grid -D       // 213 загрузок за неделю!  автор модуля Д. Лаврик
-      
+      npm i gulp-version-number -D     // предотврашает кеширование файлов браузером
+      npm i gulp-webp-html-nosvg -D    // оборачивает тег img в тег <picture>  
+      npm i gulp-plumber -D    // оброботка ошибок
+      npm i gulp-notify -D    // выводит сообщение об ошибках
 
+   могут пригодится
+      npm i gulp-replace      // авто замена по регулярным выражениям   
    необходимые для продакшина
       npm install normalize.css     // подключение непосредственно в main.less первой строкой   @import (less) 'normolize.css'; /*будет искать файл normalize.css в папке css если ненайдёт то искать будет в папке node_modules*/
-
    
 Стандартная структура проэкта
    build
@@ -186,6 +191,24 @@
 
 
 ----------------------- Проблемы -- решения start ---------
+import в GULP 
+   описоние
+      по умолчанию в GULP деректива import из ES6 не работает!!
+      возникает ошибка  
+         SyntaxError: Unexpected identifier  на строку с import gulp from "gulp";
+   решение 1    https://github.com/gulpjs/gulp#use-latest-javascript-version-in-your-gulpfile     
+      Rename gulpfile.js to gulpfile.babel.js
+      Run this command:
+         npm install --save-dev @babel/register @babel/core @babel/preset-env
+      Add a .babelrc file to the root folder of your project with the following code in it:
+         {
+         "presets": [
+            "@babel/preset-env"
+         ]
+         }
+   решение 2   https://stackoverflow.com/questions/39436322/node-js-syntaxerror-unexpected-token-import     https://www.npmjs.com/package/esm
+      не проверял 
+
 
 ----------------------- Проблемы -- решения end -----------
 
