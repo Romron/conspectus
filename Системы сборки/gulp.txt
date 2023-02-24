@@ -1,5 +1,6 @@
 Источники:
    Лаврик Д noname tracker
+   https://youtu.be/jU88mLuLWlk    см. так же    https://fls.guru/gulp.html
 
 Термины:
 
@@ -39,7 +40,7 @@
             задать процент использования браузера    "browsersList":">0,5";
                либо в обдельном файле
                либо в package.json в ключе browsersList 
-      npm gulp-cleanCSS i -D     // минимизирует и оптимизирует CSS код
+      npm gulp-clean-css -D     // минимизирует и оптимизирует CSS код
          настройка 
             задаётся уравень оптимизации  рекомендуется думул 1
       npm gulp-sourcemaps i -D      // генерирует карту по которой соотносятся исходные и минимизированные файлы
@@ -49,8 +50,21 @@
       npm i smart-grid -D       // 213 загрузок за неделю!  автор модуля Д. Лаврик
       npm i gulp-version-number -D     // предотврашает кеширование файлов браузером
       npm i gulp-webp-html-nosvg -D    // оборачивает тег img в тег <picture>  
+      npm i -D gulp-webpcss    // в зависимости об браузера(!) картинки в файле стилей либо в фотмате webp либо обычные требует дополнительного js кода 
+      npm i -D webp-converter@2.2.3    // необходима именно эта версия(?) для работы gulp-webpcss(?)
       npm i gulp-plumber -D    // оброботка ошибок
       npm i gulp-notify -D    // выводит сообщение об ошибках
+      npm i sass -D
+      npm i gulp-sass -D
+      npm i gulp-rename -D
+      npm i webpack-stream -D    // запускает webpack как поток для взаимодействия с gulp.  для сборки js файлов в один
+      npm i webpack -D 
+      npm i gulp-webp -D
+      npm i -D gulp-imagemin@7.1.0  // для win 7
+      npm i gulp-newer -D     // включеет в поток только навые файлы т.е. те которыж ещё нет в папке с результатом
+      npm i gulp-fonter -D
+      npm i gulp-ttf2woff2 -D
+
 
    могут пригодится
       npm i gulp-replace      // авто замена по регулярным выражениям   
