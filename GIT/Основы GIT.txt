@@ -170,7 +170,7 @@
             HostName github.com 
             IdentityFile ~/.ssh/id_ed25519_romron
             # IdentitiesOnly yes      # без этих строк тоже работает
-         клонировать репозиторий для SSH нужно добовлять username. после собаки и перед github !!!!
+         !!!клонировать репозиторий для SSH нужно добовлять username. после собаки и перед github !!!!
          my_repo/.git/config        рабочие примеры!!        
             [remote "origin"]
                url = git@Romron.github.com:Romron/conspectus.git

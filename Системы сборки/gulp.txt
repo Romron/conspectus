@@ -64,6 +64,7 @@
       npm i gulp-newer -D     // включеет в поток только навые файлы т.е. те которыж ещё нет в папке с результатом
       npm i gulp-fonter -D
       npm i gulp-ttf2woff2 -D
+      npm i gulp-svg-sprite -D
 
 
    могут пригодится
