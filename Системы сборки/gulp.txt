@@ -65,6 +65,9 @@
       npm i gulp-fonter -D
       npm i gulp-ttf2woff2 -D
       npm i gulp-svg-sprite -D
+      npm i gulp-zip -D
+      npm i vinyl-ftp -D
+      npm i gulp-util -default   // устаревший!?
 
 
    могут пригодится
