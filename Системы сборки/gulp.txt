@@ -33,6 +33,7 @@
       npm install del -D      // для использования import нужно установливать npm i del@6.1.1
       npm i @babel/preset-env @babel/register -D         // для решения проблемы с import 
    нужные для разроботки
+      npm i gulp-file-include -D
       npm gulp-concat  i -D     // соединяет указанные css файлы в алфовитном порядке(!) в один по этому нужно передавать масив соединяемых файлов в определённом порядке
       npm gulp-group-css-media-queries i -D     // нужен тогда кагда отключен gulp-concat например для less файлов 
       npm gulp-autoprefixer i -D
