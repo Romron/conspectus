@@ -12,6 +12,31 @@
    Нарезка PSD макета   https://youtu.be/pLWAzoDvWsc
 
 
+
+----------------------- T O D O  -----------------------  
+
+transition: ;
+transform: translate();
+transform: rotate();
+transform: skale();
+visbility: ;
+gap: ;         !!!
+column-gap: ;
+:not(:last-child){ }
+@media (any-hover: hover){ 
+   :hover{ }
+}
+pointer-events:
+@supports(){   /*медеа запрос*/
+
+}
+
+
+добавить в сборку gulp 
+   первичная оброботка данных из полей формы
+   pop-up окно при отправке формы 
+
+
 ----------------------- ТЕОРИЯ start -----------------------  
 
    Критерии вёрстки
