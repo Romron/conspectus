@@ -15,20 +15,20 @@
 
 ----------------------- T O D O  -----------------------  
 
-transition: ;
-transform: translate();
-transform: rotate();
-transform: skale();
-visbility: ;
-gap: ;         !!!
-column-gap: ;
-:not(:last-child){ }
++ transition: ;
++ transform: translate();
++ transform: rotate();
++ transform: skale();
++ column-gap: ;   // поддержка браузерами??
++ visbility: ;
++ gap: ;         //  поддержка браузерами??
++ pointer-events: ;  // делает указанный элемент прозрачным для курсора и ещё кучу всего для SVG 
++@supports(){   /*медеа запрос*/
+
+}
++ :not(:last-child){ }     // всё кроме селектора указанного в скобках
 @media (any-hover: hover){ 
    :hover{ }
-}
-pointer-events:
-@supports(){   /*медеа запрос*/
-
 }
 
 
