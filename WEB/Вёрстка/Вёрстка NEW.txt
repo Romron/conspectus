@@ -1,7 +1,7 @@
 Источники:
    Класическая вёрстка от Лаврик Дмитрия     https://nnmclub.to/forum/viewtopic.php?t=1481348
    Чотири критерії якості HTML-верстки       https://youtu.be/2tEvlbOmyL0
-
+   Фигуры на CSS              https://html5book.ru/css-figury/
 Термины:
 
 
