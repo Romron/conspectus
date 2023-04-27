@@ -69,6 +69,8 @@
       npm i gulp-zip -D
       npm i vinyl-ftp -D      // для отправки файлов по ftp при каждом обновлении в gulp.watch(path.watch.path_files, task_name) заменить task_name gulp.series(task_name,ftp)
       npm i gulp-util -default   // устаревший(!?) но работает
+      npm i gulp-tap -D       // выполняет разнообразные операции над файлами в потоке
+      npm i gulp-filelist -D       // сохраняет список обработаных файлов в отдельный json файл 
      
 
 
