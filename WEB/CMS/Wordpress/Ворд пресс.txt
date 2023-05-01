@@ -205,12 +205,13 @@
 			if (has_post_thumbnail(get_the_ID())){
 				the_post_thumbnail('название_размера_кртинки');
 			}
-форма поиска
+форма поиска		источник:   Весь WordPress и PHP. Как создавать сайты, темы и плагины (2022) WEB-DL [Часть 1]\02. Codex для разработки темы на WordPress\19. Реализация формы поиска
 	в любом месте темы
-		get_search	_form();
+		get_search_form();
 			вернёт стандартную форму поиска WP
 	для стилизации формы поиска 
-		в корне темы нужен файл  	searchform.php
+		в корне (дочерней) темы нужен файл  	searchform.php
+		есле такого файла нет то будет использован шаблон из ядра WP 
 		или фильтер в function
 			function my_theme_custom_searchform($form){
 				$form = "
@@ -220,12 +221,11 @@
 							указать тегу form метод 
 							и если он GET то полю ввода поискового запроса задать имя 'S'
 
-
 					</form>
 				";
 				return $searc_form;
 			};
-			add_filter('get_search	_form',my_theme_custom_searchform);
+			add_filter('get_search_form',my_theme_custom_searchform);
 	сраницы вывода результатов поиска
 		search.php
 	для формы поиска как и для других блоков нужно зарегистрировать поддержку html5
@@ -263,6 +263,12 @@
 			wp_nav_menu(arrey(
 				'theme_location'=>'heder_nav_menu-1',		// именно по названию локации WP распознаёт меню
 			));
+		в результате появится конструкция типа 
+			<ul>
+				<li><a href="">что то из админ панели </a></li>
+			</ul>
+		все измененя вёрстки делать с помощью массива настроек ф-ции register_nav_menus()
+	
 	свой хук для назначения класса тегам например li			https://youtu.be/5W9hL3N7Q6g	33:46
 пагинация				https://youtu.be/gLdt8Pqf4T4		https://www.kobzarev.com/wordpress/pagination-doesnt-work/
 	формируется по данным из запроса WP_Query
@@ -614,7 +620,7 @@ WordPress -- Git -- Composer
 			вместе с разрешонным тегом нужно передавать и разрешонные атребуты этих тегов
 		wp_kses_post()
 		wp_kses_data() 
-	любые URL в т.ч. сгенерированные WP нужно оборачивать в esc_url()
+	любые(!!) URL в т.ч. сгенерированные WP нужно оборачивать в esc_url()
 	любые строки JS скриптов нужно оборачивать в esc_js()
 Подготовка темы к переводу на разные языки				https://wp-kama.ru/handbook/codex/translations		https://youtu.be/0-MzzIOzw7s
 	т.е. переводится будет не контент сайта а сама тема
@@ -628,6 +634,8 @@ WordPress -- Git -- Composer
 		в function.php 
 			в хуке init() добовить load_theme_textdomain()
 	обновить языкавой файл
+Множественное число _n()		источник:		Весь WordPress и PHP. Как создавать сайты, темы и плагины (2022) WEB-DL [Часть 1]\02. Codex для разработки темы на WordPress\21. Реализация формы поиска  19.15
+
 Создание типов записей				https://wp-kama.ru/function/register_post_type
 	!!! Важно: после создания нового типа записи. Обязательно нужно зайти на страницу 
 		Настройки → Постоянные ссылки
