@@ -421,10 +421,41 @@
 				global $my_theme_name_options;		// значение заданное в $opt_name
 				echo $my_theme_name_options['fild_name'];  // в указонном поле может быть строка (echo ...) или масив (print_r();)
 			?>
+
+обязательные системные функции
+	wp_head();
+		ф-ция 
+			по умолчанию выводит в тег head разнообразную информацию
+		action	добавляет информацию в тег head 
+			function my_func(){
+				echo "something";
+			}add_action('wp_head', my_func, 20)
+	body_class()
+		выводит в атребут class разнообразные классы
+		добавить свои классы  
+			body_class(my_class_1, my_class_2);
+			фильтром  "body_class" в любом месте темы
+				function my_func_classes($classes){
+					if (is_front_page()){
+						$classes[] = 'my_class_1';
+						$classes[] = 'my_class_2';
+					}
+
+					return $classes;
+				}
+				add_filter('body_class', my_func_classes)				
+	wp_body_open()
+		ф-ция 
+			по умолчанию выводит в тег head разнообразную информацию	
+		action	добавляет информацию сразу после тега body 
+				function my_func(){
+				echo "something";
+			}add_action('wp_body_open', my_func,20)		
+	wp_footer()
+		всё аналогично wp_head() и wp_body_open()
+	language_attributes();
+		автоматически добавляет язык документа в тег html в зависимости от языка установленного в админ панеле
 		
-
-
-	
 
 ----------------------- ТЕОРИЯ end ------------------------- 
 
@@ -432,7 +463,7 @@
 Обязательно при посадке шаблона
 	добавлять функции которые запускают хуки их используют плагины
 		wp_head()
-		body_class()
+		body_class()	
 		wp_body_open()
 		post_class()
 		wp_footer()
