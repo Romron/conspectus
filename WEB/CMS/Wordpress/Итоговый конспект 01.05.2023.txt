@@ -48,8 +48,36 @@
 Алгоритм посадки шаблона
    1. файлы и папки исходного HTML шаблона в assets кроме картинок
    2. подключить стили, шрифты, скрипты
-
-
+   3. подключить TGM Plugin Activation    http://tgmpluginactivation.com/download/
+      установить в настройках обязательные плагины
+         core плогин темы
+         Advanced Custom Fields
+         Redux Framework
+   4. настроить Redux Framework        Весь WordPress и PHP. Как создавать сайты, темы и плагины (2022) WEB-DL [Часть 1]\02. Codex для разработки темы на WordPress\39. Options Настройки
+      $opt_name = 'my-theme_options'; 
+      изменить нужное в масиве $args -- настройки панели Options плагина в админке
+         'allow_sub_menu' => false,
+      удалить 
+         $args['admin_bar_links']
+         $args['admin_bar_links']
+         $args['admin_bar_links']
+         блоки для вывода технической информации
+            // Panel Intro text -> before the form.
+            // translators:  Panel opt_name.
+            // Add content after the form.
+      заполнить все 
+         $args['share_icons']   -- соц.сети
+      заполнить или удальть блок help
+         $help_tabs = array
+      добвить нужные секции и поля нужных типов
+         Redux::set_section()
+         require_once Redux_Core::$dir . '../sample/sections/path_to_file_type_fild
+            взять поле нужного типа из файла 
+            вставить сразу после секции
+            заполнить массив нужными занчениями
+      использование даных на страницах сайта
+         все настройки в одноимённых полях массива
+            global $my-theme_options
 Подключение и регистрация стилей и скриптов реализовано по средствам хуков 			!!! https://youtu.be/8n_M5yd60m4
    Подключение
       function 	my_func_enqueue_scripts(){
