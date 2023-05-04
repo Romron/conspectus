@@ -42,6 +42,7 @@
    Theme Forest
       автор темы, тема, не имеет права добавлять пункт меню в панель WP  
       можно только добавлять submenu в пункт "Внешний вид"
+      не допускается inline css
 
 
 
@@ -81,9 +82,15 @@
             вставить сразу после секции
             заполнить массив нужными занчениями
       использование даных на страницах сайта
-         все настройки в одноимённых полях массива
-            global $my-theme_options
-      
+         все данные в одноимённых полях массива  global $my-theme_options
+         перед выводом на страницу необходимо делать проверку на существование самих данных
+            <?php if ($restaurant_site_options['home_delivery']){   ?>
+               something html
+               <?php echo esc_html( $restaurant_site_options['home_delivery'] ); ?>
+               something html
+            <?php }?>
+
+
 Подключение и регистрация стилей и скриптов реализовано по средствам хуков 			!!! https://youtu.be/8n_M5yd60m4
    Подключение
       function 	my_func_enqueue_scripts(){
