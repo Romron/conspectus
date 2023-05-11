@@ -11,7 +11,13 @@
 
 ----------------------- T O D O  -----------------------  
 
+   командная строка WP и elementor 
+      Elementor CLI https://developers.elementor.com/docs/cli/
+      WP-CLI      https://wp-cli.org/
+   
+
 Разобраться 
+
    добавление класса тегам li списка в меню
       wp_nav_menu(      // неработает добавление классов li
             array(
