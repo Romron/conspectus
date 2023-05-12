@@ -4,6 +4,11 @@
       для сайтов с WC перед генерацией установить соответсвующюю галочку 
    https://github.com/reduxframework/redux-framework/blob/master/sample/sample-config.php
 
+   иконки для elementor 
+      https://elementor.github.io/elementor-icons/
+      https://gist.github.com/litonarefin/9e934ec1aeb736742fe5277e4c1ea60a
+
+
 Термины:
 
 Смежные области:
