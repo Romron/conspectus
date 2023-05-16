@@ -1,6 +1,11 @@
 Источники:
    Лаврик Д noname tracker
    https://youtu.be/jU88mLuLWlk    см. так же    https://fls.guru/gulp.html
+   https://ru.manpages.org/glob/7
+   Документация Gulp на русском
+      https://webdesign-master.ru/blog/docs/gulp-documentation.html#dest 
+      https://gulpjs.su/docs/ru/getting-started/quick-start     
+   
 
 Термины:
 
@@ -10,6 +15,10 @@
 
 
 ----------------------- ТЕОРИЯ start -----------------------  
+   для сохранения исходной структуры папок в целевой дериктории 
+      app.gulp.src(app.path.src.php, { base: app.path.srcFolder })
+         { base: app.path.srcFolder } параметр который сохраняет структуру папок из исходной директории при копировании файлов. 
+
 
    gulp.task('task_name', function(){ });
       метод класса gulp который запускает модули которые возвращают промисы
