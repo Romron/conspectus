@@ -18,6 +18,8 @@
 
 ----------------------- T O D O  -----------------------  
 
+   https://themeforest.net/legal/author
+
    командная строка WP и elementor 
       Elementor CLI https://developers.elementor.com/docs/cli/
       WP-CLI      https://wp-cli.org/
