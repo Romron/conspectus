@@ -52,3 +52,27 @@ for https://jobs.wordpress.net/
    I don't have advanced skills yet, but I very want to become professional and I ready to invest in my evolution a lot of time   and effort.
    Send me please test project and I will try make it the best I can
       Sorry for my bad English.
+
+
+
+
+    Готовність регулярно виділяти вільний час для роботи в проєкті
+    Уміння працювати з цими технологіями:
+        PHP
+        Laravel
+        MySQL/MariaDB
+    Уміння працювати з GitHub
+    Базові навички використання Docker
+
+Ми вітаємо як і фахівців з досвідом, так і тих, хто тільки на теорії знайомий з перерахованими вище технологіями.
+
+
+для Sharity.place
+   Доброго дня
+
+      Програмування завжди було моїм хоббі але про перехід до "професійної ліги" замислився лише в минулому році.
+      Ось те з чим я працію: scc, html, js, php,  git, gulp, wordpress.  Розумію ООП та  принципи SOLID, трохи стикався з MySQL, з Laravel тільки знайомився.
+      
+      Оплата праці поки що не принципова - э выльний час, хочу навчатись, дуже потрібний досвід
+
+
