@@ -28,16 +28,6 @@
 Плагины для темы
    Contact form 7
 
-Добавить в тему "restauranе site"
-   карту на страницу контактов https://devs.redux.io/core-extensions/google-maps.html
-   заменить стандартные названия в файлах redux 
-   use dynamic_section for redux
-   выбор иконок https://devs.redux.io/core-extensions/icon-select.html
-   изменение размера картинок
-   смену шрифтов в теме через Redux панель опций
-   форму и страницу поиска по сайту
-
-
    https://themeforest.net/legal/author
 
    командная строка WP и elementor 
