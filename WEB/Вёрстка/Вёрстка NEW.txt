@@ -1,7 +1,8 @@
 Источники:
    Класическая вёрстка от Лаврик Дмитрия     https://nnmclub.to/forum/viewtopic.php?t=1481348
    Чотири критерії якості HTML-верстки       https://youtu.be/2tEvlbOmyL0
-   Фигуры на CSS              https://html5book.ru/css-figury/
+   Фигуры на CSS        https://html5book.ru/css-figury/
+                        https://habr.com/ru/articles/126207/
    скрыть элементы:     https://www.cat-in-web.ru/10-ways-to-hide-elements-in-css/
    иконки с выбором цвета:       https://icons8.com/
    соотношение сторон
@@ -81,7 +82,7 @@ pointer-events: none;  // делает указанный элемент про�
          position: absolute;
          left: 50%;
          top: 50%;
-         transform: translate(-50%, -50%)
+         transform: translate(-50%, -50%);
          width: 50%;
          height: 1px;
          background-color: black;
@@ -91,7 +92,7 @@ pointer-events: none;  // делает указанный элемент про�
          position: absolute;
          left: 50%;
          top: 50%;
-         transform: translate(-50%, -50%)
+         transform: translate(-50%, -50%);
          width: 1px;
          height: 50%;
          background-color: black;
