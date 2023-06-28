@@ -79,25 +79,24 @@ pointer-events: none;  // делает указанный элемент про�
 
 Примитивные фигуры
    + 
-      :before{
+      &:before,
+      &:after {
          content: '';
          position: absolute;
          left: 50%;
          top: 50%;
          transform: translate(-50%, -50%);
-         width: 50%;
-         height: 1px;
          background-color: black;
       }
-      :after{
-         content: '';
-         position: absolute;
-         left: 50%;
-         top: 50%;
-         transform: translate(-50%, -50%);
+
+      &:before {
+         width: 50%;
+         height: 1px;
+      }
+
+      &:after {
          width: 1px;
          height: 50%;
-         background-color: black;
       }
    х
       тоже что и плюс но весь элемент повернуть на 45 град
