@@ -344,7 +344,8 @@
 
          <div class="" <?php echo $img_bg ?> >  </div>
          
-
+Кастомные поля на странице редактирования меню в админ панели     
+   https://wordpress.stackexchange.com/questions/47628/custom-metabox-for-menu-administration-page
 
 
 
