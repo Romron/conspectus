@@ -80,6 +80,7 @@
       npm i gulp-util -default   // устаревший(!?) но работает
       npm i gulp-tap -D       // выполняет разнообразные операции над файлами в потоке
       npm i gulp-filelist -D       // сохраняет список обработаных файлов в отдельный json файл 
+      npm i php-serialize -D
      
 
 
