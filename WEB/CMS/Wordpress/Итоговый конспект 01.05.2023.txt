@@ -12,6 +12,9 @@
    иконки для elementor 
       https://elementor.github.io/elementor-icons/
       https://gist.github.com/litonarefin/9e934ec1aeb736742fe5277e4c1ea60a
+   
+   AJAX 
+      !!!   https://youtu.be/3Hvq-_p470k  
 
 
 Термины:
