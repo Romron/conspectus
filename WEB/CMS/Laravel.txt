@@ -637,6 +637,7 @@
       перейти в нужную папку
       выполнить команду 
          laravel new projectname
+         composer create-project --prefer-dist laravel/laravel .    // ++ установка в пустую папку в которой открыт терминол
          composer create-project --prefer-dist laravel/laravel laravelblog   // ++
          composer create-project laravel/laravel projectname      // эта команда не проверялась
       настроить базу донных подробнее см. ниже
