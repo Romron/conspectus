@@ -171,6 +171,8 @@
             # IdentitiesOnly yes      # без этих строк тоже работает
          !!!клонировать репозиторий для SSH нужно добовлять username. после собаки и перед github !!!!
             git clone git@Rombt.github.com:Rombt/restaurant-site.git
+            git clone git@Romron.github.com:Romron/laravel_0.git
+                      
          my_repo/.git/config        рабочие примеры!!        
             [remote "origin"]
                url = git@Romron.github.com:Romron/conspectus.git
