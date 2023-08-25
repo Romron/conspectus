@@ -52,6 +52,16 @@
 
 ----------------------- TO USE  -----------------------
 
+Для отлаладки кода который не выводится на страницу 
+   в файле wp-config.php
+      define( 'WP_DEBUG', true );      // первых двух достаточно
+      define( 'WP_DEBUG_LOG', true );
+      // define( 'WP_DEBUG_DISPLAY', false );   // эти три на всякий случай
+      // @ini_set( 'log_errors', 'On' );
+      // @ini_set( 'error_log', dirname( __FILE__ ) . '/wp-content/php-error.log' );
+   в том месте где нужно вывести сообщение error_log( print_r( " masage ", true ) );
+      пример   error_log( print_r( $_POST, true ) );
+
 Коментари нужны не для того что бы объяснить написаное, а для того что бы объснить ЗАЧЕМ это написано
 
 Условие Йоды
