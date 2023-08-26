@@ -48,19 +48,19 @@
    В контрлах элементора не работает значение поля поля по умолчанию
       default
 
-   добавление класса тегам li списка в меню
-      wp_nav_menu(      // неработает добавление классов li
-            array(
-               'theme_location' => 'food-menu',
-               'container' => 'nav',
-               'container_class' => 'menu food-menu',
-               'menu_class' => 'food-menu__list',
-               'add_li_class'=>'food-menu__sub-item',
-            )
-      ); 
 
 
 ----------------------- TO USE  -----------------------
+
+Для отлаладки кода который не выводится на страницу 
+   в файле wp-config.php
+      define( 'WP_DEBUG', true );      // первых двух достаточно
+      define( 'WP_DEBUG_LOG', true );
+      // define( 'WP_DEBUG_DISPLAY', false );   // эти три на всякий случай
+      // @ini_set( 'log_errors', 'On' );
+      // @ini_set( 'error_log', dirname( __FILE__ ) . '/wp-content/php-error.log' );
+   в том месте где нужно вывести сообщение error_log( print_r( " masage ", true ) );
+      пример   error_log( print_r( $_POST, true ) );
 
 Коментари нужны не для того что бы объяснить написаное, а для того что бы объснить ЗАЧЕМ это написано
 
@@ -69,6 +69,28 @@
       т.к. есле пропустить, чисто механически, один из знаков равенства сразу будет ошибка 
       if(true == $my_var){} 
 
+	Указывать количество постов которое выводится на странице можно не только непосредственно в аргументах WP_Query 
+		но и с помощью хука 
+			0:18:25 часть 7 	F:\Личное\WP уроки\Весь WordPress и PHP. Как создавать сайты, темы и плагины (2022) WEB-DL [Часть 3]\12. Extra! Advanced Level. Практика по разработке Премиум WordPress Темы
+      Пример
+         function my_func(){
+            $my_post_per_page = ';
+            if("проверка наличия соответсвующей опции в настройках темы"){
+               $my_post_per_page = значение из опций
+            }
+            if (!empty( $my_post_per_page)
+                  && $query->is_main_query()
+                  && is_post_type_archive('custom_post_type')
+            ){
+               $query->set('post_per_page', '' $my_post_per_page);
+            }
+         
+         }
+         add('pre_get_posts', my_func);
+      
+   Главный цикл WP работает в зависимости от страницы 
+      на архивной странице какого либо типа записи он будет именно по этому типу записей (!)
+      т.е. global $query будет содержать запрос именно по этому типу записей
 
 ----------------------- ТЕОРИЯ start -----------------------  
 Введение 
