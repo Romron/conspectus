@@ -5,6 +5,7 @@
                         https://habr.com/ru/articles/126207/
    скрыть элементы:     https://www.cat-in-web.ru/10-ways-to-hide-elements-in-css/
    иконки с выбором цвета:       https://icons8.com/
+   иконки разные:    https://www.flaticon.com/free-icon/star_276049?related_id=276049&origin=pack
    соотношение сторон
       https://youtu.be/93eVd-lUVLM
 Термины:
