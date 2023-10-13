@@ -1,5 +1,6 @@
 Источники:
    https://youtu.be/Ti2Q4sQkNdU
+   https://developer.wordpress.org/block-editor/how-to-guides/javascript/esnext-js/
    9 JavaScript приёмов Must Have для junior    https://youtu.be/9Ek1mzIJzME
 
 Термины:
