@@ -1,4 +1,5 @@
 Источники:
+	https://codepen.io/     всё готовое!!!
 	https://learn.javascript.ru/	!!!!!
 	https://youtu.be/4AETFuOaq3s			Топ-12 фишек программирования на JavaScript с массивами. Ты просто обязан их знать!
 	https://youtu.be/csuTmwTKWjc			Оптимизируем код
