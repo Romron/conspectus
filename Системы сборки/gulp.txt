@@ -40,7 +40,7 @@
 Модули      https://www.npmjs.com/
    необходимые 
       npm install del -D      // для использования import нужно установливать npm i del@6.1.1
-      npm i @babel/preset-env @babel/register -D         // для решения проблемы с import 
+      npm i @babel/preset-env @babel/register -D         // для решения проблемы обратной совместимости  https://babeljs.io/docs/usage
    нужные для разроботки
       npm i gulp-file-include -D
       npm gulp-concat  i -D     // соединяет указанные css файлы в алфовитном порядке(!) в один по этому нужно передавать масив соединяемых файлов в определённом порядке
