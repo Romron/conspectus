@@ -128,7 +128,7 @@
          git checkout -- .    // все файлы
       после git add
          git reset file_name     (git reset .    // все файлы)
-         git checkout --file_name      (git checkout -- .    // все файлы)
+            git checkout --file_name      (git checkout -- .    // все файлы)
       после git commit
          git reset --hard HEAD~2          // удалить два последних коммита в локальном репозитории
          git push --force     // удальть из удаённого репозитория те коммиты которые ранее были удалены из локального репозитория
