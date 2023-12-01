@@ -1,10 +1,14 @@
 Источники:
+   Документация Gulp на русском
+      https://webdesign-master.ru/blog/docs/gulp-documentation.html#dest 
+      https://gulpjs.su/docs/ru/getting-started/quick-start       !!! перевод оф документации   !!!
+      https://habr.com/ru/articles/344626/
+
    Лаврик Д noname tracker
    https://youtu.be/jU88mLuLWlk    см. так же    https://fls.guru/gulp.html
    https://ru.manpages.org/glob/7
-   Документация Gulp на русском
-      https://webdesign-master.ru/blog/docs/gulp-documentation.html#dest 
-      https://gulpjs.su/docs/ru/getting-started/quick-start     
+   https://nodejs.org/api/stream.html           о потоках в node.js  
+   https://github.com/gulpjs/vinyl              о vinyl
    
 
 Термины:
