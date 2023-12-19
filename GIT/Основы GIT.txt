@@ -128,7 +128,7 @@
          git checkout -- .    // все файлы
       после git add
          git reset file_name     (git reset .    // все файлы)
-         git checkout --file_name      (git checkout -- .    // все файлы)
+            git checkout --file_name      (git checkout -- .    // все файлы)
       после git commit
          git reset --hard HEAD~2          // удалить два последних коммита в локальном репозитории
          git push --force     // удальть из удаённого репозитория те коммиты которые ранее были удалены из локального репозитория
@@ -173,6 +173,7 @@
             git clone git@Rombt.github.com:Rombt/restaurant-site.git
             git clone git@Romron.github.com:Romron/laravel-0.git
             git clone git@Romron.github.com:Romron/phpOOP-0.git
+            git clone git@Romron.github.com:Rombt/gulp-assembly.git
                       
          my_repo/.git/config        рабочие примеры!!        
             [remote "origin"]

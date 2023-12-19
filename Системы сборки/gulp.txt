@@ -1,10 +1,14 @@
 Источники:
+   Документация Gulp на русском
+      https://webdesign-master.ru/blog/docs/gulp-documentation.html#dest 
+      https://gulpjs.su/docs/ru/getting-started/quick-start       !!! перевод оф документации   !!!
+      https://habr.com/ru/articles/344626/
+
    Лаврик Д noname tracker
    https://youtu.be/jU88mLuLWlk    см. так же    https://fls.guru/gulp.html
    https://ru.manpages.org/glob/7
-   Документация Gulp на русском
-      https://webdesign-master.ru/blog/docs/gulp-documentation.html#dest 
-      https://gulpjs.su/docs/ru/getting-started/quick-start     
+   https://nodejs.org/api/stream.html           о потоках в node.js  
+   https://github.com/gulpjs/vinyl              о vinyl
    
 
 Термины:
@@ -40,7 +44,7 @@
 Модули      https://www.npmjs.com/
    необходимые 
       npm install del -D      // для использования import нужно установливать npm i del@6.1.1
-      npm i @babel/preset-env @babel/register -D         // для решения проблемы с import 
+      npm i @babel/preset-env @babel/register -D         // для решения проблемы обратной совместимости  https://babeljs.io/docs/usage
    нужные для разроботки
       npm i gulp-file-include -D
       npm gulp-concat  i -D     // соединяет указанные css файлы в алфовитном порядке(!) в один по этому нужно передавать масив соединяемых файлов в определённом порядке
