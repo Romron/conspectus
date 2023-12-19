@@ -5,6 +5,9 @@
 	https://youtu.be/csuTmwTKWjc			Оптимизируем код
 	https://youtu.be/VhKUYqr7P1Q			События мыши
 	https://youtu.be/kizGhzeNE64			!!! Замыкание приватные методы наследование
+	https://youtu.be/mI6Jcfsgma4?si=lvacvlnmipebHxdK		!!! лексическое окружение и замыкание
+	https://youtu.be/07FllcTRj84?si=nVbqdAiEvgeUFgpY		!!! var, let, const
+	https://youtu.be/aFxQvCqrUC0?si=4ehj_Ro6WMamjmkj		!!! this
 
 
 Термины:
@@ -15,6 +18,33 @@
 ----------------------- TO USE  -----------------------
 
 WebGL (Web Graphics Library) - программная библиотека для языка JavaScript предназначенная для визуализации интерактивной трёхмерной графики
+
+
+Метод для рекурсивного перебора полей объекта в которых находятся массивы с перебором самих массивов
+	   objClearForTask(obj) { 		
+
+
+			function modifyArray(array) {
+				return array.map(item => item.replace(this.src.php, this.prod.php));
+			}
+			let bound_ModifyArray = modifyArray.bind(this);		// привязка контекста к родительскому объекту 
+
+			function processObject(obj) {
+				return Object.fromEntries(
+					Object.entries(obj).map(([key, value]) => {
+						if (Array.isArray(value) && value.length !== 0) {
+							return [key, bound_ModifyArray(value)];
+						}
+						if (typeof value === 'object' && value !== null) {
+							return [key, processObject(value)];
+						}
+						return [key, value];
+					})
+				);
+			}
+			return processObject(obj);
+   },
+
 
 ------------------------------------------------------- 
 
@@ -59,7 +89,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
 
 	Свойства бъекта, объявленного через const, могут быть изменены
 
-ФУНКЦИИ
+ФУНКЦИИ			https://youtu.be/nGVYdna4kq4?si=ki54Ial1w7oFAHZ7
 	JavaScript функции – это значения!!! представляющее «действие»
 	Обычные значения, такие как строки или числа представляют собой данные
 	
