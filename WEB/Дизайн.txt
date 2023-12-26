@@ -38,6 +38,7 @@
    прототипирование и анимация:
       !! https://webflow.com/    визуальный редактор сайтов с возможностью, анимирования, кодирования, импетации БД и публикации 
       https://www.framer.com/motion/      создание сайтов с AI
+      https://youtu.be/WPTXklL09kg?si=28CdbxZLWR21U-mi
 
    композиции
       https://youtu.be/ZyPt0yMa9F0?si=Dup_vevwZcEpa9Zu      о пространстве в рисовании
