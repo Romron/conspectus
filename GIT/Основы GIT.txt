@@ -174,7 +174,7 @@
             git clone git@Romron.github.com:Romron/laravel-0.git
             git clone git@Romron.github.com:Romron/phpOOP-0.git
             git clone git@Romron.github.com:Rombt/gulp-assembly.git
-            git clone git@Romron.github.com:Rombt/CRM-Dashboard-Customers.git
+            git clone git@Rombt.github.com:Rombt/CRM-Dashboard-Customers.git
                       
          my_repo/.git/config        рабочие примеры!!        
             [remote "origin"]
