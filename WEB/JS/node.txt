@@ -1,7 +1,10 @@
 Источники:
    https://habr.com/ru/company/timeweb/blog/541452/
+   node.js
+      https://youtu.be/243pQXC5Ebs?si=MwYK7ccmULclv0Ze
    gulp
       https://lucasbatiiista.medium.com/configuring-gulp-browsersync-php-inside-server-3ee882c6a798
+
 
 Термины:
 
