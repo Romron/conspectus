@@ -519,8 +519,10 @@ flexboxgrid
             vmax - наименьшеого из значений между vmin или vmax   100vmax  по аналогии
 
 SVG
+   https://prgssr.ru/development/oformlenie-soderzhimogo-use-v-svg-s-pomoshyu-css.html#heading-svguse----dom      !!
    https://css-tricks.com/svg-use-external-source/
    https://css-tricks.com/svg-use-with-external-reference-take-2/
+
 
 
    При использовании команды повторного вызова use, элемент svg попадает в теневой дом (shadow DOM) 
