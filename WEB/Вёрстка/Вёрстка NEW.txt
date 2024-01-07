@@ -520,6 +520,7 @@ flexboxgrid
 
 SVG
    https://prgssr.ru/development/oformlenie-soderzhimogo-use-v-svg-s-pomoshyu-css.html#heading-svguse----dom      !!
+   https://svgontheweb.com/ru/
    https://css-tricks.com/svg-use-external-source/
    https://css-tricks.com/svg-use-with-external-reference-take-2/
 
