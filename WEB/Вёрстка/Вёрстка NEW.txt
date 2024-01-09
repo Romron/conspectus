@@ -13,6 +13,8 @@
    SVG:
       https://youtu.be/Yzj8bBCq7Eg?si=ew9ld1R75aVrLryo
 
+   <details> and <summary>
+      ! https://habr.com/ru/articles/477520/
 
 Термины:
 
