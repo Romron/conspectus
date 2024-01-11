@@ -14,7 +14,8 @@
       https://youtu.be/ZY_Xp8b_G5M?si=PjugBcIVX7MY3QDO
       https://youtu.be/PrTGgcDJ2dI?si=dD6GlL51APfsfSQX
       https://color.adobe.com/ru/create/color-wheel
-      https://coolors.co/     гаммы из фоток, градиенты, и много всего!
+      https://color.adobe.com/ru/create/image   гаммы из фоток    !!!
+      https://coolors.co/     гаммы из фоток, градиенты, и много всего
       http://colormind.io/    показывает элементы сайта в выбраной палитре
       https://paletton.com/
       https://youtu.be/seowi4Ze0Z0?si=jW2tK_IVqYDiNqo7         Как выбрать цвета для сайта. Подбора палитры сайта
@@ -568,20 +569,6 @@ WebGL (Web Graphics Library) - программная библиотека дл�
       sprite
       code     https://airbnb.design/introducing-lottie/    преобразавание анимации из Иллюстратора в код
 
-   Нейросетки
-      https://leonardo.ai/       генерация картинок
-      https://www.photoroom.com/ru        оброботка и редактирование картинок
-      https://spline.design/ai            3-d объекты 
-      https://www.notion.so/              аналог chat-gpt
-      https://app.runwayml.com/           оброботка видео анимации
-      https://www.autodraw.com/           рисование с коррекцией AI
-      https://palette.fm/                 чёрно белое в цветное
-      https://www.watermarkremover.io/ru  удаление водяных знаков
-      https://namelix.com/                generate a short, brandable business name using artificial intelligence
-
-
-Учётки для leonardo.ai
-   02 vecir67118@bikedid.com  :  Rom_vecir67118@bikedid.com
 
 ----------------------- Практика end -----------------------
 

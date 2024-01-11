@@ -20,6 +20,25 @@
 
 ----------------------- Практика start ---------------------
 
+   Нейросетки
+      https://leonardo.ai/       генерация картинок
+      https://www.photoroom.com/ru        оброботка и редактирование картинок
+      https://spline.design/ai            3-d объекты 
+      https://www.notion.so/              аналог chat-gpt
+      https://app.runwayml.com/           оброботка видео анимации
+      https://www.autodraw.com/           рисование с коррекцией AI
+      https://palette.fm/                 чёрно белое в цветное
+      https://www.watermarkremover.io/ru  удаление водяных знаков
+      https://namelix.com/                generate a short, brandable business name using artificial intelligence
+
+
+Учётки для leonardo.ai
+   02 vecir67118@bikedid.com  :  Rom_vecir67118@bikedid.com
+
+
+
+
+
 ----------------------- Практика end -----------------------
 
 
