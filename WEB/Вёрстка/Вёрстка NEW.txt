@@ -20,13 +20,13 @@
       https://youtu.be/93eVd-lUVLM
    SVG:
       https://youtu.be/Yzj8bBCq7Eg?si=ew9ld1R75aVrLryo
-      https://www.w3.org/TR/xml-stylesheet/
       https://prgssr.ru/development/oformlenie-soderzhimogo-use-v-svg-s-pomoshyu-css.html#heading-svguse----dom      !!
       https://svgontheweb.com/ru/
       https://css-tricks.com/svg-use-external-source/
       https://css-tricks.com/svg-use-with-external-reference-take-2/
       https://youtu.be/g0RzCKhuA-E?si=kf_wqHAJwkBTg7-3   анимация иконок    
       https://allyjs.io/tutorials/focusing-in-svg.html      Managing focus in SVG                                                                                      
+      https://www.w3.org/TR/xml-stylesheet/
    <details> and <summary>
       ! https://habr.com/ru/articles/477520/
    BEM 
