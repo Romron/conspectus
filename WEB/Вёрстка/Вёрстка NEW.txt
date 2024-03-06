@@ -130,6 +130,27 @@
 
 ----------------------- TO USE  -----------------------  
 
+   свойства CSS      https://youtu.be/jLJU27MNdQs?si=HgHyaEnR6IjaRoTn
+      изменение высоты блока  пропорционально изменению ширины  
+         width: 100%;
+         aspect-ratio: 16/9;  
+      функция CSS аналогична миксину adaptive-property      https://habr.com/ru/companies/ruvds/articles/501634/
+         clamp();
+      селектор плейсхолдера input 
+         input::placeholder{}
+      цвет и форма курсора в полях ввода     https://css-tricks.com/almanac/properties/c/caret/
+         caret: #ff7a18 underscore;
+      счётчик отображений определенного элемента
+         counter-reset        https://itwiki.dev/ru/front-end/css-reference/properties/counter-reset
+      привязка скролла к точкам блокам
+         scroll-snap-type        https://developer.mozilla.org/ru/docs/Web/CSS/scroll-snap-type
+      маски для блока
+         clip-path      https://habr.com/ru/companies/skillfactory/articles/539064/
+      градация серого, размытие и прочее для любого блока
+         filter      https://developer.mozilla.org/en-US/docs/Web/CSS/filter
+
+      
+
    скрывая элемент с помощью opasity: 0; необходимо добавлять visibility: hidden; 
       что бы со скрытым элементом нельзя было взамиодействовать 
 
