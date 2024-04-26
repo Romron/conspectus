@@ -1,5 +1,6 @@
 Источники:
 	https://www.youtube.com/@TimurShemsedinov       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	https://github.com/HowProgrammingWorks/Index		Базовый курс инженерии программного обеспечения 
 
 	https://codepen.io/     всё готовое!!!
 	https://learn.javascript.ru/	!!!!!
