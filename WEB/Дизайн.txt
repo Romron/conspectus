@@ -45,6 +45,10 @@
       https://webfonts.pro/
       https://www.myfonts.com/      поиск по изображению
       https://fonts.adobe.com/
+      
+      подбор шрифтовых пар:
+         https://www.fontpair.co/
+         https://typ.io/
    
    прототипирование и анимация:
       !! https://webflow.com/    визуальный редактор сайтов с возможностью, анимирования, кодирования, импетации БД и публикации 
