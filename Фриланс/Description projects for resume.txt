@@ -1,0 +1,56 @@
+http://rombt.free.nf/
+   один из первых моих проектов, прошу не судить строго, сегодня я бы многое сделал иначе.
+   Проект выполнен на основе 
+      дизайна найденного мной в бесплатном доступе на просторах интернета
+      разработанной мной сборки GULP 
+   в этом проекте мной выполнено:
+      семантическая вёрстка страниц - HTML5 
+         результат:  https://rombt.github.io/restaurant-site/
+         если нужны подробности: https://github.com/Rombt/restaurant-site/tree/HTML-coding
+      js - jQuery, Ajax и Swiper.js для слайдеров.
+      натяжка готовой вёрстки 
+         результат: http://rombt.free.nf/
+         если нужны подробности: https://github.com/Rombt/restaurant-site/tree/WordPress-template
+      кастомный функционал темы в core plugin:
+         типы записей 
+            recipes - этот функционал вполне достоин отдельного плагина
+               кастомные поля (add_meta_box()) разнесены по блокам Ingredient, Nutrition, Food-Step 
+               в каждом блоке администратор сайта может добавлять или удалять поля по своему усмотрению (jQuery, Ajax) 
+               предусмотрена возможность добавлять файл рецепта которые будут доступны для скачивания пользователем
+               пример страницы: http://rombt.free.nf/recipes/classic-tiramisu/
+            food_menu_items
+               кастомные поля (ACF) : 
+               цена блюда
+               показывать ли в секции "Food menu" 
+               показывать ли в секции "Today Specialy"
+            our-clients 
+            для каждого кастомного типа записей предусмотрена возможность менять значение этого поля непосредственно со страницы этого типа записей (Ajax, jQuery)
+      WooCommerce - тема полностью интегрирована с WooCommerce 
+      Redux - тема имеет очень много опций включая типографику
+
+
+One of my first serious projects, please don't judge it too harshly; today, I would do many things differently.
+
+Semantic HTML5 page markup
+   Result: Project Demo
+   Details: GitHub Repository
+JavaScript: jQuery, Ajax, and Swiper.js for sliders.
+Integration of the completed markup into WordPress
+Result: Live Site
+Details: GitHub Repository
+Custom theme functionality in a core plugin:
+Post Types:
+Recipes: This functionality is comprehensive enough to be a standalone plugin.
+Custom fields (add_meta_box()) are organized into blocks: Ingredient, Nutrition, Food-Step.
+Each block allows the site administrator to add or remove fields as needed (jQuery, Ajax).
+Option to add recipe files for user downloads.
+Example page: Classic Tiramisu
+Food Menu Items:
+Custom fields (ACF):
+Dish price
+Display in "Food menu" section
+Display in "Today Special" section
+Our Clients
+For each custom post type, the field values can be edited directly on the post page (Ajax, jQuery).
+WooCommerce: The theme is fully integrated with WooCommerce.
+Redux: The theme offers many options, including typography settings.
