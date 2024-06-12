@@ -31,6 +31,9 @@
       https://www.watermarkremover.io/ru  удаление водяных знаков
       https://namelix.com/                generate a short, brandable business name using artificial intelligence
       https://www.relume.io/              ! разработка сайтов 
+      https://app.recraft.ai              https://youtu.be/pCTTlYF3oOI?si=pq1QYtPeIDyfYDsD   для генерации в ЕДИНОМ СТИЛЕ
+      https://remove-bg.ai/ru             удаляет фон
+      https://app.flair.ai/               генерирует фон для картинки 
 
 
 

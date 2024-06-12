@@ -1,4 +1,7 @@
 Источники:
+	https://www.youtube.com/@TimurShemsedinov       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	https://github.com/HowProgrammingWorks/Index		Базовый курс инженерии программного обеспечения 
+
 	https://codepen.io/     всё готовое!!!
 	https://learn.javascript.ru/	!!!!!
 	https://youtu.be/4AETFuOaq3s			Топ-12 фишек программирования на JavaScript с массивами. Ты просто обязан их знать!
@@ -8,6 +11,7 @@
 	https://youtu.be/mI6Jcfsgma4?si=lvacvlnmipebHxdK		!!! лексическое окружение и замыкание
 	https://youtu.be/07FllcTRj84?si=nVbqdAiEvgeUFgpY		!!! var, let, const
 	https://youtu.be/aFxQvCqrUC0?si=4ehj_Ro6WMamjmkj		!!! this
+
 
 
 Термины:
