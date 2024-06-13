@@ -1,3 +1,40 @@
+https://github.com/Rombt/gulp-assembly
+
+
+Выполняет все необходимые операции для быстрой и удобной разработки проектов любой сложности. Основные возможности:
+
+Два режима работы: разработка и производство
+Простое создание и изменение сетки страниц
+Преобразование шрифтов в форматы WOFF и WOFF2, включая создание файла шрифта
+Оптимизация изображений в формат WebP с поддержкой JPEG для старых браузеров
+Оптимизация и сжатие стилей и JavaScript в один файл
+Создание спрайтов SVG
+Создание ZIP-архива
+Развертывание по FTP на хостинг
+И многие другие возможности
+
+Переведено с помощью DeepL.com (бесплатная версия)
+
+
+
+Performs all necessary operations for fast and convenient development of projects of any complexity. Main features include:
+
+Two working modes: development and production
+Easy creation and modification of page grids
+Font transformation to WOFF and WOFF2 formats, including font file creation
+Image optimization to WebP format with JPEG fallback for older browsers
+Optimization and compression of styles and JavaScript into a single file
+SVG sprite creation
+ZIP archive creation
+FTP deployment to hosting
+And many other features
+
+
+
+
+
+
+
 http://rombt.free.nf/
    один из первых моих проектов, прошу не судить строго, сегодня я бы многое сделал иначе.
    Проект выполнен на основе 
