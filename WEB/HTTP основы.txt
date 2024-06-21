@@ -35,6 +35,7 @@
       #         AllowOverride All
       #         # Require all denied
       #         Require all granted 
+      #         Options Indexes FollowSymLinks Includes ExecCGI
       # </Directory>
    apache\conf\httpd.conf
       <Directory />
