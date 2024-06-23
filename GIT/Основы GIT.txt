@@ -178,6 +178,8 @@
             git clone git@Rombt.github.com:Rombt/impex-rombt.git
             git clone git@Rombt.github.com:Rombt/snippets.git
             git clone git@Rombt.github.com:Rombt/horizontal-menus.git
+            git clone git@Rombt.github.com:Rombt/planeta-club.git
+
 
                       
          my_repo/.git/config        рабочие примеры!!        
