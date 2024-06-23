@@ -13,6 +13,18 @@
 Смежные области:
 
 
+----------------------- T O D O  -----------------------  
+
+
+
+----------------------- TO USE  -----------------------  
+
+Node.js debugging       https://code.visualstudio.com/docs/nodejs/nodejs-debugging
+   in setting.json      
+      "debug.javascript.autoAttachFilter": "disabled",
+
+
+
 
 ----------------------- ТЕОРИЯ start -----------------------  
    вся информация о текущем node процесе в пепеменной process     https://nodejs.org/docs/latest/api/process.html#processargv
