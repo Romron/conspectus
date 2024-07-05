@@ -181,6 +181,9 @@
             git clone git@Rombt.github.com:Rombt/planeta-club.git
 
 
+            git clone git@Rombt.github.com:Rombt/renoteck.git
+
+
                       
          my_repo/.git/config        рабочие примеры!!        
             [remote "origin"]
