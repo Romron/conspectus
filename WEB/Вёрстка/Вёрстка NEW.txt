@@ -34,6 +34,12 @@
       ! https://habr.com/ru/articles/477520/
    BEM 
       https://github.com/yoksel/common-words    cлова, часто используемые в CSS-классах
+
+   Чекбоксы 
+      https://youtu.be/E6kLaaQFctU?si=RT1DOBvm7jrB91pi         !!!
+
+
+
 Термины:
 
 
