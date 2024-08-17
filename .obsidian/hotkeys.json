@@ -41,14 +41,6 @@
       "key": "ArrowDown"
     }
   ],
-  "editor:fold-all": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "Y"
-    }
-  ],
   "editor:insert-wikilink": [
     {
       "modifiers": [

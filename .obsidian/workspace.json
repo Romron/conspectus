@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "87dbf900ed8b2f06",
+        "id": "ab1138a99c6d5549",
         "type": "tabs",
         "children": [
           {
-            "id": "ec6c56b5a82bf9ef",
+            "id": "c14b2e3872bb3b65",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Дизайн/Обучение web дизайну.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#id_element",
+                "query": "tag:#визуальная_структурированность",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,12 +65,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 212.5
   },
   "right": {
     "id": "35cc6582fb022294",
@@ -82,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Дизайн/Обучение web дизайну.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Дизайн/Обучение web дизайну.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Дизайн/Обучение web дизайну.md"
+              }
             }
           }
         ],
@@ -139,35 +146,35 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "ec6c56b5a82bf9ef",
+  "active": "c14b2e3872bb3b65",
   "lastOpenFiles": [
-    "WEB/Вёрстка/Вёрстка NEW.md",
-    "WEB/Разработка сайта -- темы.md",
-    "WEB/Нейросети.md",
     "Дизайн/Визуальная привлекательность.md",
+    "Дизайн/Обучение web дизайну.md",
+    "Дизайн/Дизайн.md",
+    "Дизайн/Единство стиля.md",
+    "Дизайн/Функциональность.md",
     "Дизайн/WP templates.md",
+    "WEB/Разработка сайта -- темы.md",
+    "WEB/Маркетинг/SEO продвижение сайта.md",
+    "WEB/Маркетинг/Контекстная реклама.md",
+    "WEB/Маркетинг/Продвижение сайта.md",
+    "WEB/SEO.md",
+    "WEB/визуально не структурированный.md",
+    "WEB/Вёрстка/Вёрстка NEW.md",
+    "WEB/Нейросети.md",
     "WEB/визуально.md",
     "WEB/Визуальная.md",
     "WEB/визуаль.md",
     "WEB/json.md",
-    "WEB/Маркетинг/-- SEO.md",
     "WEB/Файловая структура проэкта.md",
     "WEB/Проектирование программных продуктов/Теория.md",
     "WEB/Парсеры/Puppeteer.md",
     "WEB/Проектирование программных продуктов/Патерны.md",
     "Фриланс/Резюме/level_0/Берегуленко Роман wordpress js-html-css.pdf",
-    "Дизайн/Дизайн.md",
     "Фриланс/Резюме/list_of_recruiters_request 05.06.2024.md",
     "Фриланс/Резюме/about_creating_resume.md",
     "Фриланс/Projects/__PlanetaClub/my messages .md",
     "Фриланс/Job search/Подготовка к собеседованию.md",
-    "Фриланс/Job search/Necessary.md",
-    "Фриланс/Фриланс_init_2020 .md",
-    "Фриланс/Отклики на вакансии.md",
-    "Фриланс/Descriptions projects for resume.md",
-    "СУБД/Основы проектирования БД.md",
-    "Системы сборки/webpack.md",
-    "Системы сборки/gulp.md",
     "Дизайн/Дизайн.txt",
     "Дизайн",
     "Новая папка"
