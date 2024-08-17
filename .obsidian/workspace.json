@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "d8a85ac8efe792a8",
+        "id": "cfd56eaa34af2a91",
         "type": "tabs",
         "children": [
           {
-            "id": "f70e606ff2a6475b",
+            "id": "48c665cd0fcdb737",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian/conspectus/WP templates/Визуальная привлекательность.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian/conspectus/WP templates/Визуальная привлекательность.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Obsidian/conspectus/WP templates/Визуальная привлекательность.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Obsidian/conspectus/WP templates/Визуальная привлекательность.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,6 +138,36 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "f70e606ff2a6475b",
-  "lastOpenFiles": []
+  "active": "48c665cd0fcdb737",
+  "lastOpenFiles": [
+    "Фриланс/Резюме/level_0/Берегуленко Роман wordpress js-html-css.pdf",
+    "Дизайн/Дизайн.md",
+    "Фриланс/Резюме/list_of_recruiters_request 05.06.2024.md",
+    "Фриланс/Резюме/about_creating_resume.md",
+    "Фриланс/Projects/__PlanetaClub/my messages .md",
+    "Фриланс/Job search/Подготовка к собеседованию.md",
+    "Фриланс/Job search/Necessary.md",
+    "Фриланс/Фриланс_init_2020 .md",
+    "Фриланс/Отклики на вакансии.md",
+    "Фриланс/Descriptions projects for resume.md",
+    "СУБД/Основы проектирования БД.md",
+    "Системы сборки/webpack.md",
+    "Системы сборки/gulp.md",
+    "Психология/Области внутреннего пространгства .md",
+    "Дзен/Index.md",
+    "WEB/Проэктирование/Проектирование .md",
+    "WEB/Проэктирование/Принцыпы проэктирования.md",
+    "WEB/Парсеры/Puppeteer.md",
+    "WEB/Вёрстка/Препроцессоры/LESS.md",
+    "WEB/Вёрстка/Тестирование и оценка качества вёрстки.md",
+    "WEB/Вёрстка/Слайдер SWIPER.md",
+    "WEB/Вёрстка/Вёрстка OLD.md",
+    "WEB/Вёрстка/Вёрстка NEW.md",
+    "WEB/Вёрстка/HTML - CSS.md",
+    "WEB/PHP/Шаблонизатор Blade.md",
+    "WEB/PHP/Тестирование в php.md",
+    "Дизайн/Дизайн.txt",
+    "Дизайн",
+    "Новая папка"
+  ]
 }
