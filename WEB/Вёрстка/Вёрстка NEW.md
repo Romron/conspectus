@@ -165,7 +165,7 @@
       селектор плейсхолдера input 
          input::placeholder{}
       цвет и форма курсора в полях ввода     https://css-tricks.com/almanac/properties/c/caret/
-         caret: #ff7a18 underscore;
+         caret: rgb(255, 122, 24) underscore;
       счётчик отображений определенного элемента
          counter-reset        https://itwiki.dev/ru/front-end/css-reference/properties/counter-reset
       привязка скролла к точкам блокам
@@ -378,7 +378,7 @@
    ID элемента 
       Назначение  - уникализация элемента страниоцы 
       использование
-         к адресу страниоцы добавить #id_element страница прокрутится к элементу
+         к адресу страницы добавить id_element страница прокрутится к элементу
    Тег использовать не желательно т.к. при внесении правок вёрстка сламается
    Класс обеспечивает максимальную гибкость
    БЭМ
@@ -611,7 +611,7 @@ Flex
          .item{
             padding: 50px 0px;
             text-aling: center;
-            bacrgraund: #f5d781;
+            bacrgraund: rgb(245, 215, 129);
             /* т. к. по умолчанию box-sizing:content-box; 
                   т.е. 
                      реальная ширина элемента расчитываеться 

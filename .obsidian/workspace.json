@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cfd56eaa34af2a91",
+        "id": "87dbf900ed8b2f06",
         "type": "tabs",
         "children": [
           {
-            "id": "48c665cd0fcdb737",
+            "id": "ec6c56b5a82bf9ef",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -44,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#id_element",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,11 +61,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "35cc6582fb022294",
@@ -121,25 +122,39 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
       "switcher:Меню быстрого перехода": false,
-      "graph:Граф": false,
+      "graph:Граф": true,
       "canvas:Создать новый холст": false,
-      "daily-notes:Сегодняшняя заметка": false,
-      "templates:Вставить шаблон": false,
+      "daily-notes:Сегодняшняя заметка": true,
+      "templates:Вставить шаблон": true,
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "48c665cd0fcdb737",
+  "active": "ec6c56b5a82bf9ef",
   "lastOpenFiles": [
+    "WEB/Вёрстка/Вёрстка NEW.md",
+    "WEB/Разработка сайта -- темы.md",
+    "WEB/Нейросети.md",
+    "Дизайн/Визуальная привлекательность.md",
+    "Дизайн/WP templates.md",
+    "WEB/визуально.md",
+    "WEB/Визуальная.md",
+    "WEB/визуаль.md",
+    "WEB/json.md",
+    "WEB/Маркетинг/-- SEO.md",
+    "WEB/Файловая структура проэкта.md",
+    "WEB/Проектирование программных продуктов/Теория.md",
+    "WEB/Парсеры/Puppeteer.md",
+    "WEB/Проектирование программных продуктов/Патерны.md",
     "Фриланс/Резюме/level_0/Берегуленко Роман wordpress js-html-css.pdf",
     "Дизайн/Дизайн.md",
     "Фриланс/Резюме/list_of_recruiters_request 05.06.2024.md",
@@ -153,19 +168,6 @@
     "СУБД/Основы проектирования БД.md",
     "Системы сборки/webpack.md",
     "Системы сборки/gulp.md",
-    "Психология/Области внутреннего пространгства .md",
-    "Дзен/Index.md",
-    "WEB/Проэктирование/Проектирование .md",
-    "WEB/Проэктирование/Принцыпы проэктирования.md",
-    "WEB/Парсеры/Puppeteer.md",
-    "WEB/Вёрстка/Препроцессоры/LESS.md",
-    "WEB/Вёрстка/Тестирование и оценка качества вёрстки.md",
-    "WEB/Вёрстка/Слайдер SWIPER.md",
-    "WEB/Вёрстка/Вёрстка OLD.md",
-    "WEB/Вёрстка/Вёрстка NEW.md",
-    "WEB/Вёрстка/HTML - CSS.md",
-    "WEB/PHP/Шаблонизатор Blade.md",
-    "WEB/PHP/Тестирование в php.md",
     "Дизайн/Дизайн.txt",
     "Дизайн",
     "Новая папка"
