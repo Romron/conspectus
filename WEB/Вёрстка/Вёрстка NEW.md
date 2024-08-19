@@ -29,6 +29,7 @@
       https://css-tricks.com/svg-use-with-external-reference-take-2/
       https://allyjs.io/tutorials/focusing-in-svg.html      Managing focus in SVG                                                                                      
       https://www.w3.org/TR/xml-stylesheet/
+      https://youtu.be/TCGWuvOxw28?si=e1GCFgRICAwbSzlq
       анимация:
          https://youtu.be/LGYkzJ5FxmQ?si=bnU3X4hZFNgn8pL0      !!
          https://youtu.be/g0RzCKhuA-E?si=kf_wqHAJwkBTg7-3   анимация иконок  
