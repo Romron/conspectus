@@ -6,7 +6,7 @@
       {
         "id": "d67191ff1415e43d",
         "type": "tabs",
-        "dimension": 52.98102981029811,
+        "dimension": 70.86720867208672,
         "children": [
           {
             "id": "9874ba40e8e22c2c",
@@ -25,7 +25,7 @@
       {
         "id": "0048ed9bf79462be",
         "type": "tabs",
-        "dimension": 47.018970189701896,
+        "dimension": 29.132791327913278,
         "children": [
           {
             "id": "e52774c2cd379d08",
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#визуальная_иерархия",
+                "query": "tag:#риитм",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
