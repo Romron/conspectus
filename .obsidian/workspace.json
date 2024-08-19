@@ -6,7 +6,7 @@
       {
         "id": "d67191ff1415e43d",
         "type": "tabs",
-        "dimension": 70.86720867208672,
+        "dimension": 45.1219512195122,
         "children": [
           {
             "id": "9874ba40e8e22c2c",
@@ -25,7 +25,7 @@
       {
         "id": "0048ed9bf79462be",
         "type": "tabs",
-        "dimension": 29.132791327913278,
+        "dimension": 54.87804878048781,
         "children": [
           {
             "id": "e52774c2cd379d08",
@@ -85,8 +85,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -106,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Дизайн/Анализ чужих дизайнов.md",
+                "file": "Дизайн/Дизайн.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Дизайн/Анализ чужих дизайнов.md",
+                "file": "Дизайн/Дизайн.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Дизайн/Анализ чужих дизайнов.md"
+                "file": "Дизайн/Дизайн.md"
               }
             }
           }
@@ -167,14 +166,14 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "9874ba40e8e22c2c",
+  "active": "e52774c2cd379d08",
   "lastOpenFiles": [
+    "Дизайн/Визуальная привлекательность.md",
     "Дизайн/Дизайн.md",
     "Дизайн/Анализ чужих дизайнов.md",
     "WEB/Создание темы для сайта/Сравнение чужих тем.md",
     "Дизайн/Обучение web дизайну.md",
     "Дизайн/Единство стиля.md",
-    "Дизайн/Визуальная привлекательность.md",
     "WEB/Создание темы для сайта/Разработка сайта -- темы.md",
     "WEB/Создание темы для сайта/60C71500",
     "WEB/Создание темы для сайта/Сравнение тем.xlsx",
