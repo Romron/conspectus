@@ -6,7 +6,7 @@
       {
         "id": "d67191ff1415e43d",
         "type": "tabs",
-        "dimension": 73.3739837398374,
+        "dimension": 86.44986449864498,
         "children": [
           {
             "id": "9874ba40e8e22c2c",
@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Дизайн/Анализ чужих дизайнов.md",
+                "file": "Дизайн/Дизайн.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
       {
         "id": "0048ed9bf79462be",
         "type": "tabs",
-        "dimension": 26.6260162601626,
+        "dimension": 13.550135501355012,
         "children": [
           {
             "id": "e52774c2cd379d08",
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Дизайн/Анализ чужих дизайнов.md",
+                "file": "Дизайн/Дизайн.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Дизайн/Анализ чужих дизайнов.md",
+                "file": "Дизайн/Дизайн.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Дизайн/Анализ чужих дизайнов.md"
+                "file": "Дизайн/Дизайн.md"
               }
             }
           }
@@ -168,9 +168,9 @@
   },
   "active": "9874ba40e8e22c2c",
   "lastOpenFiles": [
+    "Дизайн/Анализ чужих дизайнов.md",
     "Дизайн/Дизайн.md",
     "Дизайн/Визуальная привлекательность.md",
-    "Дизайн/Анализ чужих дизайнов.md",
     "WEB/Создание темы для сайта/Сравнение чужих тем.md",
     "Дизайн/Обучение web дизайну.md",
     "Дизайн/Единство стиля.md",
