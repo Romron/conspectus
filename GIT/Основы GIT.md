@@ -4,6 +4,7 @@
    https://support.rdb24.com/hc/ru/articles/115000463769-%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0-%D1%81%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%81%D0%B8%D1%81%D0%B0-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0-gitignore
    !! https://devsday.ru/blog/details/11891
    !! https://youtu.be/W4hoc24K93E   полный курс !!!
+   https://youtu.be/NXNf9aYTCZ0?si=V2RCqNN814_lS7_B    оформление read_me.md
 
 
 ----------- Теория start  ----------
