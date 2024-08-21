@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GIT/Основы GIT.md",
+                "file": "Дизайн/Дизайн.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT/Основы GIT.md",
+                "file": "Дизайн/Дизайн.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT/Основы GIT.md",
+                "file": "Дизайн/Дизайн.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT/Основы GIT.md"
+                "file": "Дизайн/Дизайн.md"
               }
             }
           }
@@ -168,9 +168,10 @@
   },
   "active": "9874ba40e8e22c2c",
   "lastOpenFiles": [
-    "Дизайн/Дизайн.md",
-    "Дизайн/Обучение web дизайну.md",
     "Дизайн/Анализ чужих дизайнов.md",
+    "Дизайн/Дизайн.md",
+    "GIT/Основы GIT.md",
+    "Дизайн/Обучение web дизайну.md",
     "Дизайн/Визуальная привлекательность.md",
     "WEB/Создание темы для сайта/Сравнение чужих тем.md",
     "Дизайн/Единство стиля.md",
