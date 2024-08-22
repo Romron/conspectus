@@ -180,11 +180,10 @@
             git clone git@Rombt.github.com:Rombt/snippets.git
             git clone git@Rombt.github.com:Rombt/horizontal-menus.git
             git clone git@Rombt.github.com:Rombt/planeta-club.git
-
             git clone git@Rombt.github.com:Rombt/renoteck.git
-
             git clone git@Rombt.github.com:Rombt/timetracker.git
 
+            git clone git@Rombt.github.com:Rombt/premium_them-1.git
 
                       
          my_repo/.git/config        рабочие примеры!!        
