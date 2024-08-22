@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Дизайн/Дизайн.md",
+                "file": "Фриланс/Отклики на вакансии.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Дизайн/Дизайн.md",
+                "file": "Фриланс/Отклики на вакансии.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Дизайн/Дизайн.md",
+                "file": "Фриланс/Отклики на вакансии.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Дизайн/Дизайн.md"
+                "file": "Фриланс/Отклики на вакансии.md"
               }
             }
           }
@@ -168,8 +168,8 @@
   },
   "active": "9874ba40e8e22c2c",
   "lastOpenFiles": [
-    "Дизайн/Анализ чужих дизайнов.md",
     "Дизайн/Дизайн.md",
+    "Дизайн/Анализ чужих дизайнов.md",
     "GIT/Основы GIT.md",
     "Дизайн/Обучение web дизайну.md",
     "Дизайн/Визуальная привлекательность.md",
