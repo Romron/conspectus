@@ -183,7 +183,7 @@
             git clone git@Rombt.github.com:Rombt/renoteck.git
             git clone git@Rombt.github.com:Rombt/timetracker.git
 
-            git clone git@Rombt.github.com:Rombt/premium_them-1.git
+            git clone git@Rombt.github.com:Rombt/premium_them_1
 
                       
          my_repo/.git/config        рабочие примеры!!        
