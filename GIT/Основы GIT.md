@@ -134,6 +134,10 @@
          git reset --hard HEAD~2          // удалить два последних коммита в локальном репозитории
          git push --force     // удальть из удаённого репозитория те коммиты которые ранее были удалены из локального репозитория
 
+   получить изменения из удалённого репозитория и в случае возникновения конфликтов автоматически применить изменения из удалённого репозитория
+      git pull --strategy-option theirs
+
+
    Несколько аккаунтов на одном компьютере  
       источники:
          https://docs.github.com/ru/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-your-personal-account/managing-multiple-accounts#contributing-to-multiple-accounts-using-ssh-and-git_ssh_command
