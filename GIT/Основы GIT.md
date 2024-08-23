@@ -174,7 +174,6 @@
             git clone git@Rombt.github.com:Rombt/restaurant-site.git
             git clone git@Romron.github.com:Romron/laravel-0.git
             git clone git@Romron.github.com:Romron/phpOOP-0.git
-            git clone git@Rombt.github.com:Rombt/gulp-assembly.git
             git clone git@Rombt.github.com:Rombt/CRM-Dashboard-Customers.git
             git clone git@Rombt.github.com:Rombt/impex-rombt.git              
             git clone git@Rombt.github.com:Rombt/snippets.git
@@ -183,6 +182,7 @@
             git clone git@Rombt.github.com:Rombt/renoteck.git
             git clone git@Rombt.github.com:Rombt/timetracker.git
 
+            git clone git@Rombt.github.com:Rombt/gulp-assembly.git
             git clone git@Rombt.github.com:Rombt/premium_theme_1.git
 
                       
