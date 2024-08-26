@@ -136,6 +136,10 @@
 
    получить изменения из удалённого репозитория и в случае возникновения конфликтов автоматически применить изменения из удалённого репозитория
       git pull --strategy-option theirs
+   
+   ля того чтобы слить изменения из ветки a в ветку b и в случае возникновения конфликтов автоматически применить изменения из ветки a, можно использовать следующую последовательность команд:
+      git checkout b
+      git merge -X theirs a
 
 
    Несколько аккаунтов на одном компьютере  
@@ -178,7 +182,6 @@
             git clone git@Rombt.github.com:Rombt/restaurant-site.git
             git clone git@Romron.github.com:Romron/laravel-0.git
             git clone git@Romron.github.com:Romron/phpOOP-0.git
-            git clone git@Rombt.github.com:Rombt/gulp-assembly.git
             git clone git@Rombt.github.com:Rombt/CRM-Dashboard-Customers.git
             git clone git@Rombt.github.com:Rombt/impex-rombt.git              
             git clone git@Rombt.github.com:Rombt/snippets.git
@@ -187,6 +190,7 @@
             git clone git@Rombt.github.com:Rombt/renoteck.git
             git clone git@Rombt.github.com:Rombt/timetracker.git
 
+            git clone git@Rombt.github.com:Rombt/gulp-assembly.git
             git clone git@Rombt.github.com:Rombt/premium-theme-1.git
 
                       
