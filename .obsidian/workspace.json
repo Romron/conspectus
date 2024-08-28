@@ -85,8 +85,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -167,7 +166,7 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "68865d7b2b596846",
+  "active": "f43eb1b1da8d4e24",
   "lastOpenFiles": [
     "Фриланс/Отклики на вакансии.md",
     "Фриланс/Projects/22.08.2024/dis_1.jpg",
