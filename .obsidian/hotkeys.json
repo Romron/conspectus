@@ -49,5 +49,13 @@
       ],
       "key": "C"
     }
+  ],
+  "editor:delete-paragraph": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": " "
+    }
   ]
 }
