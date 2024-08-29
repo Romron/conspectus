@@ -4,36 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d67191ff1415e43d",
+        "id": "802c9c8fa312f66d",
         "type": "tabs",
-        "dimension": 86.44986449864498,
         "children": [
           {
-            "id": "9874ba40e8e22c2c",
+            "id": "519d4b5856137eb7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Дизайн/Дизайн.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "0048ed9bf79462be",
-        "type": "tabs",
-        "dimension": 13.550135501355012,
-        "children": [
-          {
-            "id": "e52774c2cd379d08",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Дизайн/Дизайн.md",
+                "file": "Дизайн система/Дизайн система.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Дизайн/Дизайн.md",
+                "file": "Дизайн система/Дизайн система.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Дизайн/Дизайн.md",
+                "file": "Дизайн система/Дизайн система.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Дизайн/Дизайн.md"
+                "file": "Дизайн система/Дизайн система.md"
               }
             }
           }
@@ -166,14 +146,21 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "f43eb1b1da8d4e24",
+  "active": "519d4b5856137eb7",
   "lastOpenFiles": [
+    "Дизайн система/Дизайн токены.md",
+    "Дизайн система/Дизайн система.md",
+    "Дизайн система/Анатомия.md",
+    "Дизайн система/[Анатомия.md",
+    "Дизайн система/img/Анатомия дизайн токена.png",
+    "Дизайн система",
+    "Дизайн/Дизайн.md",
+    "Дизайн/Без названия.md",
     "Фриланс/Отклики на вакансии.md",
     "Фриланс/Projects/22.08.2024/dis_1.jpg",
     "Фриланс/Projects/22.08.2024/links.txt",
     "Фриланс/Projects/22.08.2024",
     "Фриланс/Projects/Нова папка",
-    "Дизайн/Дизайн.md",
     "Дизайн/Анализ чужих дизайнов.md",
     "GIT/Основы GIT.md",
     "Дизайн/Обучение web дизайну.md",
@@ -199,12 +186,6 @@
     "WEB/Вёрстка/Вёрстка NEW.md",
     "WEB/Нейросети.md",
     "WEB/визуально.md",
-    "WEB/Визуальная.md",
-    "WEB/визуаль.md",
-    "WEB/json.md",
-    "WEB/Файловая структура проэкта.md",
-    "WEB/Проектирование программных продуктов/Теория.md",
-    "Фриланс/Резюме/level_0/Берегуленко Роман wordpress js-html-css.pdf",
-    "Дизайн/Дизайн.txt"
+    "Фриланс/Резюме/level_0/Берегуленко Роман wordpress js-html-css.pdf"
   ]
 }
