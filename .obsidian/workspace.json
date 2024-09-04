@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Дизайн система/Дизайн система.md",
+                "file": "Дизайн/Анализ чужих дизайнов.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Дизайн система/Дизайн система.md",
+                "file": "Дизайн/Анализ чужих дизайнов.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Дизайн система/Дизайн система.md",
+                "file": "Дизайн/Анализ чужих дизайнов.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Дизайн система/Дизайн система.md"
+                "file": "Дизайн/Анализ чужих дизайнов.md"
               }
             }
           }
@@ -148,8 +148,8 @@
   },
   "active": "e52774c2cd379d08",
   "lastOpenFiles": [
-    "Дизайн система/Дизайн токены.md",
     "Дизайн система/Дизайн система.md",
+    "Дизайн система/Дизайн токены.md",
     "Дизайн/Дизайн.md",
     "Дизайн система/[[Анатомия.md",
     "Дизайн система/img/Анатомия дизайн токена.png",
