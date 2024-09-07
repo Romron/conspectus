@@ -53,7 +53,7 @@
 
 
 ----------------------- Практика start ---------------------
-Рабочий код из файла httpd-vhosts.conf приэтом в httpd.conf нет ничего об этом хосте
+Рабочий код из файла httpd-vhosts.conf при этом в httpd.conf нет ничего об этом хосте
    <VirtualHost 127.0.0.1:80>
       DocumentRoot "F:/web"
       ServerName web
@@ -66,6 +66,26 @@
    </VirtualHost>
 
 
+   для настройки виртуального хоста Laragon
+   для суб доменов в conf файлы laragon ничего прописывать не нужно работает и так 
+      <VirtualHost *:80>
+         DocumentRoot "D:/web/multisite"
+         ServerName multisite
+
+         <Directory "D:/web/multisite">
+            Options Indexes FollowSymLinks Includes ExecCGI
+            AllowOverride All
+            Require all granted
+         </Directory>
+
+        ErrorLog "D:/web/multisite/logs/multisite-error.log"
+        CustomLog "D:/web/multisite/logs/multisite-access.log" common
+      </VirtualHost>
+
+
+   строки для файла .hosts
+      127.0.0.1 multisite
+      127.0.0.1 premium-theme-1.multisite
 
 
 
