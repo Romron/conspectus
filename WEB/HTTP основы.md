@@ -67,7 +67,7 @@
 
 
    для настройки виртуального хоста Laragon
-   для суб доменов в conf файлы laragon ничего прописывать не нужно работает и так 
+   для каждого из суб доменов в conf файлы laragon нужно прописать такой же блок
       <VirtualHost *:80>
          DocumentRoot "D:/web/multisite"
          ServerName multisite
