@@ -44,7 +44,9 @@ Node.js debugging       https://code.visualstudio.com/docs/nodejs/nodejs-debuggi
          скачать https://github.com/coreybutler/nvm-windows/releases
       установить node.js
          nvm install node        // установит последнюю версию node 
-         nvm install номер_версии    // установит указанную версию
+         nvm install номер_версии    // установит указанную версию+
+         для gulp-assembly нужна node v16.17.1
+         
       использование разных версий      команды нужно вводить в cmd windows открытой с правами администратора(!!)
          nvm ls      // покажет все установленные версии
          nvm use номер_версии    // использовать указанную версию
