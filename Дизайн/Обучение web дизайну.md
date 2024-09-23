@@ -24,7 +24,12 @@
 ---
 Упражнения
 ---
-1, [Стилизация](https://youtu.be/deRYiHJooik?si=piOne4jJbGo73-OM)
+- Изменение одного и того же дизайна за счёт изменения 
+	- композиции
+	- сеток
+	- цветовой гаммы
+- [Стилизация](https://youtu.be/deRYiHJooik?si=piOne4jJbGo73-OM)
+
 
 
 
