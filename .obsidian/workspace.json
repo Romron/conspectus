@@ -6,9 +6,41 @@
       {
         "id": "0048ed9bf79462be",
         "type": "tabs",
+        "dimension": 76.21776504297995,
         "children": [
           {
             "id": "e52774c2cd379d08",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Дизайн/Композиция.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a1ca4e188200152a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Дизайн/Композиция.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "2ba827bf854f47c8",
+        "type": "tabs",
+        "dimension": 23.78223495702006,
+        "children": [
+          {
+            "id": "8a162e046aa5c851",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,21 +50,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "90c95f09d15678dd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Дизайн/Варианты меню.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Дизайн/Варианты меню.md",
+                "file": "Дизайн/Композиция.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Дизайн/Варианты меню.md",
+                "file": "Дизайн/Композиция.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Дизайн/Варианты меню.md"
+                "file": "Дизайн/Композиция.md"
               }
             }
           }
@@ -159,15 +178,18 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "90c95f09d15678dd",
+  "active": "e52774c2cd379d08",
   "lastOpenFiles": [
+    "Дизайн/Обучение композиции.md",
     "Дизайн/Обучение web дизайну.md",
+    "Дизайн/Композиция.md",
+    "Дизайн/Этапы построения.md",
+    "Дизайн/Этапы создания дизайна.md",
     "Дизайн/Варианты меню.md",
+    "Дизайн/img",
     "Дизайн система/img/Анатомия дизайн токена.png",
     "Дизайн система/Дизайн токены.md",
     "Дизайн система/Дизайн система.md",
-    "Дизайн/Обучение композиции.md",
-    "Дизайн/Композиция.md",
     "Дизайн/Визуальная привлекательность.md",
     "Дизайн/Анализ чужих дизайнов.md",
     "Дизайн/Дизайн.md",
@@ -187,7 +209,6 @@
     "WEB/Создание темы для сайта/60C71500",
     "WEB/Создание темы для сайта/Сравнение тем.xlsx",
     "WEB/Создание темы для сайта/DE261500",
-    "WEB/Создание темы для сайта/~$Сравнение тем.xlsx",
     "WEB/Без названия.canvas",
     "WEB/Функциональность.md",
     "WEB/CMS/Wordpress/Итоговый конспект 01.05.2023.md",
@@ -197,8 +218,6 @@
     "WEB/Маркетинг/Контекстная реклама.md",
     "WEB/Маркетинг/Продвижение сайта.md",
     "WEB/SEO.md",
-    "WEB/визуально не структурированный.md",
-    "WEB/Вёрстка/Вёрстка NEW.md",
-    "WEB/Нейросети.md"
+    "WEB/визуально не структурированный.md"
   ]
 }
