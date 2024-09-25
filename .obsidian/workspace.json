@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Дизайн/Композиция.md",
+                "file": "Дизайн/Обучение web дизайну.md",
                 "mode": "source",
                 "source": false
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Дизайн/Композиция.md",
+                "file": "Дизайн/Обучение web дизайну.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Дизайн/Композиция.md",
+                "file": "Дизайн/Обучение web дизайну.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Дизайн/Композиция.md"
+                "file": "Дизайн/Обучение web дизайну.md"
               }
             }
           }
@@ -180,9 +180,9 @@
   },
   "active": "e52774c2cd379d08",
   "lastOpenFiles": [
+    "Дизайн/Композиция.md",
     "Дизайн/Обучение композиции.md",
     "Дизайн/Обучение web дизайну.md",
-    "Дизайн/Композиция.md",
     "Дизайн/Этапы построения.md",
     "Дизайн/Этапы создания дизайна.md",
     "Дизайн/Варианты меню.md",
