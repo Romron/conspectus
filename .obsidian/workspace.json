@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Дизайн/Текстовые блоки.md",
+                "file": "WEB/JS/JavaScript.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Дизайн/Текстовые блоки.md",
+                "file": "WEB/JS/JavaScript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Дизайн/Текстовые блоки.md",
+                "file": "WEB/JS/JavaScript.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Дизайн/Текстовые блоки.md"
+                "file": "WEB/JS/JavaScript.md"
               }
             }
           }
@@ -181,9 +181,9 @@
   },
   "active": "a0e7bce37449048b",
   "lastOpenFiles": [
+    "Дизайн/Текстовые блоки.md",
     "Дизайн/Обучение web дизайну.md",
     "Дизайн/Композиция.md",
-    "Дизайн/Текстовые блоки.md",
     "Дизайн/Текстовые.md",
     "Дизайн/Обучение композиции.md",
     "Дизайн/Этапы построения.md",
