@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "99862f3f50387c3b",
+        "id": "645b3e1c6e2a4969",
         "type": "tabs",
         "children": [
           {
-            "id": "c0749aa042f43d0b",
+            "id": "0d5e70a47472c0cd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Хуки и фильтры.md",
+                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Циклы и условия.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Хуки и фильтры.md",
+                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Циклы и условия.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Хуки и фильтры.md",
+                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Циклы и условия.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Хуки и фильтры.md"
+                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Циклы и условия.md"
               }
             }
           }
@@ -146,9 +146,10 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "c0749aa042f43d0b",
+  "active": "0d5e70a47472c0cd",
   "lastOpenFiles": [
     "WEB/CMS/Wordpress/Подготовка к собеседованию/Основные понятия.md",
+    "WEB/CMS/Wordpress/Подготовка к собеседованию/Циклы и условия.md",
     "WEB/CMS/Wordpress/Подготовка к собеседованию/Хуки и фильтры.md",
     "WEB/CMS/Wordpress/Подготовка к собеседованию/Ядро.md",
     "WEB/CMS/Wordpress/Подготовка к собеседованию/Таксономии.md",
@@ -174,7 +175,6 @@
     "Дизайн/Текстовые блоки.md",
     "Дизайн/Композиция.md",
     "Дизайн/Текстовые.md",
-    "Дизайн/Обучение композиции.md",
     "Дизайн/img",
     "Дизайн система/img/Анатомия дизайн токена.png",
     "Дизайн/Створити ярлик.lnk",
