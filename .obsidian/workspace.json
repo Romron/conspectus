@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Циклы и условия.md",
+                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Основные понятия.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Циклы и условия.md",
+                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Основные понятия.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Циклы и условия.md",
+                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Основные понятия.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Циклы и условия.md"
+                "file": "WEB/CMS/Wordpress/Подготовка к собеседованию/Основные понятия.md"
               }
             }
           }
@@ -148,8 +148,9 @@
   },
   "active": "0d5e70a47472c0cd",
   "lastOpenFiles": [
-    "WEB/CMS/Wordpress/Подготовка к собеседованию/Основные понятия.md",
     "WEB/CMS/Wordpress/Подготовка к собеседованию/Циклы и условия.md",
+    "WEB/CMS/Wordpress/Подготовка к собеседованию/Основные понятия.md",
+    "WEB/CMS/Wordpress/Подготовка к собеседованию/Пагинация.md",
     "WEB/CMS/Wordpress/Подготовка к собеседованию/Хуки и фильтры.md",
     "WEB/CMS/Wordpress/Подготовка к собеседованию/Ядро.md",
     "WEB/CMS/Wordpress/Подготовка к собеседованию/Таксономии.md",
@@ -174,7 +175,6 @@
     "WEB/JS/JavaScript.md",
     "Дизайн/Текстовые блоки.md",
     "Дизайн/Композиция.md",
-    "Дизайн/Текстовые.md",
     "Дизайн/img",
     "Дизайн система/img/Анатомия дизайн токена.png",
     "Дизайн/Створити ярлик.lnk",
