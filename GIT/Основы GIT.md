@@ -195,6 +195,9 @@
             git clone git@Rombt.github.com:Rombt/gulp-assembly.git
             git clone git@Rombt.github.com:Rombt/premium-theme-1.git
 
+            git clone git@Rombt.github.com:Rombt/red-explorers.git
+                      
+
                       
          my_repo/.git/config        рабочие примеры!!        
             [remote "origin"]
