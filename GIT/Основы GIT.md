@@ -198,6 +198,7 @@
 
 
             git clone git@Rombt.github.com:Rombt/dvc.git
+            git clone git@Rombt.github.com:Rombt/modi.git
                       
 
                       
