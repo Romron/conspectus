@@ -1,4 +1,14 @@
 
+!! Создать магазин для продвижения товаров с нуля до каких - то продаж
+   на примере вот этих курсов:
+      https://www.youtube.com/watch?v=2XYh6Za_q3w&list=PLkOvrhXD_9Pvf3aWqXb5TXPdk-2AVdaYP&ab_channel=AntonSokolovskiyMarketing
+      https://www.youtube.com/watch?v=QdNtfd2ryBA&list=PLkOvrhXD_9Pu0kUx9X2G-Miyqnmkq7C6a&ab_channel=AntonSokolovskiyMarketing
+   разработку проводить с точки зрения бизнеса т.е. минимум усилий - максимум результата
+      делать всё по минимуму в погоне за результатом 
+
+
+
+
 
 Перечень досок объявлений типа флагмы
    разместить на них свои товары
