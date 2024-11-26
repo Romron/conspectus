@@ -93,11 +93,24 @@ https://www.awwwards.com/
 https://themeforest.net/
 
    страница магазина:
-      https://the7.io/blank-side-menu/
+      https://the7.io/blank-side-menu/       !!
 
    https://preview.themeforest.net/item/enfold-responsive-multipurpose-theme/full_screen_preview/4519990?_ga=2.166973625.665307452.1732609137-680088390.1732609137
+
+
+   https://the7.io/elementor-coffee/
+      анимация header menu при скролле
+
+
+   https://ewebotwp.com/branding/
+      карточки в слайдере
+   
+   https://ewebotwp.com/blog/
+      анимация иконки бургера при ховере
 
    одинаковые:
       https://workscout.in/
       https://kriesi.at/themes/enfold-restaurant/
       https://kriesi.at/themes/enfold-shop/
+      https://the7.io/elementor-corporate/
+      https://the7.io/business-advisors/
