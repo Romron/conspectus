@@ -1,4 +1,14 @@
 
+https://www.eclipso.studio/
+
+   ПОНРАВИЛОСЬ
+      светлый, много пространства
+      анимация скролла
+      фиксация меню хедера при скролле 
+      типографика 
+      анимация в хедере
+      https://www.eclipso.studio/projects/merconic
+         оформление слайдера
 
 
 https://genesiscreative.uk/
@@ -66,4 +76,9 @@ https://twofiftyk.com/
       https://twofiftyk.com/careers
          анимация h1
          спойлеры блока "Culture" 
+
+https://www.thomasmonavon.com/
+
+   ПОНРАВИЛОСЬ
+      анимация скролла
     
