@@ -148,17 +148,48 @@ https://themeforest.net/
       #C4BCA4
 
 
-Идеи для заголовка hero-блока 
-   варианты оформления 
-      https://ewebotwp.com/home-10/
-   текстовка заголовков
+подборка разнотипных сайтов которые стоило бы реализовать  https://the7.io/#prebuilts
+
+
+
+Идеи для hero-блока 
+
+   https://the7.io/elementor-shop/  !!!
+
+
+   заголовки под заголовки и слоганы могут менятся    https://the7.io/elementor-company/
+
+
+   заголовок 
+      варианты оформления 
+         https://ewebotwp.com/home-10/ !!
+      
+      текстовка заголовков
+         A Website that Leads to Customers
+         Get a free quote
+         Build a Professional Website with Ease!
+         The Most Customizable Theme on the Market
+         We build digital experiences
+         Visual design, UI/UX, digital marketing & consulting
+         See things in the present, even if they are in the future
+
+         
+
+   подзаголовок
+      Websites Branding Digital Marketing    https://the7.io/elementor-creative-light/
+
+   слоганы 
+      B2B Solutions  https://the7.io/elementor-business/
+										
 
    возможные поля и кнопки
       анализ вашего сайта 
          https://ewebotwp.com/home-07/
-      запуск видео
+      кнопка "запуск видео"
          https://ewebotwp.com/home-05/
       просто две кнопки  под текстом заголовка
          https://ewebotwp.com/home-04/
+      кнопка под заголовком 
+         https://the7.io/elementor-corporate/
 
 
