@@ -1,0 +1,26 @@
+
+   Projects for the demo
+      E-Commerce
+         Commerce Engine
+         ShopNova
+         E-Market Pro
+         NextShop
+      Corporate sites
+         EvoPrime
+         PulseTech
+         NeoVision
+         FutureLink
+      Education portals
+         SkillJoy
+         EduVenture
+         GrowWay
+         NextStep Academy
+      Photographer's portfolio website
+         FolioX
+         NeoFrame
+         Inspire
+         Edge
+      Restaurant's sites
+         Dineo
+         Savory
+         Platera
